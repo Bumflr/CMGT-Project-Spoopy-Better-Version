@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArsenalObject : MonoBehaviour
+public class UsableItem : MonoBehaviour
 {
+
     protected bool tapInput;
     protected bool holdInput;
 

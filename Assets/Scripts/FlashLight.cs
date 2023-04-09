@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FlashLight : ArsenalObject
+public class FlashLight : UsableItem
 {
     public Light lighting;
-    public Text testtext;
 
     public float maxEnergy = 10;
-    public float energy = 10;
+
+    public AnimationCurve lightingCurve;
+    public AnimationCurve lightingIntensityCurve;
+
+    private float energy;
 
     private bool flashlightToggle;
-    private MeshCollider mesh;
 
     private void Awake()
     {
-        mesh = GetComponent<MeshCollider>();
+        energy = maxEnergy;
     }
 
     public override void Enter()
@@ -29,6 +31,8 @@ public class FlashLight : ArsenalObject
     public override void Exit()
     {
         base.Exit();
+
+        flashlightToggle = false;
 
         this.gameObject.SetActive(false);
     }
@@ -44,13 +48,11 @@ public class FlashLight : ArsenalObject
             flashlightToggle = !flashlightToggle;
         }
 
-
-
         if (flashlightToggle && energy >= 0)
         {
             energy -= 0.01f;
 
-            testtext.text = energy.ToString();
+            //testtext.text = energy.ToString();
 
             lighting.enabled = true;
         }
@@ -58,7 +60,20 @@ public class FlashLight : ArsenalObject
         {
             lighting.enabled = false;
         }
+
+        CurrentLightingLevel();
     }
+
+    void CurrentLightingLevel()
+    {
+        float percentage = 1 - (energy / maxEnergy);
+
+        //Goes from 1.0 to 0.0
+
+        lighting.range = lightingCurve.Evaluate(percentage);
+        lighting.intensity = lightingIntensityCurve.Evaluate(percentage);
+    }
+
     private void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.CompareTag("Ghost"))

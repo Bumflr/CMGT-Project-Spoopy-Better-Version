@@ -15,7 +15,7 @@ public class FlashLightFOVCheck : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstructionMask;
 
-    public Toggle testToggle;
+    //public Toggle testToggle;
 
     public bool canSeePlayer { get; private set; }
 
@@ -96,6 +96,6 @@ public class FlashLightFOVCheck : MonoBehaviour
 
 
 
-        testToggle.isOn = canSeePlayer;
+        //testToggle.isOn = canSeePlayer;
     }
 }
