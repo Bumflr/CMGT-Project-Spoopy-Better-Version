@@ -47,7 +47,7 @@ MonoBehaviour:
   soundAudioClipArray:
   - sound: 0
     audioClip: {fileID: 8300000, guid: 2f284f80fa5fde249afc9e331bc44989, type: 3}
-    volume: 0.1
+    volume: 0
     audioMixerGroup: {fileID: 24300002, guid: 1ee8cb8efca1f234aa24f4a0e55419b6, type: 2}
   - sound: 1
     audioClip: {fileID: 8300000, guid: c41373e373cb0e1448aee38c569ef2e5, type: 3}
@@ -56,4 +56,8 @@ MonoBehaviour:
   - sound: 2
     audioClip: {fileID: 8300000, guid: 61a75b91f847f9c4d8d7425b79abc841, type: 3}
     volume: 1
+    audioMixerGroup: {fileID: 24300002, guid: 1ee8cb8efca1f234aa24f4a0e55419b6, type: 2}
+  - sound: 3
+    audioClip: {fileID: 8300000, guid: caa1abd2d3d8c7345b915fecf10649a8, type: 3}
+    volume: 0.75
     audioMixerGroup: {fileID: 24300002, guid: 1ee8cb8efca1f234aa24f4a0e55419b6, type: 2}

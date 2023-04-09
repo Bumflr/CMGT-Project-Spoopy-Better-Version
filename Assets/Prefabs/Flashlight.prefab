@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lighting: {fileID: 2458075781402345265}
-  maxEnergy: 10
+  maxEnergy: 30
   lightingCurve:
     serializedVersion: 2
     m_Curve:

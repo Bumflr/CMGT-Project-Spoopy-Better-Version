@@ -16,8 +16,6 @@ public class PlayerInventory
 
         itemList = new List<Item>();
 
-        AddItem(new Item { itemType = Item.ItemType.Flashlight, amount = 1 });
-
         Debug.Log(itemList.Count);
     }
 

@@ -14,6 +14,7 @@ public static class SoundManager
         DetectingGhost,
         GhostIdle,
         GhostChase,
+        TerrorRadiusSound
     }
 
 
@@ -34,7 +35,7 @@ public static class SoundManager
         soundTimerDictionary[Sound.DetectingGhost] = Time.time;
         soundTimerDictionary[Sound.GhostIdle] = Time.time;
         soundTimerDictionary[Sound.GhostChase] = Time.time;
-
+        soundTimerDictionary[Sound.TerrorRadiusSound] = Time.time;
     }
 
     // TODO adding VOLUME with the audio groups
@@ -139,7 +140,6 @@ public static class SoundManager
                 {
                     return false;
                 }
-            //return SoundEffectDelay(sound, 1f);
             case Sound.GhostIdle:
                 if (soundTimerDictionary.ContainsKey(sound))
                 {
@@ -159,12 +159,11 @@ public static class SoundManager
                 {
                     return false;
                 }
-                //return SoundEffectDelay(sound, 1f);
-            /*case Sound.GhostChase:
+            case Sound.TerrorRadiusSound:
                 if (soundTimerDictionary.ContainsKey(sound))
                 {
                     float lastTimePlayed = soundTimerDictionary[sound];
-                    float TimerMax = 11f;
+                    float TimerMax = 2f;
                     if (lastTimePlayed + TimerMax < Time.time)
                     {
                         soundTimerDictionary[sound] = Time.time;
@@ -177,8 +176,8 @@ public static class SoundManager
                 }
                 else
                 {
-                    return true;
-                }*/
+                    return false;
+                }
             default:
                 return true;
                 //return SoundEffectDelay(sound, 2f);

@@ -9,7 +9,7 @@ public class PauseManager : MonoBehaviour
 
     public GameState currentGameState;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 

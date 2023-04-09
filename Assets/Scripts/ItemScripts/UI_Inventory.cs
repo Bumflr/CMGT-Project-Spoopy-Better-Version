@@ -3,32 +3,27 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+
 
 public class UI_Inventory : MonoBehaviour
 {
     private PlayerInventory inventory;
 
-    private Transform itemSlotContainer;
-    private Transform itemSlotTemplate;
-
-    private Transform equipItemSlotContainer;
-
-    private GameObject bgObject;
+    [SerializeField] private Transform itemSlotContainer;
+    [SerializeField] private Transform itemSlotTemplate;
+    [SerializeField] private Transform equipItemSlotContainer;
+    [SerializeField] private GameObject bgObject;
     private void Awake()
     {
-        itemSlotContainer = transform.Find("itemSlotContainer");
-        itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
-
-        equipItemSlotContainer = transform.Find("equipItemSlotContainer");
-
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
 
-        bgObject = transform.Find("BG").gameObject;
+        this.gameObject.SetActive(false);
+        bgObject.SetActive(false);
     }
+
     private void OnGameStateChanged(GameState newGameState)
     {
-        if (newGameState != GameState.Gameplay)
+        if (newGameState == GameState.Paused)
         {
             this.gameObject.SetActive(true);
             bgObject.SetActive(true);
@@ -86,6 +81,8 @@ public class UI_Inventory : MonoBehaviour
                 text.SetText("");
             }
             x++;
+
+            //No support/limit for when something exceeds the inventory limit/count
         }
 
         foreach (Transform child in equipItemSlotContainer)
@@ -100,6 +97,8 @@ public class UI_Inventory : MonoBehaviour
             itemSlotRectTransform.gameObject.SetActive(true);
             itemSlotRectTransform.anchoredPosition = new Vector2(0, 0);
 
+            Destroy(itemSlotRectTransform.GetComponentInChildren<Button>().gameObject);
+          
 
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = inventory.currentlyequippedItem.GetSprite();

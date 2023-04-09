@@ -13,6 +13,11 @@ public class PlayerCharacterController : MonoBehaviour
         playerInventory = new PlayerInventory(UseItem);
         uiInventory.SetInventory(playerInventory);
 
+        Item flashlight = new Item { itemType = Item.ItemType.Flashlight, amount = 1 };
+        playerInventory.AddItem(flashlight);
+        playerInventory.EquipItem(flashlight);
+        playerWeaponScript.SwitchWeapon(flashlight);
+
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
     private void OnGameStateChanged(GameState newGameState)

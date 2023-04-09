@@ -28,6 +28,7 @@ public class PlayerWeaponScript : MonoBehaviour
 
             usableItems.Add(weapon.type, newWeapon);
         }
+
     }
 
     public void SwitchWeapon(Item item)

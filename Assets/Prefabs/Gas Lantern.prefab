@@ -43,7 +43,7 @@ Light:
   m_GameObject: {fileID: 5654375235630486903}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.6698113, g: 0.37695912, b: 0.09731218, a: 1}
   m_Intensity: 0.3
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lighting: {fileID: 5654375235630486900}
-  maxEnergy: 20
+  maxEnergy: 60
   lightingCurve:
     serializedVersion: 2
     m_Curve:
