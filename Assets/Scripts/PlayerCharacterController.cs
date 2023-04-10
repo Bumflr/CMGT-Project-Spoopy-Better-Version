@@ -36,6 +36,7 @@ public class PlayerCharacterController : MonoBehaviour
     {
         switch (item.itemType) 
         {
+            case Item.ItemType.Camera:
             case Item.ItemType.Flashlight:
             case Item.ItemType.Lantern:
                 playerWeaponScript.SwitchWeapon(item);

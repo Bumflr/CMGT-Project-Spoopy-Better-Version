@@ -10,6 +10,7 @@ public class Item
     {
         Flashlight,
         Lantern,
+        Camera,
 
         ManaPotion,
         Coin,
@@ -31,6 +32,7 @@ public class Item
             default:
             case ItemType.ManaPotion:
             case ItemType.Coin: return true;
+            case ItemType.Camera:
             case ItemType.Flashlight:
             case ItemType.Lantern:
             case ItemType.Medkit: return false;

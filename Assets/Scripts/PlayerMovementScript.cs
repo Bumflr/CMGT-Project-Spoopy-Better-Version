@@ -75,8 +75,9 @@ public class PlayerMovementScript : MonoBehaviour
         //Right now all of the player's abilities are in 1 script which might not be the most smart thing to do, but whatever it's a prototype
 
         var targetSpeed = 1f;
-        
-        if (Input.GetButtonDown("Jump") && !dodgeStart)
+
+        dodgeModifier = 1f;
+       /* if (Input.GetButtonDown("Jump") && !dodgeStart)
         {
             dodgeStart = true;
             dodgeTimer = 0;
@@ -92,7 +93,7 @@ public class PlayerMovementScript : MonoBehaviour
         {
             dodgeStart = false;
             dodgeModifier = 1f;
-        }
+        }*/
 
         playerState = PlayerStates.Walking;
 
