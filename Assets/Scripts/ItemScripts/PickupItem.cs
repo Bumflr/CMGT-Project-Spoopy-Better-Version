@@ -27,6 +27,8 @@ public class PickupItem : MonoBehaviour
         }
     }
 
+    //TODO Make sure a prompt pops up to make sure the player actuall ypicks up the stuff because they might not want to do that.
+
     private void OnTriggerExit(Collider other)
     {
         PlayerCharacterController pickingPlayer = other.GetComponent<PlayerCharacterController>();

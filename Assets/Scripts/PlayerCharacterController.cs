@@ -31,7 +31,10 @@ public class PlayerCharacterController : MonoBehaviour
             this.gameObject.SetActive(true);
         }
     }
-
+    private void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
     private void UseItem(Item item)
     {
         switch (item.itemType) 

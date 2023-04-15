@@ -21,6 +21,11 @@ public class UI_Inventory : MonoBehaviour
         bgObject.SetActive(false);
     }
 
+    private void OnDestroy()
+    {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+    }
+
     private void OnGameStateChanged(GameState newGameState)
     {
         if (newGameState == GameState.Paused)
