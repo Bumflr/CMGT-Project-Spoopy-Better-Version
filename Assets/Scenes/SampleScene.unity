@@ -13792,7 +13792,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 1}
+  m_Color: {r: 0.11320752, g: 0.112566724, b: 0.112566724, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -22778,23 +22778,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 895230487940515522, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.999997
       objectReference: {fileID: 0}
     - target: {fileID: 895230487940515522, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.002471392
       objectReference: {fileID: 0}
     - target: {fileID: 895230487940515522, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 895230487940515522, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 895230487940515522, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.283
       objectReference: {fileID: 0}
     - target: {fileID: 895230487940515522, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -22809,12 +22809,20 @@ PrefabInstance:
       value: TerrainGroup_1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 895230488813999416, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
+      propertyPath: m_DrawInstanced
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 895230488813999416, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_MaterialTemplate
       value: 
-      objectReference: {fileID: 10651, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 2100000, guid: ba4edb44d868669499675bcdf622c8ef, type: 2}
     - target: {fileID: 895230488813999416, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_ShadowCastingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 895230488813999416, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
+      propertyPath: m_DrawTreesAndFoliage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
