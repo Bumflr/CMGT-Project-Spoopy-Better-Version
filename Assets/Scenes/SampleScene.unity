@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (379)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &7750755 stripped
@@ -280,6 +284,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -479,6 +487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &37853465 stripped
@@ -610,6 +622,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -1026,6 +1042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &70009604 stripped
@@ -1091,6 +1111,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -1884,6 +1908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &124665344 stripped
@@ -1950,6 +1978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &124992476 stripped
@@ -2015,6 +2047,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (126)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -2281,6 +2317,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (127)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -2747,6 +2787,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -3540,6 +3584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (102)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &211846626 stripped
@@ -3605,6 +3653,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -4079,6 +4131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &248367535 stripped
@@ -4176,6 +4232,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -4440,6 +4500,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -4914,6 +4978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (124)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &280931110 stripped
@@ -4979,6 +5047,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -5723,6 +5795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &337691527 stripped
@@ -6191,11 +6267,7 @@ Transform:
   m_Children:
   - {fileID: 2123631170}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &362444526
-PrefabInstance:
-  m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 1511396283}
@@ -6449,6 +6521,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -6912,6 +6988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (116)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &407941517 stripped
@@ -6977,6 +7057,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -7384,6 +7468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &429075801 stripped
@@ -7780,6 +7868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &437336415 stripped
@@ -7912,6 +8004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &443221673 stripped
@@ -7977,6 +8073,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -8242,6 +8342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &455125608 stripped
@@ -8307,6 +8411,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (115)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -8439,6 +8547,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -8703,6 +8815,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -9034,6 +9150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &485480185 stripped
@@ -9312,6 +9432,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (114)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -10431,6 +10555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &527998907 stripped
@@ -11014,6 +11142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &570799057 stripped
@@ -11079,6 +11211,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -11146,6 +11282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (125)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &576144569 stripped
@@ -11211,6 +11351,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (143)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -11343,6 +11487,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -11541,6 +11689,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (122)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -12299,6 +12451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (73)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &648583977 stripped
@@ -12552,6 +12708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &652053269 stripped
@@ -12618,6 +12778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &652624438 stripped
@@ -12683,6 +12847,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -12948,6 +13116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &672891130 stripped
@@ -13110,6 +13282,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -13994,6 +14170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (103)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &716257825 stripped
@@ -14257,6 +14437,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -14793,6 +14977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (95)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &742713807 stripped
@@ -15055,6 +15243,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -15581,6 +15773,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -16706,6 +16902,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &799217824 stripped
@@ -17205,6 +17405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &844587351 stripped
@@ -17337,6 +17541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &849371771 stripped
@@ -17403,6 +17611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &850049239 stripped
@@ -17468,6 +17680,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (88)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -17600,6 +17816,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -17799,6 +18019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &883919654 stripped
@@ -17993,6 +18217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &898135977 stripped
@@ -18058,6 +18286,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -18404,6 +18636,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -19617,6 +19853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &964029957 stripped
@@ -19947,6 +20187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (99)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &978347121 stripped
@@ -20012,6 +20256,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -20144,6 +20392,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -20734,6 +20986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (117)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1011805261 stripped
@@ -20800,6 +21056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (121)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1014877057 stripped
@@ -20865,6 +21125,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -21527,6 +21791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1088241604 stripped
@@ -21729,6 +21997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1092044683 stripped
@@ -21860,6 +22132,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -22601,6 +22877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1127020667 stripped
@@ -22733,6 +23013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1145977199 stripped
@@ -22864,6 +23148,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -23327,6 +23615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (90)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1162068958 stripped
@@ -23524,6 +23816,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -24723,6 +25019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1257702167 stripped
@@ -24987,6 +25287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (112)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1274860482 stripped
@@ -25184,6 +25488,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -25383,6 +25691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1300466423 stripped
@@ -25448,6 +25760,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -26043,6 +26359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1338613564 stripped
@@ -26306,6 +26626,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (107)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -27008,6 +27332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1397538901 stripped
@@ -27479,6 +27807,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -27973,6 +28305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (128)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1444714744 stripped
@@ -28105,6 +28441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1446710888 stripped
@@ -28170,6 +28510,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -28369,6 +28713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (130)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1454032793 stripped
@@ -28500,6 +28848,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -28928,6 +29280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1501194057 stripped
@@ -29125,6 +29481,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (120)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -29746,6 +30106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (129)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1513092277 stripped
@@ -29944,6 +30308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (110)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1515091868 stripped
@@ -30010,6 +30378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1517947672 stripped
@@ -30075,6 +30447,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (97)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -30736,6 +31112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1558269074 stripped
@@ -30802,6 +31182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1561504927 stripped
@@ -30867,6 +31251,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -31184,6 +31572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1574648163 stripped
@@ -31447,6 +31839,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -32487,6 +32883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (131)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1588720204 stripped
@@ -32722,6 +33122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1604814451 stripped
@@ -32925,6 +33329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1623482220 stripped
@@ -32990,6 +33398,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -33321,6 +33733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1651107970 stripped
@@ -33524,6 +33940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (94)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1672517581 stripped
@@ -33589,6 +34009,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -34516,6 +34940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (101)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1719785394 stripped
@@ -34878,6 +35306,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (123)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -36073,6 +36505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1784436894 stripped
@@ -36270,6 +36706,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -36642,6 +37082,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -37067,6 +37511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (118)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1857887185 stripped
@@ -37198,6 +37646,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -37854,6 +38306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1888893543 stripped
@@ -38118,6 +38574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1913467625 stripped
@@ -38315,6 +38775,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -39487,6 +39951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1929543266 stripped
@@ -39618,6 +40086,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (119)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -39949,6 +40421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &1960394860 stripped
@@ -40014,6 +40490,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (494)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -40749,6 +41229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &2012956290 stripped
@@ -40814,6 +41298,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -41145,6 +41633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &2029253755 stripped
@@ -41210,6 +41702,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -41682,6 +42178,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (108)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -42343,6 +42843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &2115188935 stripped
@@ -42556,6 +43060,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
@@ -42824,6 +43332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minetrack Straight (157)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
 --- !u!4 &2136394372 stripped
@@ -43021,6 +43533,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
       propertyPath: m_Name
       value: Minetrack Straight (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10ffa45b4377e074d916c7e6c7ddea3b, type: 3}
