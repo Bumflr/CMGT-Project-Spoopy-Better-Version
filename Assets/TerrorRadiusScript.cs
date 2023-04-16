@@ -4,13 +4,29 @@ using UnityEngine;
 
 public class TerrorRadiusScript : MonoBehaviour
 {
-    //Honestly I should do this via a Physics.OVerlapSphere
-    private void OnTriggerStay(Collider other)
+    public LayerMask whatIsGhost;
+    public float radius;
+
+    private GameObject closestGhost;
+    private float closestDistance;
+        
+    private void Update()
     {
-        if (other.CompareTag("Ghost"))
+        Collider[] terrorRadiusCollider = Physics.OverlapSphere(this.transform.position, radius, whatIsGhost);
+
+        if (terrorRadiusCollider.Length > 0)
         {
             SoundManager.PlaySound(SoundManager.Sound.TerrorRadiusSound, this.transform.position);
         }
+
+        foreach (Collider ghost in terrorRadiusCollider)
+        {
+            //float distance = Vector3.Distance(transform.position, ghost.gameObject.transform.position);
+
+            Debug.DrawLine(transform.position, ghost.gameObject.transform.position, Color.yellow);
+        }
+
+        //if (Vector3.Distance)
     }
 
 }

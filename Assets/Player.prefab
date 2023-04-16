@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 980208968693173642}
-  - component: {fileID: 3173208151510675272}
   - component: {fileID: 241161100574964930}
   m_Layer: 9
   m_Name: TerrorRadius
@@ -33,19 +32,6 @@ Transform:
   m_Father: {fileID: 4515499420534818538}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3173208151510675272
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2280334828485587185}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 12
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &241161100574964930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892244b1f0bd8494ebcad1dba820f60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whatIsGhost:
+    serializedVersion: 2
+    m_Bits: 64
+  radius: 12
 --- !u!1 &4515499420534818540
 GameObject:
   m_ObjectHideFlags: 0
