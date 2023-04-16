@@ -3232,6 +3232,10 @@ PrefabInstance:
       value: TerrainGroup_1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 895230488813999416, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
+      propertyPath: m_MaterialTemplate
+      value: 
+      objectReference: {fileID: 10651, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 895230488813999416, guid: 3c04e34a7cbfe0948ba5d312a4c0760b, type: 3}
       propertyPath: m_ShadowCastingMode
       value: 0
       objectReference: {fileID: 0}
