@@ -76,6 +76,7 @@ Shader "Custom/TriPlanarShaderTest3"
             // Albedo comes from a texture tinted by color
             fixed4 c = (up_col + lo_col + abs(si_col) + abs(fr_col)) * _Color;
             o.Albedo = c.rgb;
+
             // Metallic and smoothness come from slider variables
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;

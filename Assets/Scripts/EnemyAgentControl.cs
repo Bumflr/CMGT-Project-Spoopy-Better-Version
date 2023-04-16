@@ -61,7 +61,6 @@ public class EnemyAgentControl : MonoBehaviour
  
         if (!m_IsPatrol)
         {
-
             Chasing();
         }
         else
@@ -86,8 +85,7 @@ public class EnemyAgentControl : MonoBehaviour
         {
             if (m_WaitTime <= 0 && !m_CaughtPlayer && Vector3.Distance(transform.position, m_Player.transform.position) >= 6f)
             {
-                SoundManager.PlaySound(SoundManager.Sound.GhostChase, this.transform.position);
-
+               
                 //  Check if the enemy is not near to the player, returns to patrol after the wait time delay
                 m_IsPatrol = true;
                 m_PlayerNear = false;
@@ -114,6 +112,8 @@ public class EnemyAgentControl : MonoBehaviour
             //  Check if the enemy detect near the player, so the enemy will move to that position
             if (m_TimeToRotate <= 0)
             {
+                SoundManager.PlaySound(SoundManager.Sound.GhostChase, this.transform.position);
+
                 Move(speedWalk);
                 LookingPlayer(playerLastPosition);
             }
