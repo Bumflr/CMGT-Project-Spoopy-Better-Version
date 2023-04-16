@@ -52,7 +52,7 @@ public class PlayerMovementScript : MonoBehaviour
     {
         var h = Input.GetAxis("Horizontal");
         var v = Input.GetAxis("Vertical");
-        var input = new Vector2(h, v);
+        var input = new Vector3(h, 0, v);
         var inputDir = input.normalized;
 
 
@@ -121,7 +121,8 @@ public class PlayerMovementScript : MonoBehaviour
         currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, SpeedSmoothTime);
 
         velocityY += Time.deltaTime * Gravity;
-        var velocity = new Vector3(inputDir.x, 0, inputDir.y) * currentSpeed + Vector3.up * velocityY;
+        Vector3 moveDir = _cam.transform.right * inputDir.x + _cam.transform.forward * inputDir.z;
+        var velocity = new Vector3(moveDir.x, 0, moveDir.z) * currentSpeed + Vector3.up * velocityY;
 
 
         _cController.Move(velocity * Time.deltaTime);
