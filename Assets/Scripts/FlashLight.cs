@@ -14,7 +14,6 @@ public class FlashLight : UsableItem
 
     private float energy;
 
-    private bool flashlightToggle;
 
     private void Awake()
     {

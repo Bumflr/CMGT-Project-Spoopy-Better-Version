@@ -171,6 +171,7 @@ MonoBehaviour:
   RotationSmoothTime: 0.05
   Gravity: -12
   JumpHeight: 1
+  lerpValueRotation: 0.05
   DodgeCurve:
     serializedVersion: 2
     m_Curve:

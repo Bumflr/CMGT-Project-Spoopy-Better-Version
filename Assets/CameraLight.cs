@@ -17,7 +17,6 @@ public class CameraLight : UsableItem
     public AnimationCurve lightingIntensityCurve;
 
     private float shots;
-    private bool flashlightToggle;
 
     private GameObject savedParent;
 

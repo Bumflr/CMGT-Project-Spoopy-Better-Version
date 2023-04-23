@@ -8,6 +8,8 @@ public class UsableItem : MonoBehaviour
     protected bool tapInput;
     protected bool holdInput;
 
+    public bool flashlightToggle;
+
     public virtual void LogicUpdate()
     {
         if (Input.GetMouseButtonDown(0))
