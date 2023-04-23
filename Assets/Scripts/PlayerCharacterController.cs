@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCharacterController : MonoBehaviour
 {
-    [SerializeField] private UI_Inventory uiInventory;
+    [SerializeField] public UI_Inventory uiInventory;
     [SerializeField] private PlayerWeaponScript playerWeaponScript;
 
     public PlayerInventory playerInventory;
@@ -44,6 +44,10 @@ public class PlayerCharacterController : MonoBehaviour
             case Item.ItemType.Lantern:
                 playerWeaponScript.SwitchWeapon(item);
                 playerInventory.EquipItem(item);
+                break;
+            case Item.ItemType.FlashLightBatteries:
+                playerWeaponScript.LoadAmmo(item);
+                playerInventory.RemoveItem(item);
                 break;
             default:
             case Item.ItemType.Coin:

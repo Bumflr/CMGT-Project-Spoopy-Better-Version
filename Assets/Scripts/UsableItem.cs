@@ -10,6 +10,9 @@ public class UsableItem : MonoBehaviour
 
     public bool flashlightToggle;
 
+    public float ammo;
+    public float maxAmmo = 10;
+
     public virtual void LogicUpdate()
     {
         if (Input.GetMouseButtonDown(0))

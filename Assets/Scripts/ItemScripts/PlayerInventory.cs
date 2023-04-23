@@ -21,6 +21,7 @@ public class PlayerInventory
 
     public void AddItem(Item item)
     {
+
         if (item.isStackable())
         {
             bool itemAlreadyInInventory = false;
@@ -38,6 +39,7 @@ public class PlayerInventory
         {
             itemList.Add(item);
         }
+
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
     public void RemoveItem(Item item)
