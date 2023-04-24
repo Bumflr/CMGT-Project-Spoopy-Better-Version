@@ -42842,8 +42842,6 @@ Transform:
   - {fileID: 1047271324}
   - {fileID: 1790760619}
   - {fileID: 1283710906}
-  - {fileID: 1703583649}
-  - {fileID: 2047505291}
   - {fileID: 1904042451}
   - {fileID: 942479404}
   - {fileID: 1435176701}
@@ -42852,6 +42850,7 @@ Transform:
   - {fileID: 1538707362}
   - {fileID: 95590183}
   - {fileID: 204925904}
+  - {fileID: 501521466}
   - {fileID: 101386788}
   - {fileID: 538830772}
   - {fileID: 171970300}
@@ -42866,19 +42865,19 @@ Transform:
   - {fileID: 336238391}
   - {fileID: 437199836}
   - {fileID: 727583808}
-  - {fileID: 1569475280}
+  - {fileID: 1450528049}
   - {fileID: 1399565313}
   - {fileID: 116847318}
   - {fileID: 527247657}
   - {fileID: 788807080}
   - {fileID: 372796942}
+  - {fileID: 2047505291}
   - {fileID: 491821659}
   - {fileID: 1465708712}
-  - {fileID: 501521466}
-  - {fileID: 2111038384}
-  - {fileID: 1450528049}
+  - {fileID: 1703583649}
   - {fileID: 1988832025}
   - {fileID: 1755247154}
+  - {fileID: 2111038384}
   - {fileID: 482797945}
   - {fileID: 1722343136}
   - {fileID: 489715558}
@@ -42960,6 +42959,7 @@ Transform:
   - {fileID: 1513852770}
   - {fileID: 1328525772}
   - {fileID: 259138851}
+  - {fileID: 1569475280}
   - {fileID: 120956215}
   - {fileID: 108162666}
   - {fileID: 186212512}
@@ -43185,12 +43185,13 @@ Transform:
   - {fileID: 412423750}
   - {fileID: 1098463748}
   - {fileID: 697444630}
+  - {fileID: 1006987485}
   - {fileID: 1434115730}
   - {fileID: 801034617}
   - {fileID: 946474274}
   - {fileID: 735771075}
   - {fileID: 630973611}
-  - {fileID: 1006987485}
+  - {fileID: 618038601}
   - {fileID: 523338315}
   - {fileID: 2009017886}
   - {fileID: 467684587}
@@ -43205,7 +43206,6 @@ Transform:
   - {fileID: 1636949255}
   - {fileID: 790193412}
   - {fileID: 833943611}
-  - {fileID: 618038601}
   m_Father: {fileID: 0}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63224,7 +63224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515499420534818542, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: WalkSpeed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4515499420534818543, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: flashLightPrefab

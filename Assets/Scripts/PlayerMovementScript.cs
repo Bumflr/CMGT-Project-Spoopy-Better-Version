@@ -7,7 +7,8 @@ public enum PlayerStates
 {
     Sneaking,
     Walking,
-    Running
+    Running,
+    Exhausted
 }
 
 public class PlayerMovementScript : MonoBehaviour
@@ -16,6 +17,10 @@ public class PlayerMovementScript : MonoBehaviour
     public float SneakSpeed = 0.3f;
     public float WalkSpeed = 1.0f;
     public float RunSpeed = 2.0f;
+    public bool Exhausted;
+    public float ExhaustSpeed = 0.5f;
+    public float Stamina = 5.0f;
+    public float MaxStamina = 5.0f;
     public float RotationSpeed = 5.0f;
     public float RotationSmoothTime = 0.2f;
     public float Gravity = -12f;
@@ -97,7 +102,40 @@ public class PlayerMovementScript : MonoBehaviour
 
         playerState = PlayerStates.Walking;
 
-        if (input.magnitude > 0.9f) playerState = PlayerStates.Running;
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            playerState = PlayerStates.Running;
+        }
+
+        if (playerState == PlayerStates.Running)
+        {
+            Stamina = Stamina - 1 * Time.deltaTime;
+        }
+
+        else
+        {
+            Stamina = Stamina + 1 * Time.deltaTime;
+            if (Stamina >= MaxStamina)
+            {
+                Stamina = MaxStamina;
+            }
+        }
+
+        if (Stamina <= 0)
+        {
+            Exhausted = true;
+        }
+
+        if (Stamina == MaxStamina)
+        {
+            Exhausted = false;
+        }
+
+        if (Exhausted == true)
+        {
+            playerState = PlayerStates.Exhausted;
+        }
+
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -115,6 +153,9 @@ public class PlayerMovementScript : MonoBehaviour
                 break;
             case PlayerStates.Running:
                 targetSpeed = RunSpeed  * inputDir.magnitude * dodgeModifier;
+                break;
+            case PlayerStates.Exhausted:
+                targetSpeed = ExhaustSpeed * inputDir.magnitude * dodgeModifier;
                 break;
         }
 
