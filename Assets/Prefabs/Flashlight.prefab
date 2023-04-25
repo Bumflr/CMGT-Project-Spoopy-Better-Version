@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lighting: {fileID: 2458075781402345265}
-  maxEnergy: 30
+  maxEnergy: 60
   lightingCurve:
     serializedVersion: 2
     m_Curve:
@@ -140,7 +140,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 2
+      value: 4
       inSlope: -0.0000010011113
       outSlope: -0.0000010011113
       tangentMode: 0

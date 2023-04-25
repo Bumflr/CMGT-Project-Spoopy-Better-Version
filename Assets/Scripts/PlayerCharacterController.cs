@@ -42,6 +42,7 @@ public class PlayerCharacterController : MonoBehaviour
             case Item.ItemType.Camera:
             case Item.ItemType.Flashlight:
             case Item.ItemType.Lantern:
+            case Item.ItemType.FlashGrenade:
                 playerWeaponScript.SwitchWeapon(item);
                 playerInventory.EquipItem(item);
                 break;

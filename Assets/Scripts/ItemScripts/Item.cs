@@ -11,6 +11,7 @@ public class Item
         Flashlight,
         Lantern,
         Camera,
+        FlashGrenade,
 
         ManaPotion,
         Coin,
@@ -35,6 +36,7 @@ public class Item
             case ItemType.Camera:
             case ItemType.Flashlight:
             case ItemType.Lantern:
+            case ItemType.FlashGrenade:
             case ItemType.Medkit: return false;
         }
     }
