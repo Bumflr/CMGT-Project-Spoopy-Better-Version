@@ -44,7 +44,29 @@ public static class SoundManager
 
     public static void PlaySound(Sound sound, Vector3 position)
     {
-        if (CanPlaySound(sound))
+        if (CanPlaySound(sound, 1))
+        {
+            GameObject soundGameObject = new GameObject("Sound");
+            soundGameObject.transform.position = position;
+
+            AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
+            audioSource.clip = GetAudioClip(sound);
+            audioSource.maxDistance = 25f;
+            audioSource.spatialBlend = 1f;
+            audioSource.rolloffMode = AudioRolloffMode.Linear;
+            audioSource.dopplerLevel = 0f;
+
+            audioSource.volume = GetVolume(sound);
+            audioSource.outputAudioMixerGroup = GetAudioMixerGroup(sound);
+
+            audioSource.Play();
+
+            UnityEngine.Object.Destroy(soundGameObject, audioSource.clip.length);
+        }
+    }
+    public static void PlaySound(Sound sound, Vector3 position, float rate)
+    {
+        if (CanPlaySound(sound, rate))
         {
             GameObject soundGameObject = new GameObject("Sound");
             soundGameObject.transform.position = position;
@@ -67,7 +89,7 @@ public static class SoundManager
 
     public static void PlaySound(Sound sound)
     {
-        if (CanPlaySound(sound))
+        if (CanPlaySound(sound, 1))
         {
             if (oneShotGameObject == null)
             {
@@ -82,7 +104,7 @@ public static class SoundManager
 
     public static void PlayMusic(Sound sound)
     {
-        if (CanPlaySound(sound))
+        if (CanPlaySound(sound,1))
         {
             if (bgmGameObject == null)
             {
@@ -114,8 +136,14 @@ public static class SoundManager
         }
     }
 
-    private static bool CanPlaySound(Sound sound)
+    private static bool CanPlaySound(Sound sound, float rate)
     {
+        if (rate == 0)
+        {
+            Debug.Log("Rate of animation soundbyte cannot be zero!, returning...");
+            return false;
+        }
+
         switch (sound)
         {
             //This code doesnt work that well, it doesnt start playing any sound until the TimerMax time so if there is a 
@@ -162,9 +190,8 @@ public static class SoundManager
             case Sound.TerrorRadiusSound:
                 if (soundTimerDictionary.ContainsKey(sound))
                 {
-                    float lastTimePlayed = soundTimerDictionary[sound];
-                    float TimerMax = 2f;
-                    if (lastTimePlayed + TimerMax < Time.time)
+                    float lastTimePlayed = soundTimerDictionary[sound];       
+                    if (lastTimePlayed + rate + 1f < Time.time)
                     {
                         soundTimerDictionary[sound] = Time.time;
                         return true;
@@ -180,7 +207,6 @@ public static class SoundManager
                 }
             default:
                 return true;
-                //return SoundEffectDelay(sound, 2f);
         }
     }
     //

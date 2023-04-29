@@ -13,7 +13,7 @@ public class Item
         Camera,
         FlashGrenade,
 
-        ManaPotion,
+        FlashLightBatteries,
         Coin,
         Medkit,
     }
@@ -31,12 +31,12 @@ public class Item
         switch (itemType)
         {
             default:
-            case ItemType.ManaPotion:
+            case ItemType.FlashLightBatteries:
             case ItemType.Coin: return true;
-            case ItemType.Camera:
-            case ItemType.Flashlight:
-            case ItemType.Lantern:
-            case ItemType.FlashGrenade:
+            case ItemType.Camera: return false;
+            case ItemType.Flashlight: return false;
+            case ItemType.FlashGrenade: return false;
+            case ItemType.Lantern: return false;
             case ItemType.Medkit: return false;
         }
     }

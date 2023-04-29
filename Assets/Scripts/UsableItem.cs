@@ -8,6 +8,11 @@ public class UsableItem : MonoBehaviour
     protected bool tapInput;
     protected bool holdInput;
 
+    public bool flashlightToggle;
+
+    public float ammo;
+    public float maxAmmo = 10;
+
     public virtual void LogicUpdate()
     {
         if (Input.GetMouseButtonDown(0))

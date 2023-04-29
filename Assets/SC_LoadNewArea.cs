@@ -17,7 +17,6 @@ public class SC_LoadNewArea : MonoBehaviour
         {
             scenes[i] = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
         }
-
     }
 
     private void OnTriggerEnter(Collider other)

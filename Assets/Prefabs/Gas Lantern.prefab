@@ -108,6 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a04256b414bca468c8e8b800a4797b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashlightToggle: 0
+  ammo: 0
+  maxAmmo: 10
   lighting: {fileID: 5654375235630486900}
   maxEnergy: 120
   lightingCurve:
@@ -172,10 +175,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 10
   angle: 310
-  playerRef: {fileID: 0}
   targetMask:
     serializedVersion: 2
     m_Bits: 64
   obstructionMask:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 0
+  playerRef: {fileID: 0}

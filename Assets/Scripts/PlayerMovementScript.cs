@@ -21,6 +21,10 @@ public class PlayerMovementScript : MonoBehaviour
     public float Gravity = -12f;
     public float JumpHeight = 1.0f;
 
+    public float turnSpeed;
+    [Range(0.0f, 1.0f)]
+    public float lerpValueRotation;
+
     private PlayerStates playerState;
 
     [Tooltip("Curve that handles movement speed of the dodge, [X axis = duration, Y axis = strength]")]
@@ -55,8 +59,8 @@ public class PlayerMovementScript : MonoBehaviour
         var input = new Vector3(h, 0, v);
         var inputDir = input.normalized;
 
-
-        if (!Input.GetKey(KeyCode.L))
+        //**MOUSE ROTATION**
+        /*if (!Input.GetKey(KeyCode.L))
         {
             Ray cameraRay = _cam.ScreenPointToRay(Input.mousePosition);
             Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
@@ -69,7 +73,7 @@ public class PlayerMovementScript : MonoBehaviour
 
                 transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
             }
-        }
+        }*/
 
 
         //Right now all of the player's abilities are in 1 script which might not be the most smart thing to do, but whatever it's a prototype
@@ -77,6 +81,7 @@ public class PlayerMovementScript : MonoBehaviour
         var targetSpeed = 1f;
 
         dodgeModifier = 1f;
+
        /* if (Input.GetButtonDown("Jump") && !dodgeStart)
         {
             dodgeStart = true;
@@ -134,17 +139,32 @@ public class PlayerMovementScript : MonoBehaviour
 
         }
 
+        //**Keypress Based Rotation
+        if (!Input.GetKey(KeyCode.LeftShift))
+        {
+            if (inputDir.magnitude > 0.9f)
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(velocity), lerpValueRotation);
+            }
+        }
+        else if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(Vector3.up * -turnSpeed * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
+        }
 
-       // float movementSpeed = ((running) ? 1 : 0.5f) * inputDir.magnitude;
-       // _anim.SetFloat("movementSpeed", movementSpeed, SpeedSmoothTime, Time.deltaTime);
+        // float movementSpeed = ((running) ? 1 : 0.5f) * inputDir.magnitude;
+        // _anim.SetFloat("movementSpeed", movementSpeed, SpeedSmoothTime, Time.deltaTime);
     }
 
- 
+
     void Jump()
     {
         if (_cController.isGrounded)
         {
-
             //_anim.SetBool("jumping", true);
             var jumpVelocity = Mathf.Sqrt(-2 * Gravity * JumpHeight);
             velocityY = jumpVelocity;

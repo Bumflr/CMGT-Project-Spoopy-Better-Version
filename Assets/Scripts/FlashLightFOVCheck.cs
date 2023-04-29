@@ -9,16 +9,18 @@ public class FlashLightFOVCheck : MonoBehaviour
     public float radius;
     [Range(0, 360)]
     public float angle;
-
-    public GameObject playerRef;
-    
+   
     public LayerMask targetMask;
     public LayerMask obstructionMask;
 
+    public GameObject playerRef;
     //public Toggle testToggle;
+    private UsableItem flashlight;
 
-    public bool canSeePlayer { get; private set; }
+    public Light lighting;
+    public bool canSeeEnemy { get; private set; }
 
+    private Collider[] rangeChecks;
     private void Awake()
     {
         playerRef = GameObject.FindGameObjectWithTag("Ghost");
@@ -26,6 +28,7 @@ public class FlashLightFOVCheck : MonoBehaviour
         if (TryGetComponent<Light>(out Light lighting))
         {
             Debug.Log(lighting);
+            this.lighting = lighting;
 
             if (lighting.type == LightType.Spot)
             {
@@ -42,60 +45,61 @@ public class FlashLightFOVCheck : MonoBehaviour
             Debug.Log("No Light Component found! Continuing with current settings...");
         }
 
-        //StartCoroutine(FOVRoutine());
+        flashlight = GetComponent<UsableItem>();
     }
 
-   /* private IEnumerator FOVRoutine()
-    {
-        WaitForSeconds wait = new WaitForSeconds(0.2f);
-
-        while (true)
-        {
-            yield return wait;
-        }
-    }*/
-
-    private void FixedUpdate()
+    private void Update()
     {
         FieldOfViewCheck();
+
+        if (lighting != null)
+        {
+            radius = lighting.range;
+        }
     }
 
     private void FieldOfViewCheck()
     {
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+        //Collider[] rangeChecks;
+        rangeChecks = new Collider[10];
 
-        if (rangeChecks.Length != 0)
+        int numColliders = Physics.OverlapSphereNonAlloc(transform.position, radius, rangeChecks, targetMask);
+
+        if (numColliders > 0 && flashlight.flashlightToggle)
         {
-            Transform target = rangeChecks[0].transform;
-            Vector3 directionToTarget = (target.position - transform.position).normalized;
-
-            if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
+            for (int i = 0; i < numColliders; i++)
             {
-                float distanceToTarget = Vector3.Distance(transform.position, target.position);
+                Transform target = rangeChecks[i].transform;
+                Vector3 directionToTarget = (target.position - transform.position).normalized;
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
                 {
-                    canSeePlayer = true;
+                    float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                    SoundManager.PlaySound(SoundManager.Sound.DetectingGhost, this.transform.position);
+                    if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                    {
+                        canSeeEnemy = true;
 
-                    //SoundManager.PlaySound(SoundManager.Sound.MetalPipe);
+                        SoundManager.PlaySound(SoundManager.Sound.DetectingGhost, this.transform.position);
 
+                        target.gameObject.GetComponent<SC_EnemyVisibility>().BeingLit();
+                        //SoundManager.PlaySound(SoundManager.Sound.MetalPipe);
+                    }
+                    else
+                    {
+                        //canSeeEnemy = false;
+                        //target.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                    }
                 }
                 else
-                    canSeePlayer = false;
-            }
-            else
-            {
-                canSeePlayer = false;
-            }
+                {
+                    // canSeeEnemy = false;
+                    //target.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+                }
 
+            }
         }
-        else if (canSeePlayer)
-            canSeePlayer = false;
+        else canSeeEnemy = false;
 
-
-
-        //testToggle.isOn = canSeePlayer;
     }
 }
