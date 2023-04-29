@@ -17,8 +17,10 @@ public class FlashLightFOVCheck : MonoBehaviour
     //public Toggle testToggle;
     private UsableItem flashlight;
 
+    public Light lighting;
     public bool canSeeEnemy { get; private set; }
 
+    private Collider[] rangeChecks;
     private void Awake()
     {
         playerRef = GameObject.FindGameObjectWithTag("Ghost");
@@ -26,6 +28,7 @@ public class FlashLightFOVCheck : MonoBehaviour
         if (TryGetComponent<Light>(out Light lighting))
         {
             Debug.Log(lighting);
+            this.lighting = lighting;
 
             if (lighting.type == LightType.Spot)
             {
@@ -44,18 +47,27 @@ public class FlashLightFOVCheck : MonoBehaviour
 
         flashlight = GetComponent<UsableItem>();
     }
-    private void FixedUpdate()
+
+    private void Update()
     {
         FieldOfViewCheck();
+
+        if (lighting != null)
+        {
+            radius = lighting.range;
+        }
     }
 
     private void FieldOfViewCheck()
     {
-        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+        //Collider[] rangeChecks;
+        rangeChecks = new Collider[10];
 
-        if (rangeChecks.Length != 0 && flashlight.flashlightToggle)
+        int numColliders = Physics.OverlapSphereNonAlloc(transform.position, radius, rangeChecks, targetMask);
+
+        if (numColliders > 0 && flashlight.flashlightToggle)
         {
-            for (int i = 0; i < rangeChecks.Length; i++)
+            for (int i = 0; i < numColliders; i++)
             {
                 Transform target = rangeChecks[i].transform;
                 Vector3 directionToTarget = (target.position - transform.position).normalized;
@@ -81,12 +93,13 @@ public class FlashLightFOVCheck : MonoBehaviour
                 }
                 else
                 {
-                   // canSeeEnemy = false;
+                    // canSeeEnemy = false;
                     //target.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
                 }
 
             }
         }
         else canSeeEnemy = false;
+
     }
 }

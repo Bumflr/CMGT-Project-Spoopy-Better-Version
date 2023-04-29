@@ -47,7 +47,6 @@ public class PlayerCharacterController : MonoBehaviour
                 break;
             case Item.ItemType.FlashLightBatteries:
                 playerWeaponScript.LoadAmmo(item);
-                playerInventory.RemoveItem(item);
                 break;
             default:
             case Item.ItemType.Coin:

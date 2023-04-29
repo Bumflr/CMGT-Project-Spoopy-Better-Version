@@ -36,6 +36,11 @@ public class FlashLight : UsableItem
 
     public override void PhsyicsUpdate()
     {
+        if (ammo < 0)
+        {
+            flashlightToggle = false;
+        }
+
         if (tapInput)
         {
             UsedTap();

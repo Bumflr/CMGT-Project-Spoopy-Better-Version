@@ -81,6 +81,7 @@ public class PlayerMovementScript : MonoBehaviour
         var targetSpeed = 1f;
 
         dodgeModifier = 1f;
+
        /* if (Input.GetButtonDown("Jump") && !dodgeStart)
         {
             dodgeStart = true;

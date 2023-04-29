@@ -76,8 +76,9 @@ public class PlayerWeaponScript : MonoBehaviour
             Debug.Log(sumOfRemainder);
 
             Item newItem = new Item { itemType = item.itemType, amount = sumOfRemainder };
-            characterController.playerInventory.AddItem(newItem);
 
+            characterController.playerInventory.RemoveItem(item);
+            characterController.playerInventory.AddItem(newItem);
             //iT DONT SHOW UP but hey ta least it is there in code
             //Debug.Log(characterController.playerInventory.OnItemListChanged)
         }

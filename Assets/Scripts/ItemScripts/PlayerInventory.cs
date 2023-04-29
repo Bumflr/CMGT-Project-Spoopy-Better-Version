@@ -37,7 +37,17 @@ public class PlayerInventory
         }
         else
         {
-            itemList.Add(item);
+            bool itemAlreadyInInventory = false;
+            foreach (Item inventoryItem in itemList)
+            {
+                if (item.itemType == inventoryItem.itemType)
+                {
+                    itemAlreadyInInventory = true;
+                    Debug.Log("Item already in inventory and not stackable so get out");
+                }
+            }
+            if (!itemAlreadyInInventory) { itemList.Add(item); }
+
         }
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
