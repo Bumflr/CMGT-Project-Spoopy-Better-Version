@@ -16,11 +16,6 @@ public class TerrorRadiusScript : MonoBehaviour
     {
         Collider[] terrorRadiusCollider = Physics.OverlapSphere(this.transform.position, radius, whatIsGhost);
 
-      /*  if (terrorRadiusCollider.Length > 0)
-        {
-            SoundManager.PlaySound(SoundManager.Sound.TerrorRadiusSound, this.transform.position);
-        }*/
-
         foreach (Collider ghost in terrorRadiusCollider)
         {
             float distance = Vector3.Distance(transform.position, ghost.gameObject.transform.position);
@@ -40,25 +35,24 @@ public class TerrorRadiusScript : MonoBehaviour
             }
         }
 
-
-        if (closestDistance(closestGhost) >= radius)
+        if (closestGhost != null)
         {
-            //it must have left the radius and it didnt find something new so reset it
-            closestGhost = null;
+            Debug.DrawLine(transform.position, closestGhost.gameObject.transform.position, Color.magenta);
+
+            if (closestDistance(closestGhost) >= radius)
+            {
+                //it must have left the radius and it didnt find something new so reset it
+                closestGhost = null;
+            }
+            else if (terrorRadiusCollider.Length > 0)
+            {
+                CalculateDistance();
+            }
+            else
+            {
+                vmCam.m_Lens.OrthographicSize = 6;
+            }
         }
-        else if (terrorRadiusCollider.Length > 0)
-        {
-            CalculateDistance();
-        }
-        else
-        {
-            vmCam.m_Lens.OrthographicSize = 6;
-        }
-
-
-
-
-        if (closestGhost != null) Debug.DrawLine(transform.position, closestGhost.gameObject.transform.position, Color.magenta);
 
     }
     private void CalculateDistance()
