@@ -217,6 +217,7 @@ public class EnemyAgentControl : MonoBehaviour
                     /*
                      *  If the player is behind a obstacle the player position will not be registered
                      * */
+                    m_IsPatrol = true;
                     m_playerInRange = false;
                 }
             }
