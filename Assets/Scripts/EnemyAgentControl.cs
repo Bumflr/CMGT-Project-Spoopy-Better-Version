@@ -195,6 +195,11 @@ public class EnemyAgentControl : MonoBehaviour
             }
         }
     }
+
+    void LookingAround()
+    {
+        
+    }
  
     void EnviromentView()
     {
