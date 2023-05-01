@@ -17,7 +17,8 @@ public class EnemyAgentControl : MonoBehaviour
     public float meshResolution = 1.0f;             //  How many rays will cast per degree
     public int edgeIterations = 4;                  //  Number of iterations to get a better performance of the mesh filter when the raycast hit an obstacule
     public float edgeDistance = 0.5f;               //  Max distance to calcule the a minumun and a maximum raycast when hits something
- 
+    public float range;                             //radius of sphere
+    public Transform centrePoint;                   //centre of the area the agent wants to move around in, instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
  
     public Transform[] waypoints;                   //  All the waypoints where the enemy patrols
     int m_CurrentWaypointIndex;                     //  Current waypoint where the enemy is going to
@@ -33,6 +34,7 @@ public class EnemyAgentControl : MonoBehaviour
     bool m_CaughtPlayer;                            //  if the enemy has caught the player
 
     GameObject m_Player;
+    
  
     void Start()
     {
@@ -51,14 +53,13 @@ public class EnemyAgentControl : MonoBehaviour
         navMeshAgent.speed = speedWalk;             //  Set the navemesh speed with the normal speed of the enemy
         navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
 
-
         m_Player = GameObject.FindGameObjectWithTag("Player");
     }
  
     private void Update()
     {
         EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
- 
+
         if (!m_IsPatrol)
         {
             Chasing();
@@ -68,6 +69,7 @@ public class EnemyAgentControl : MonoBehaviour
             SoundManager.PlaySound(SoundManager.Sound.GhostIdle, this.transform.position);
             Patroling();
         }
+        
     }
  
     private void Chasing()
@@ -92,6 +94,7 @@ public class EnemyAgentControl : MonoBehaviour
                 Move(speedWalk);
                 m_TimeToRotate = timeToRotate;
                 m_WaitTime = startWaitTime;
+                randomMovement();
                 navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);
             }
             else
@@ -169,6 +172,16 @@ public class EnemyAgentControl : MonoBehaviour
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speed;
     }
+
+    void randomMovement()
+    {
+        Vector3 point;
+        if (RandomPoint(centrePoint.position, range, out point))    //  pass in our centre point and radius of area
+        {
+                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);     //  so you can see with gizmos
+                navMeshAgent.SetDestination(point);
+        }
+    }
  
     void CaughtPlayer()
     {
@@ -196,9 +209,21 @@ public class EnemyAgentControl : MonoBehaviour
         }
     }
 
-    void LookingAround()
+    bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-        
+
+        Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
+        { 
+            //the 1.0f is the max distance from the random point to a point on the navmesh, might want to increase if range is big
+            //or add a for loop like in the documentation
+            result = hit.position;
+            return true;
+        }
+
+        result = Vector3.zero;
+        return false;
     }
  
     void EnviromentView()
