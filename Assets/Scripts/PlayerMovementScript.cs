@@ -116,7 +116,7 @@ public class PlayerMovementScript : MonoBehaviour
 
         this.inputs = PlayerStates.Walking;
 
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.RightShift))
         {
             this.inputs = PlayerStates.Running;
         }

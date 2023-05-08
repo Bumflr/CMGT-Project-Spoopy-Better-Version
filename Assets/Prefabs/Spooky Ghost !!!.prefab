@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5547092507928332851}
   - component: {fileID: 5547092507928332852}
   - component: {fileID: 5547092507928332877}
+  - component: {fileID: 3747859926742578546}
   m_Layer: 6
   m_Name: Spooky Ghost !!!
   m_TagString: Ghost
@@ -130,7 +131,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -154,22 +155,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5683a2cef106e51489605a1561a7c3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pms: {fileID: 0}
   navMeshAgent: {fileID: 5547092507928332851}
   startWaitTime: 4
   timeToRotate: 2
-  speedWalk: 0.81
-  speedRun: 1.37
+  speedWalk: 1.5
+  speedRun: 3.2
+  hearRadius: 45
   viewRadius: 15
   viewAngle: 90
   playerMask:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 776
   obstacleMask:
     serializedVersion: 2
     m_Bits: 192
   meshResolution: 1
   edgeIterations: 4
   edgeDistance: 0.5
+  range: 0
+  centrePoint: {fileID: 0}
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -186,6 +191,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayUntilInvisble: 0.05
+--- !u!114 &3747859926742578546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5547092507928332853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86381c84970ee141a626f31a8d891dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 0.3
+  secondsTilStriking: 0.5
+  attackingPointOffset: {fileID: 5547092507928332878}
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &5547092508809917391
 GameObject:
   m_ObjectHideFlags: 0

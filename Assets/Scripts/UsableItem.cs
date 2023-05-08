@@ -15,7 +15,7 @@ public class UsableItem : MonoBehaviour
 
     public virtual void LogicUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             tapInput = true;
 
@@ -23,7 +23,7 @@ public class UsableItem : MonoBehaviour
             Debug.Log("Input received!");
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             holdInput = false;
         }
