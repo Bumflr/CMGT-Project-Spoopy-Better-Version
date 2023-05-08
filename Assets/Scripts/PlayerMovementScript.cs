@@ -36,13 +36,14 @@ public class PlayerMovementScript : MonoBehaviour
     private float dodgeModifier;
 
     float velocityY;
-    float rotationVelocityTime;
 
     public float SpeedSmoothTime = 0.1f;
     float speedSmoothVelocity;
     float currentSpeed;
     public Camera _cam;
     private CharacterController _cController;
+
+    [HideInInspector] public bool isHiding;
     void Start()
     {
         //_cam = FindObjectOfType<Camera>();
@@ -52,6 +53,7 @@ public class PlayerMovementScript : MonoBehaviour
     }
 
 
+
     void Update()
     {
         var h = Input.GetAxis("Horizontal");
@@ -59,6 +61,8 @@ public class PlayerMovementScript : MonoBehaviour
         var input = new Vector3(h, 0, v);
         var inputDir = input.normalized;
 
+        if (isHiding)
+            return;
         //**MOUSE ROTATION**
         /*if (!Input.GetKey(KeyCode.L))
         {
@@ -121,6 +125,7 @@ public class PlayerMovementScript : MonoBehaviour
             case PlayerStates.Running:
                 targetSpeed = RunSpeed  * inputDir.magnitude * dodgeModifier;
                 break;
+  
         }
 
         currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, SpeedSmoothTime);
@@ -170,7 +175,6 @@ public class PlayerMovementScript : MonoBehaviour
             velocityY = jumpVelocity;
         }
     }
-
 
     //public void GrabLedge(Collider other)
     //{

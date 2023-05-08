@@ -7,6 +7,7 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] public UI_Inventory uiInventory;
     [SerializeField] private PlayerWeaponScript playerWeaponScript;
 
+    public PlayerMovementScript playerMovementScript;
     public PlayerInventory playerInventory;
     private void Start()
     {
