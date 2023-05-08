@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public enum Inputs
+public enum PlayerStates
 {
     Still,
     Sneaking,
@@ -32,9 +32,8 @@ public class PlayerMovementScript : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float lerpValueRotation;
 
-    private PlayerStates playerState;
-    private Inputs inputs;
-    public Inputs playerState;
+    public PlayerStates playerState;
+    private PlayerStates inputs;
 
     [Tooltip("Curve that handles movement speed of the dodge, [X axis = duration, Y axis = strength]")]
     public AnimationCurve DodgeCurve;
@@ -115,14 +114,14 @@ public class PlayerMovementScript : MonoBehaviour
             dodgeModifier = 1f;
         }*/
 
-        this.inputs = Inputs.Walking;
+        this.inputs = PlayerStates.Walking;
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            this.inputs = Inputs.Running;
+            this.inputs = PlayerStates.Running;
         }
 
-        if (this.playerState == Inputs.Running)
+        if (this.playerState == PlayerStates.Running)
         {
             Stamina = Stamina - 1 * Time.deltaTime;
             if (Stamina < 0) Stamina = 0f;
@@ -149,13 +148,13 @@ public class PlayerMovementScript : MonoBehaviour
 
         if (Exhausted == true)
         {
-            this.inputs = Inputs.Exhausted;
+            this.inputs = PlayerStates.Exhausted;
         }
 
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            this.inputs = Inputs.Sneaking;
+            this.inputs = PlayerStates.Sneaking;
         }
 
         if (inputDir != Vector3.zero) 
@@ -164,20 +163,20 @@ public class PlayerMovementScript : MonoBehaviour
         }
 
         if (Moving) playerState = inputs;
-        else playerState = Inputs.Still;
+        else playerState = PlayerStates.Still;
 
         switch (this.inputs)
         {
-            case Inputs.Sneaking:
+            case PlayerStates.Sneaking:
                 targetSpeed = SneakSpeed * inputDir.magnitude * dodgeModifier;
                 break;
-            case Inputs.Walking:
+            case PlayerStates.Walking:
                 targetSpeed = WalkSpeed * inputDir.magnitude * dodgeModifier;
                 break;
-            case Inputs.Running:
+            case PlayerStates.Running:
                 targetSpeed = RunSpeed * inputDir.magnitude * dodgeModifier;
                 break;
-            case Inputs.Exhausted:
+            case PlayerStates.Exhausted:
                 targetSpeed = ExhaustSpeed * inputDir.magnitude * dodgeModifier;
                 break;
   

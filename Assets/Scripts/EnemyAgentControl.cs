@@ -75,7 +75,7 @@ public class EnemyAgentControl : MonoBehaviour
             Patroling();
         }
 
-        if(m_Player.GetComponent<PlayerMovementScript>().playerState == Inputs.Running && Vector3.Distance(transform.position, m_Player.transform.position) < hearRadius)    //check if player is running in the vacinity
+        if(m_Player.GetComponent<PlayerMovementScript>().playerState == PlayerStates.Running && Vector3.Distance(transform.position, m_Player.transform.position) < hearRadius)    //check if player is running in the vacinity
         {
             m_PlayerHeard = true;
         }
