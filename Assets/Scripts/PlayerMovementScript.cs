@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public enum PlayerStates
+public enum Inputs
 {
+    Still,
     Sneaking,
     Walking,
-    Running
+    Running,
+    Exhausted
 }
 
 public class PlayerMovementScript : MonoBehaviour
@@ -16,6 +18,11 @@ public class PlayerMovementScript : MonoBehaviour
     public float SneakSpeed = 0.3f;
     public float WalkSpeed = 1.0f;
     public float RunSpeed = 2.0f;
+    public bool Exhausted;
+    public bool Moving;
+    public float ExhaustSpeed = 0.5f;
+    public float Stamina = 5.0f;
+    public float MaxStamina = 5.0f;
     public float RotationSpeed = 5.0f;
     public float RotationSmoothTime = 0.2f;
     public float Gravity = -12f;
@@ -26,6 +33,8 @@ public class PlayerMovementScript : MonoBehaviour
     public float lerpValueRotation;
 
     private PlayerStates playerState;
+    private Inputs inputs;
+    public Inputs playerState;
 
     [Tooltip("Curve that handles movement speed of the dodge, [X axis = duration, Y axis = strength]")]
     public AnimationCurve DodgeCurve;
@@ -79,6 +88,8 @@ public class PlayerMovementScript : MonoBehaviour
             }
         }*/
 
+        if (inputDir != Vector3.zero) Moving = true;
+
 
         //Right now all of the player's abilities are in 1 script which might not be the most smart thing to do, but whatever it's a prototype
 
@@ -104,26 +115,70 @@ public class PlayerMovementScript : MonoBehaviour
             dodgeModifier = 1f;
         }*/
 
-        playerState = PlayerStates.Walking;
+        this.inputs = Inputs.Walking;
 
-        if (input.magnitude > 0.9f) playerState = PlayerStates.Running;
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            this.inputs = Inputs.Running;
+        }
+
+        if (this.playerState == Inputs.Running)
+        {
+            Stamina = Stamina - 1 * Time.deltaTime;
+            if (Stamina < 0) Stamina = 0f;
+        }
+
+        else
+        {
+            Stamina = Stamina + 1 * Time.deltaTime;
+            if (Stamina >= MaxStamina)
+            {
+                Stamina = MaxStamina;
+            }
+        }
+
+        if (Stamina <= 0)
+        {
+            Exhausted = true;
+        }
+
+        if (Stamina == MaxStamina)
+        {
+            Exhausted = false;
+        }
+
+        if (Exhausted == true)
+        {
+            this.inputs = Inputs.Exhausted;
+        }
+
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            playerState = PlayerStates.Sneaking;
+            this.inputs = Inputs.Sneaking;
         }
-        
 
-        switch (playerState)
+        if (inputDir != Vector3.zero) 
         {
-            case PlayerStates.Sneaking:
+            
+        }
+
+        if (Moving) playerState = inputs;
+        else playerState = Inputs.Still;
+
+        switch (this.inputs)
+        {
+            case Inputs.Sneaking:
                 targetSpeed = SneakSpeed * inputDir.magnitude * dodgeModifier;
                 break;
-            case PlayerStates.Walking:
+            case Inputs.Walking:
                 targetSpeed = WalkSpeed * inputDir.magnitude * dodgeModifier;
                 break;
-            case PlayerStates.Running:
-                targetSpeed = RunSpeed  * inputDir.magnitude * dodgeModifier;
+            case Inputs.Running:
+                targetSpeed = RunSpeed * inputDir.magnitude * dodgeModifier;
+                break;
+            case Inputs.Exhausted:
+                targetSpeed = ExhaustSpeed * inputDir.magnitude * dodgeModifier;
                 break;
   
         }

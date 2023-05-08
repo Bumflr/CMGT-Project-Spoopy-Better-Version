@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyAgentControl : MonoBehaviour
 {
+    public PlayerMovementScript pms;
     public NavMeshAgent navMeshAgent;               //  Nav mesh agent component
     public float startWaitTime = 4;                 //  Wait time of every action
     public float timeToRotate = 2;                  //  Wait time when the enemy detect near the player without seeing
     public float speedWalk = 6;                     //  Walking speed, speed in the nav mesh agent
     public float speedRun = 9;                      //  Running speed
- 
+
+    public float hearRadius = 45;
     public float viewRadius = 15;                   //  Radius of the enemy view
     public float viewAngle = 90;                    //  Angle of the enemy view
     public LayerMask playerMask;                    //  To detect the player with the raycast
@@ -21,6 +23,7 @@ public class EnemyAgentControl : MonoBehaviour
     public Transform centrePoint;                   //centre of the area the agent wants to move around in, instead of centrePoint you can set it as the transform of the agent if you don't care about a specific area
  
     public Transform[] waypoints;                   //  All the waypoints where the enemy patrols
+    Transform savedPlayer;
     int m_CurrentWaypointIndex;                     //  Current waypoint where the enemy is going to
  
     Vector3 playerLastPosition = Vector3.zero;      //  Last position of the player when was near the enemy
@@ -32,6 +35,7 @@ public class EnemyAgentControl : MonoBehaviour
     bool m_PlayerNear;                              //  If the player is near, state of hearing
     bool m_IsPatrol;                                //  If the enemy is patrol, state of patroling
     bool m_CaughtPlayer;                            //  if the enemy has caught the player
+    bool m_PlayerHeard;
 
     GameObject m_Player;
     
@@ -43,6 +47,7 @@ public class EnemyAgentControl : MonoBehaviour
         m_CaughtPlayer = false;
         m_playerInRange = false;
         m_PlayerNear = false;
+        m_PlayerHeard = false;
         m_WaitTime = startWaitTime;                 //  Set the wait time variable that will change
         m_TimeToRotate = timeToRotate;
  
@@ -69,7 +74,20 @@ public class EnemyAgentControl : MonoBehaviour
             SoundManager.PlaySound(SoundManager.Sound.GhostIdle, this.transform.position);
             Patroling();
         }
-        
+
+        if(m_Player.GetComponent<PlayerMovementScript>().playerState == Inputs.Running && Vector3.Distance(transform.position, m_Player.transform.position) < hearRadius)    //check if player is running in the vacinity
+        {
+            m_PlayerHeard = true;
+        }
+        else
+        {
+            m_PlayerHeard = false;
+        }
+
+        if (m_PlayerHeard == true)
+        {
+            Chasing();
+        }
     }
  
     private void Chasing()
@@ -149,6 +167,7 @@ public class EnemyAgentControl : MonoBehaviour
             }
         }
     }
+
  
     private void OnAnimatorMove()
     {
@@ -233,6 +252,7 @@ public class EnemyAgentControl : MonoBehaviour
         for (int i = 0; i < playerInRange.Length; i++)
         {
             Transform player = playerInRange[i].transform;
+
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
             if (Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2)
             {
