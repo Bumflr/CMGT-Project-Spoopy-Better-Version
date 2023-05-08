@@ -1886,7 +1886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68463536}
   m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: 250.21002, y: 7.5810566, z: -63.830006}
+  m_LocalPosition: {x: -17.400002, y: 7.5810676, z: -42.800003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9754,11 +9754,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5683a2cef106e51489605a1561a7c3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pms: {fileID: 0}
   navMeshAgent: {fileID: 360530406}
   startWaitTime: 4
   timeToRotate: 2
   speedWalk: 0.81
   speedRun: 1.37
+  hearRadius: 30
   viewRadius: 15
   viewAngle: 90
   playerMask:
@@ -19560,7 +19562,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.14628817, g: 0.14161623, b: 0.16981131, a: 1}
+  m_Color: {r: 0.8810558, g: 0.87538266, b: 0.9150943, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -22132,11 +22134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5683a2cef106e51489605a1561a7c3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pms: {fileID: 0}
   navMeshAgent: {fileID: 770560510}
   startWaitTime: 4
   timeToRotate: 2
   speedWalk: 0.81
   speedRun: 1.37
+  hearRadius: 30
   viewRadius: 15
   viewAngle: 90
   playerMask:
@@ -27745,7 +27749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
-  m_LocalPosition: {x: 250.21002, y: 7.5810566, z: -63.830006}
+  m_LocalPosition: {x: -17.400002, y: 7.5810676, z: -42.800003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51868,11 +51872,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5683a2cef106e51489605a1561a7c3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pms: {fileID: 0}
   navMeshAgent: {fileID: 1778189479}
   startWaitTime: 4
   timeToRotate: 2
   speedWalk: 0.81
   speedRun: 1.37
+  hearRadius: 30
   viewRadius: 15
   viewAngle: 90
   playerMask:
@@ -63168,7 +63174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515499420534818538, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 255.21
+      value: -12.4
       objectReference: {fileID: 0}
     - target: {fileID: 4515499420534818538, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: m_LocalPosition.y
@@ -63176,7 +63182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515499420534818538, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -58.83
+      value: -37.8
       objectReference: {fileID: 0}
     - target: {fileID: 4515499420534818538, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: m_LocalRotation.w

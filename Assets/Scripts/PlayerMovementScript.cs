@@ -29,7 +29,7 @@ public class PlayerMovementScript : MonoBehaviour
     public float JumpHeight = 1.0f;
 
     private Inputs inputs;
-    private Inputs playerState;
+    public Inputs playerState;
 
     [Tooltip("Curve that handles movement speed of the dodge, [X axis = duration, Y axis = strength]")]
     public AnimationCurve DodgeCurve;
