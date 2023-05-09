@@ -53,7 +53,7 @@ public class PlayerWeaponScript : MonoBehaviour
 
         currentlyEquippedWeapon.gameObject.SetActive(true);
         Debug.Log($"activeControlScheme is: {currentlyEquippedWeapon}");
-
+         
         SetAmountOfAmmo(currentlyEquippedWeapon.gameObject, (int)currentlyEquippedWeapon.maxAmmo);
 
         currentlyEquippedWeapon.Enter();
