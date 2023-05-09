@@ -16,7 +16,7 @@ public class SC_EnemyAttack : MonoBehaviour
             //Caught Player
             //Now prepare an attack
             //Play like a charging sound effect here or something
-
+            Debug.Log("Grabbing!");
             StartCoroutine(AttackPlayer(other));
         }
     }
@@ -32,9 +32,8 @@ public class SC_EnemyAttack : MonoBehaviour
         {
             if (b == playerCollider)
             {
-                Debug.Log("Caught player, ending game...");
 
-                GameStateManager.Instance.SetState(GameState.GameOver);
+               // GameStateManager.Instance.SetState(GameState.GameOver);
             }
         }
     }

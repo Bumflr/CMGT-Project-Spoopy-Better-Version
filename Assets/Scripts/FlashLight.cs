@@ -13,7 +13,7 @@ public class FlashLight : UsableItem
 
     private void Awake()
     {
-        ammo = maxAmmo;
+        Ammo = maxAmmo;
     }
 
     public override void Enter()
@@ -36,7 +36,7 @@ public class FlashLight : UsableItem
 
     public override void PhsyicsUpdate()
     {
-        if (ammo < 0)
+        if (Ammo < 0)
         {
             flashlightToggle = false;
         }
@@ -48,9 +48,9 @@ public class FlashLight : UsableItem
             flashlightToggle = !flashlightToggle;
         }
 
-        if (flashlightToggle && ammo >= 0)
+        if (flashlightToggle && Ammo >= 0)
         {
-            ammo -= 0.01f;
+            Ammo -= 0.01f;
 
             //testtext.text = energy.ToString();
 
@@ -66,7 +66,7 @@ public class FlashLight : UsableItem
 
     void CurrentLightingLevel()
     {
-        float percentage = 1 - (ammo / maxAmmo);
+        float percentage = 1 - (Ammo / maxAmmo);
 
         //Goes from 1.0 to 0.0
 

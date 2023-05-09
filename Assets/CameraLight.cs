@@ -8,7 +8,6 @@ public class CameraLight : UsableItem
 {
     public Light lighting;
 
-    public float maxShots = 5;
 
     public float timeFlash = 1f;
     private float cameraTimer;
@@ -16,13 +15,11 @@ public class CameraLight : UsableItem
     public AnimationCurve lightingCurve;
     public AnimationCurve lightingIntensityCurve;
 
-    private float shots;
-
     private GameObject savedParent;
 
     private void Awake()
     {
-        shots = maxShots;
+        Ammo = maxAmmo;
 
         savedParent = this.transform.parent.gameObject;
     }
@@ -49,7 +46,7 @@ public class CameraLight : UsableItem
         {
             UsedTap();
 
-            shots -= 1f;
+            Ammo -= 1f;
 
             cameraTimer = timeFlash;
 
@@ -66,7 +63,7 @@ public class CameraLight : UsableItem
             flashlightToggle = false;
         }
 
-        if (flashlightToggle && shots >= 0)
+        if (flashlightToggle && Ammo >= 0)
         {
             cameraTimer -= 0.01f;
 

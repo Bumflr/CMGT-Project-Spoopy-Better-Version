@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyAgentControl : MonoBehaviour
 {
-    public PlayerMovementScript pms;
+    public SC_PlayerLogic pms;
     public NavMeshAgent navMeshAgent;               //  Nav mesh agent component
     public float startWaitTime = 4;                 //  Wait time of every action
     public float timeToRotate = 2;                  //  Wait time when the enemy detect near the player without seeing
@@ -75,7 +75,7 @@ public class EnemyAgentControl : MonoBehaviour
             Patroling();
         }
 
-        if(m_Player.GetComponent<PlayerMovementScript>().playerState == PlayerStates.Running && Vector3.Distance(transform.position, m_Player.transform.position) < hearRadius)    //check if player is running in the vacinity
+        if(m_Player.GetComponent<SC_PlayerLogic>().playerState == PlayerStates.Running && Vector3.Distance(transform.position, m_Player.transform.position) < hearRadius)    //check if player is running in the vacinity
         {
             m_PlayerHeard = true;
         }
@@ -168,12 +168,6 @@ public class EnemyAgentControl : MonoBehaviour
         }
     }
 
- 
-    private void OnAnimatorMove()
-    {
- 
-    }
- 
     public void NextPoint()
     {
         m_CurrentWaypointIndex = (m_CurrentWaypointIndex + 1) % waypoints.Length;

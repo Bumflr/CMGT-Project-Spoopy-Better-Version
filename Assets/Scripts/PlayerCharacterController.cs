@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerCharacterController : MonoBehaviour
 {
     [SerializeField] public UI_Inventory uiInventory;
-    [SerializeField] private PlayerWeaponScript playerWeaponScript;
+    [SerializeField] public PlayerWeaponScript playerWeaponScript;
 
-    public PlayerMovementScript playerMovementScript;
+    public SC_PlayerLogic playerMovementScript;
     public PlayerInventory playerInventory;
     private void Start()
     {

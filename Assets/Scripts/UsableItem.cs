@@ -4,14 +4,29 @@ using UnityEngine;
 
 public class UsableItem : MonoBehaviour
 {
+    public PlayerWeaponScript weaponsManager;
 
     protected bool tapInput;
     protected bool holdInput;
 
     public bool flashlightToggle;
 
-    public float ammo;
-    public float maxAmmo = 10;
+    private float ammo;
+    public float Ammo { get {  return ammo; } 
+        set
+        {
+            //When the value of ammo changes, notify weaponsmanager so It can set the value of the ammo properly
+            //I do not want to do a for loop to check every time I look for this value, so I only do this when it SETS it
+            if (ammo != value)
+            {
+                ammo = value;
+                if (weaponsManager != null)
+                    weaponsManager.SetAmountOfAmmo(this.gameObject, (int)ammo);
+            }
+        }
+    }
+
+    public float maxAmmo = 3;
 
     public virtual void LogicUpdate()
     {

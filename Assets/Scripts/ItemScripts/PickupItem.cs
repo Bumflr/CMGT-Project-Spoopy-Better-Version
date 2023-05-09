@@ -40,8 +40,18 @@ public class PickupItem : MonoBehaviour
 
     //Do the standard pickup song and dance but depending on what the player picked up
     //You can do other fun wacky shit
-    protected virtual void OnPicked(PlayerCharacterController playerController)
+    private void OnPicked(PlayerCharacterController playerController)
     {
+        for (int i = 0; i < playerController.playerWeaponScript.weaponPrefabs.Length; i++)
+        {
+            if (itemType == playerController.playerWeaponScript.weaponPrefabs[i].type)
+            {
+                //It found a type match, this item is a weapon, thus equip it.
+                playerController.playerInventory.EquipItem(item);
+                playerController.playerWeaponScript.SwitchWeapon(item);
+            }
+        }
+
         //PlayPickupFeedback();
     }
 

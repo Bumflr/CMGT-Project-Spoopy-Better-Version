@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using static Item;
+using static UnityEditor.Progress;
 
 public class PlayerWeaponScript : MonoBehaviour
 {
     private PlayerCharacterController characterController;
     public Dictionary<Item.ItemType, GameObject> usableItems = new Dictionary<Item.ItemType, GameObject>();
+    public Dictionary<GameObject, Item.ItemType> invertedUsableItems = new Dictionary<GameObject, Item.ItemType>();
+
     public int NUM_UsableItems => usableItems.Count;
+
 
     private UsableItem currentlyEquippedWeapon;
 
@@ -29,11 +33,12 @@ public class PlayerWeaponScript : MonoBehaviour
         {
             var newWeapon = Instantiate(weapon.weapon, this.transform);
 
+            newWeapon.GetComponent<UsableItem>().weaponsManager = this;
             newWeapon.SetActive(false);
 
             usableItems.Add(weapon.type, newWeapon);
+            invertedUsableItems.Add(newWeapon, weapon.type);
         }
-
     }
 
     public void SwitchWeapon(Item item)
@@ -49,6 +54,8 @@ public class PlayerWeaponScript : MonoBehaviour
         currentlyEquippedWeapon.gameObject.SetActive(true);
         Debug.Log($"activeControlScheme is: {currentlyEquippedWeapon}");
 
+        SetAmountOfAmmo(currentlyEquippedWeapon.gameObject, (int)currentlyEquippedWeapon.maxAmmo);
+
         currentlyEquippedWeapon.Enter();
     }
     public void LoadAmmo(Item item)
@@ -59,25 +66,26 @@ public class PlayerWeaponScript : MonoBehaviour
         {
             case Item.ItemType.FlashLightBatteries:
                 thisItem = usableItems[Item.ItemType.Flashlight].GetComponent<UsableItem>();
-                thisItem.ammo += item.amount;
+                thisItem.Ammo += item.amount;
                 break;
             default:
                 Debug.Log("This item cannot be used as ammo!");
                 return;
         }
 
-        if (thisItem.ammo > thisItem.maxAmmo)
-        {
-            int sumOfRemainder = (int)thisItem.ammo - (int)thisItem.maxAmmo;
+        characterController.playerInventory.RemoveItem(item);
 
-            thisItem.ammo = thisItem.maxAmmo;
+        if (thisItem.Ammo > thisItem.maxAmmo)
+        {
+            int sumOfRemainder = (int)thisItem.Ammo - (int)thisItem.maxAmmo;
+
+            thisItem.Ammo = thisItem.maxAmmo;
 
 
             Debug.Log(sumOfRemainder);
 
             Item newItem = new Item { itemType = item.itemType, amount = sumOfRemainder };
 
-            characterController.playerInventory.RemoveItem(item);
             characterController.playerInventory.AddItem(newItem);
             //iT DONT SHOW UP but hey ta least it is there in code
             //Debug.Log(characterController.playerInventory.OnItemListChanged)
@@ -85,6 +93,15 @@ public class PlayerWeaponScript : MonoBehaviour
 
         //IF SOME ammo remains, add a new item with the remaining amount. 
         //
+    }
+
+    public void SetAmountOfAmmo(GameObject usableItem, int ammo)
+    {
+        ItemType itemtype = invertedUsableItems[usableItem];
+
+        Item newItem = new Item { itemType = itemtype, amount = ammo };
+
+        characterController.playerInventory.SetItem(newItem);
     }
 
     void Update()

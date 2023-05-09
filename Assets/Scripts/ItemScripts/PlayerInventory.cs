@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class PlayerInventory 
 {
@@ -16,12 +17,10 @@ public class PlayerInventory
 
         itemList = new List<Item>();
 
-        Debug.Log(itemList.Count);
     }
 
     public void AddItem(Item item)
     {
-
         if (item.isStackable())
         {
             bool itemAlreadyInInventory = false;
@@ -80,6 +79,30 @@ public class PlayerInventory
     }
     public void UseItem(Item item) {  useItemAction(item); }
     public void EquipItem(Item item)  { currentlyequippedItem = item; OnItemListChanged?.Invoke(this, EventArgs.Empty); }
+
+    public void SetItem(Item item)
+    {
+        Item itemInInventory = null;
+
+        foreach (Item inventoryItem in itemList)
+        {
+            if (inventoryItem.itemType == item.itemType)
+            {
+                //This is the item
+                itemInInventory = inventoryItem;
+            }
+        }
+        if (itemInInventory != null)
+        {
+            itemInInventory.amount = item.amount;
+
+            OnItemListChanged?.Invoke(this, EventArgs.Empty);
+        }
+        else
+        {
+            Debug.LogWarning($"Item: {item} could not be found! ");
+        }
+    }
 
     public List<Item> GetItemList()
     {
