@@ -20,15 +20,13 @@ public class SC_PlayerLogic : MonoBehaviour
     private SC_PlayerMovement playerMovement;
     private SC_PlayerHealth playerHealth;
 
-    public bool Exhausted;
-    public bool Moving;
-    public float Stamina;
-    public float MaxStamina = 5.0f;
+    public bool exhausted;
+    public bool moving;
+    public float stamina;
+    public float maxStamina = 5.0f;
 
     public PlayerStates playerState;
-
-    public float SpeedSmoothTime = 0.1f;
-
+    
     public float maxDurationHold;
     private bool mashButtonTracker; //The bool which alternates between true and false when mashing buttons/flicking the stick when In a grab
     private float heldTimer;
@@ -36,7 +34,7 @@ public class SC_PlayerLogic : MonoBehaviour
     [HideInInspector] public bool isHiding;
     void Start()
     {
-        Stamina = MaxStamina;
+        stamina = maxStamina;
         playerMovement = GetComponent<SC_PlayerMovement>();
         playerHealth = GetComponent<SC_PlayerHealth>();
     }
@@ -58,7 +56,7 @@ public class SC_PlayerLogic : MonoBehaviour
             return;
         }
 
-        if (inputDir != Vector3.zero) Moving = true;
+        if (inputDir != Vector3.zero) moving = true;
 
         playerState = PlayerStates.Walking;
 
@@ -70,28 +68,28 @@ public class SC_PlayerLogic : MonoBehaviour
         /* Running Code */
         if (playerState == PlayerStates.Running)
         {
-            Stamina -= 1 * Time.deltaTime;
-            if (Stamina < 0) Stamina = 0f;
+            stamina -= Time.deltaTime;
+            if (stamina < 0) stamina = 0f;
         }
         else
         {
-            Stamina += 1 * Time.deltaTime;
-            if (Stamina >= MaxStamina)
+            stamina += Time.deltaTime;
+            if (stamina >= maxStamina)
             {
-                Stamina = MaxStamina;
+                stamina = maxStamina;
             }
         }
 
-        if (Stamina <= 0)
+        if (stamina <= 0)
         {
-            Exhausted = true;
+            exhausted = true;
         }
-        if (Stamina >= MaxStamina)
+        if (stamina >= maxStamina)
         {
-            Exhausted = false;
+            exhausted = false;
         }
 
-        if (Exhausted == true)
+        if (exhausted == true)
         {
             playerState = PlayerStates.Exhausted;
         }
@@ -103,7 +101,7 @@ public class SC_PlayerLogic : MonoBehaviour
         }
 
 
-        if (!Moving) playerState = PlayerStates.Still;
+        if (!moving) playerState = PlayerStates.Still;
 
 
         playerMovement.Move(input, inputDir, playerState);
