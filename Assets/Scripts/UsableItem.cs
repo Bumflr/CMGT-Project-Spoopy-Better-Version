@@ -9,7 +9,7 @@ public class UsableItem : MonoBehaviour
     protected bool tapInput;
     protected bool holdInput;
 
-    public bool flashlightToggle;
+    public bool flashlightToggle = false;
 
     private float ammo;
     public float Ammo { get {  return ammo; } 

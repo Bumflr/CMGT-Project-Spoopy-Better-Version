@@ -9,12 +9,16 @@ public enum PlayerStates
     Sneaking,
     Walking,
     Running,
-    Exhausted
+    Exhausted,
+    BeingHeld,
 }
 
 public class SC_PlayerLogic : MonoBehaviour
 {
+    //Playerlogic script that decides what state the player is in 
+    //As well as the inputs (for now)
     private SC_PlayerMovement playerMovement;
+    private SC_PlayerHealth playerHealth;
 
     public bool Exhausted;
     public bool Moving;
@@ -25,11 +29,16 @@ public class SC_PlayerLogic : MonoBehaviour
 
     public float SpeedSmoothTime = 0.1f;
 
+    public float maxDurationHold;
+    private bool mashButtonTracker; //The bool which alternates between true and false when mashing buttons/flicking the stick when In a grab
+    private float heldTimer;
+
     [HideInInspector] public bool isHiding;
     void Start()
     {
         Stamina = MaxStamina;
         playerMovement = GetComponent<SC_PlayerMovement>();
+        playerHealth = GetComponent<SC_PlayerHealth>();
     }
 
     void Update()
@@ -42,9 +51,14 @@ public class SC_PlayerLogic : MonoBehaviour
         if (isHiding)
             return;
 
-        if (inputDir != Vector3.zero) Moving = true;
+        if (playerState == PlayerStates.BeingHeld)
+        {
+            //If using keyboard and if using mouse change it from input to inputdir
+            EscapingGrab(inputDir);
+            return;
+        }
 
-        //Right now all of the player's abilities are in 1 script which might not be the most smart thing to do, but whatever it's a prototype
+        if (inputDir != Vector3.zero) Moving = true;
 
         playerState = PlayerStates.Walking;
 
@@ -53,6 +67,7 @@ public class SC_PlayerLogic : MonoBehaviour
             playerState = PlayerStates.Running;
         }
 
+        /* Running Code */
         if (playerState == PlayerStates.Running)
         {
             Stamina -= 1 * Time.deltaTime;
@@ -97,7 +112,30 @@ public class SC_PlayerLogic : MonoBehaviour
         // float movementSpeed = ((running) ? 1 : 0.5f) * inputDir.magnitude;
         // _anim.SetFloat("movementSpeed", movementSpeed, SpeedSmoothTime, Time.deltaTime);
     }
-  
+
+    private void EscapingGrab(Vector3 inputDir)
+    {
+        playerHealth.BeingHeld();
+        heldTimer += Time.deltaTime;
+
+        if (mashButtonTracker ? inputDir.magnitude < .9f : inputDir.magnitude > .9f)
+        {
+            mashButtonTracker = !mashButtonTracker;
+
+            heldTimer += .25f;
+        }
+
+        if (heldTimer >= maxDurationHold)
+        {
+            playerState = PlayerStates.Walking;
+        }
+    }
+
+    public void Grabbed()
+    {
+        playerState = PlayerStates.BeingHeld;
+        heldTimer = 0;
+    }
   
 }
 

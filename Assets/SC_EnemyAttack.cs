@@ -9,9 +9,11 @@ public class SC_EnemyAttack : MonoBehaviour
     public Transform attackingPointOffset;
     public LayerMask whatIsPlayer;
 
+    public bool holdingPlayer;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !holdingPlayer)
         {
             //Caught Player
             //Now prepare an attack
@@ -32,8 +34,11 @@ public class SC_EnemyAttack : MonoBehaviour
         {
             if (b == playerCollider)
             {
+                b.GetComponent<SC_PlayerLogic>().Grabbed();
 
-               // GameStateManager.Instance.SetState(GameState.GameOver);
+
+
+                //After grabbing the player, set the enemy state to something like grabbing , and stop the enemy of doing anything else  
             }
         }
     }

@@ -41,7 +41,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2458075781402345264}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -108,8 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 019d125b33b90b649bcfc0b8058c179d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponsManager: {fileID: 0}
+  flashlightToggle: 0
+  maxAmmo: 3
   lighting: {fileID: 2458075781402345265}
-  maxShots: 12
   timeFlash: 1
   lightingCurve:
     serializedVersion: 2
@@ -173,10 +175,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 10
   angle: 360
-  playerRef: {fileID: 0}
   targetMask:
     serializedVersion: 2
     m_Bits: 64
   obstructionMask:
     serializedVersion: 2
     m_Bits: 257
+  playerRef: {fileID: 0}
+  lighting: {fileID: 0}

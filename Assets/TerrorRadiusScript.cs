@@ -10,8 +10,14 @@ public class TerrorRadiusScript : MonoBehaviour
     public CinemachineVirtualCamera vmCam;
 
     private GameObject closestGhost;
+    private CinemachineImpulseSource impulseSource;
 
-        
+
+    private void Awake()
+    {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+    }
+
     private void Update()
     {
         Collider[] terrorRadiusCollider = Physics.OverlapSphere(this.transform.position, radius, whatIsGhost);
@@ -64,6 +70,7 @@ public class TerrorRadiusScript : MonoBehaviour
         var value = Mathf.Lerp(4.2f, 6.0f, percentage);
 
         vmCam.m_Lens.OrthographicSize = value;
+
 
         SoundManager.PlaySound(SoundManager.Sound.TerrorRadiusSound, this.transform.position, percentage * 2 );
     }

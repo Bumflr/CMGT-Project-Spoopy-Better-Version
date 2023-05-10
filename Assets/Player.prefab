@@ -48,6 +48,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   radius: 12
+  vmCam: {fileID: 0}
 --- !u!1 &4515499420534818540
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,6 +64,9 @@ GameObject:
   - component: {fileID: 4515499420534818542}
   - component: {fileID: 4515499420534818543}
   - component: {fileID: 4515499420534818533}
+  - component: {fileID: 8666586690454081978}
+  - component: {fileID: 6537689745666629953}
+  - component: {fileID: 1141017363733484101}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -151,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiInventory: {fileID: 0}
   playerWeaponScript: {fileID: 4515499420534818543}
+  playerMovementScript: {fileID: 0}
 --- !u!114 &4515499420534818542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,68 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0876d48fd3966e5479bfc2f45585753b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SneakSpeed: 1
-  WalkSpeed: 2
-  RunSpeed: 3
-  RotationSpeed: 20
-  RotationSmoothTime: 0.05
-  Gravity: -12
-  JumpHeight: 1
-  turnSpeed: 0
-  lerpValueRotation: 0.05
-  DodgeCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 3
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.11882549
-      value: 3
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.19673255
-      value: 1.1463424
-      inSlope: -32.41094
-      outSlope: -32.41094
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.20961685
-      outWeight: 0.11498447
-    - serializedVersion: 3
-      time: 0.2847235
-      value: 0.008544922
-      inSlope: 0.09770468
-      outSlope: 0.09770468
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.19784378
-    - serializedVersion: 3
-      time: 0.9977417
-      value: 1.0095215
-      inSlope: 3.2763743
-      outSlope: 3.2763743
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.05764163
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  Exhausted: 0
+  Moving: 0
+  Stamina: 0
+  MaxStamina: 5
+  playerState: 0
   SpeedSmoothTime: 0.2
-  _cam: {fileID: 0}
+  maxDurationHold: 9
+  isHiding: 0
 --- !u!114 &4515499420534818543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +213,49 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8666586690454081978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515499420534818540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c16062538560547a8a9cc45ba86dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SneakSpeed: 1.25
+  WalkSpeed: 3
+  RunSpeed: 4
+  ExhaustSpeed: 1
+  Gravity: -12
+  turnSpeed: 250
+  SpeedSmoothTime: 0.2
+  lerpValueRotation: 40
+  _cam: {fileID: 0}
+--- !u!114 &6537689745666629953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515499420534818540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1df6560a439c146afa66e27c0733fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  offset: 2
+--- !u!81 &1141017363733484101
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515499420534818540}
+  m_Enabled: 1
 --- !u!1 &4515499421523219163
 GameObject:
   m_ObjectHideFlags: 0

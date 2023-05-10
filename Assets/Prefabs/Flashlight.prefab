@@ -42,7 +42,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2458075781402345264}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
@@ -109,11 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a04256b414bca468c8e8b800a4797b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponsManager: {fileID: 0}
   flashlightToggle: 0
-  ammo: 0
   maxAmmo: 60
   lighting: {fileID: 2458075781402345265}
-  maxEnergy: 60
   lightingCurve:
     serializedVersion: 2
     m_Curve:
