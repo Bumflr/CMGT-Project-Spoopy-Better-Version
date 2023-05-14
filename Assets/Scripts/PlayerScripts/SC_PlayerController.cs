@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharacterController : MonoBehaviour
+public class SC_PlayerController : MonoBehaviour
 {
-    [SerializeField] public UI_Inventory uiInventory;
-    [SerializeField] public PlayerWeaponScript playerWeaponScript;
+    [Header("Dependencies")]
+    public UI_Inventory uiInventory;
+    public SC_PlayerWeaponManager playerWeaponScript;
+    public SC_PlayerStateLogic playerMovementScript;
 
-    public SC_PlayerLogic playerMovementScript;
     public PlayerInventory playerInventory;
+
     private void Start()
     {
         playerInventory = new PlayerInventory(UseItem);
@@ -36,6 +38,7 @@ public class PlayerCharacterController : MonoBehaviour
     {
         GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
     }
+
     private void UseItem(Item item)
     {
         switch (item.itemType) 
@@ -50,10 +53,10 @@ public class PlayerCharacterController : MonoBehaviour
             case Item.ItemType.FlashLightBatteries:
                 playerWeaponScript.LoadAmmo(item);
                 break;
-            default:
             case Item.ItemType.Coin:
-                break; 
-
+                break;
+            default:
+                break;
         }
     }
 

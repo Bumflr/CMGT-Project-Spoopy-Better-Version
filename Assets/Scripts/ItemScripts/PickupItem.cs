@@ -17,7 +17,7 @@ public class PickupItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerCharacterController pickingPlayer = other.GetComponent<PlayerCharacterController>();
+        SC_PlayerController pickingPlayer = other.GetComponent<SC_PlayerController>();
 
         if(pickingPlayer != null)
         {
@@ -31,7 +31,7 @@ public class PickupItem : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        PlayerCharacterController pickingPlayer = other.GetComponent<PlayerCharacterController>();
+        SC_PlayerController pickingPlayer = other.GetComponent<SC_PlayerController>();
 
         if (pickingPlayer != null)
         {
@@ -40,7 +40,7 @@ public class PickupItem : MonoBehaviour
 
     //Do the standard pickup song and dance but depending on what the player picked up
     //You can do other fun wacky shit
-    private void OnPicked(PlayerCharacterController playerController)
+    private void OnPicked(SC_PlayerController playerController)
     {
         for (int i = 0; i < playerController.playerWeaponScript.weaponPrefabs.Length; i++)
         {

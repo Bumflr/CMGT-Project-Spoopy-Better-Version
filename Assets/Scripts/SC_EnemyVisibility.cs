@@ -20,6 +20,7 @@ public class SC_EnemyVisibility : MonoBehaviour
     {
         if (!beingLit)
         {
+            //Not being lit anymore
             meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
         }
 
@@ -31,6 +32,8 @@ public class SC_EnemyVisibility : MonoBehaviour
 
     public void BeingLit()
     {
+        //NBeinf lit af fam
+
         beingLit = true;
         timeStamp = Time.time + delayUntilInvisble;
 

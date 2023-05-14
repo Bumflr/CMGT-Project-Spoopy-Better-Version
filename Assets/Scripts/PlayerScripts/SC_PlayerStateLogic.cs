@@ -13,21 +13,21 @@ public enum PlayerStates
     BeingHeld,
 }
 
-public class SC_PlayerLogic : MonoBehaviour
+
+public class SC_PlayerStateLogic : MonoBehaviour
 {
-    //Playerlogic script that decides what state the player is in 
-    //As well as the inputs (for now)
     private SC_PlayerMovement playerMovement;
     private SC_PlayerHealth playerHealth;
 
-    public bool exhausted;
-    public bool moving;
-    public float stamina;
+    [Header("Settings")]
     public float maxStamina = 5.0f;
-
-    public PlayerStates playerState;
-    
     public float maxDurationHold;
+
+    [ReadOnly]
+    public PlayerStates playerState;
+
+    private float stamina;
+    private bool exhausted;
     private bool mashButtonTracker; //The bool which alternates between true and false when mashing buttons/flicking the stick when In a grab
     private float heldTimer;
 
@@ -45,6 +45,7 @@ public class SC_PlayerLogic : MonoBehaviour
         var v = Input.GetAxis("Vertical");
         var input = new Vector3(h, 0, v);
         var inputDir = input.normalized;
+        bool moving = false;
 
         if (isHiding)
             return;
@@ -68,12 +69,12 @@ public class SC_PlayerLogic : MonoBehaviour
         /* Running Code */
         if (playerState == PlayerStates.Running)
         {
-            stamina -= Time.deltaTime;
+            stamina -= 1 * Time.deltaTime;
             if (stamina < 0) stamina = 0f;
         }
         else
         {
-            stamina += Time.deltaTime;
+            stamina += 1 * Time.deltaTime;
             if (stamina >= maxStamina)
             {
                 stamina = maxStamina;
@@ -106,7 +107,6 @@ public class SC_PlayerLogic : MonoBehaviour
 
         playerMovement.Move(input, inputDir, playerState);
    
-
         // float movementSpeed = ((running) ? 1 : 0.5f) * inputDir.magnitude;
         // _anim.SetFloat("movementSpeed", movementSpeed, SpeedSmoothTime, Time.deltaTime);
     }

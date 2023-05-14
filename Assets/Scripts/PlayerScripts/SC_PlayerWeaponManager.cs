@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using static Item;
-using static UnityEditor.Progress;
 
-public class PlayerWeaponScript : MonoBehaviour
+public class SC_PlayerWeaponManager : MonoBehaviour
 {
-    private PlayerCharacterController characterController;
+    private SC_PlayerController characterController;
     public Dictionary<Item.ItemType, GameObject> usableItems = new Dictionary<Item.ItemType, GameObject>();
     public Dictionary<GameObject, Item.ItemType> invertedUsableItems = new Dictionary<GameObject, Item.ItemType>();
 
@@ -27,7 +26,7 @@ public class PlayerWeaponScript : MonoBehaviour
 
     void Awake()
     {
-        characterController = GetComponent<PlayerCharacterController>();
+        characterController = GetComponent<SC_PlayerController>();
 
         foreach (var weapon in weaponPrefabs)
         {
@@ -51,7 +50,7 @@ public class PlayerWeaponScript : MonoBehaviour
 
         currentlyEquippedWeapon = usableItems[item.itemType].GetComponent<UsableItem>();
 
-        Debug.Log($"activeControlScheme is: {currentlyEquippedWeapon}");
+        Debug.Log($"currentlyEquippedWeapon is: {currentlyEquippedWeapon}");
          
        // SetAmountOfAmmo(currentlyEquippedWeapon.gameObject, (int)currentlyEquippedWeapon.maxAmmo);
 

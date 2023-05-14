@@ -34,7 +34,7 @@ public class SC_EnemyAttack : MonoBehaviour
         {
             if (b == playerCollider)
             {
-                b.GetComponent<SC_PlayerLogic>().Grabbed();
+                b.GetComponent<SC_PlayerStateLogic>().Grabbed();
 
 
 

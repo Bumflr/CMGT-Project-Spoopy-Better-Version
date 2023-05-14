@@ -1514,11 +1514,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2079266ea6d19bf40a3130e62755fd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthManagerScriptableObject: {fileID: 11400000, guid: e746ea9fae303a348acebc23b56c6607, type: 2}
+  healthIcon: {fileID: 4767933409741914283}
   fineSprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
   hurtSprite: {fileID: 21300000, guid: 626b9cddb29049e4cac50cd87b419945, type: 3}
   woundedSprite: {fileID: 21300000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
   deadSprite: {fileID: 0}
-  healthIcon: {fileID: 4767933409741914283}
 --- !u!1 &4767933409886468290
 GameObject:
   m_ObjectHideFlags: 0

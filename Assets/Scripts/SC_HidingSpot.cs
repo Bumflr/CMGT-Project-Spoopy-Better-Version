@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SC_HidingSpot : MonoBehaviour
 {
-    public PlayerCharacterController currentHidingObject;
+    public SC_PlayerController currentHidingObject;
 
     public GameObject obstacleCube;
     private bool amHoveringOverHideyHole;
@@ -34,7 +34,7 @@ public class SC_HidingSpot : MonoBehaviour
         {
             amHoveringOverHideyHole = true;
 
-            currentHidingObject = other.GetComponent<PlayerCharacterController>();
+            currentHidingObject = other.GetComponent<SC_PlayerController>();
         }
     }
 

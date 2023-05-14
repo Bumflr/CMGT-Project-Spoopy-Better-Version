@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UsableItem : MonoBehaviour
 {
-    public PlayerWeaponScript weaponsManager;
+    public SC_PlayerWeaponManager weaponsManager;
 
     protected bool tapInput;
     protected bool holdInput;
@@ -35,7 +35,6 @@ public class UsableItem : MonoBehaviour
             tapInput = true;
 
             holdInput = true;
-            Debug.Log("Input received!");
         }
 
         if (Input.GetKeyUp(KeyCode.Space))

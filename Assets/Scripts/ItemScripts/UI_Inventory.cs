@@ -13,12 +13,19 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] private Transform itemSlotTemplate;
     [SerializeField] private Transform equipItemSlotContainer;
     [SerializeField] private GameObject bgObject;
-    private void Awake()
+    private void Start()
     {
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
 
         this.gameObject.SetActive(false);
         bgObject.SetActive(false);
+    }
+    public void SetInventory(PlayerInventory inventory)
+    {
+        this.inventory = inventory;
+
+        inventory.OnItemListChanged += Inventory_OnItemListChanged;
+        RefreshInventoryItems();
     }
 
     private void OnDestroy()
@@ -39,13 +46,7 @@ public class UI_Inventory : MonoBehaviour
             bgObject.SetActive(false);
         }
     }
-    public void SetInventory(PlayerInventory inventory)
-    {
-        this.inventory = inventory;
 
-        inventory.OnItemListChanged += Inventory_OnItemListChanged;
-        RefreshInventoryItems();
-    }
 
     private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {

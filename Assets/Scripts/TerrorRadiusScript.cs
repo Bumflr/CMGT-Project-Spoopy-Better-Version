@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class TerrorRadiusScript : MonoBehaviour
 {
+    [Header("Dependencies")]
+    public CinemachineVirtualCamera vmCam;
+
+    [Header("Settings")]
     public LayerMask whatIsGhost;
     public float radius;
-    public CinemachineVirtualCamera vmCam;
 
     private GameObject closestGhost;
     private CinemachineImpulseSource impulseSource;
-
 
     private void Awake()
     {

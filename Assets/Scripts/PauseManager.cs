@@ -7,13 +7,11 @@ public class PauseManager : MonoBehaviour
 {
     private GameObject player;
 
-    public GameState currentGameState;
+    [ReadOnly] public GameState currentGameState;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
-        GameState currentGameState = GameStateManager.Instance.CurrentGameState;
 
         GameState newGameState = GameState.Gameplay;
 

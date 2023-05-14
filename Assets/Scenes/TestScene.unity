@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Follow: {fileID: 87412055}
   m_Lens:
     FieldOfView: 82.43
-    OrthographicSize: 4.780207
+    OrthographicSize: 5.998841
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -1382,7 +1382,7 @@ Camera:
   far clip plane: 5000
   field of view: 82.43
   orthographic: 1
-  orthographic size: 4.780207
+  orthographic size: 5.998841
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2899,6 +2899,10 @@ PrefabInstance:
       value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 5547092507928332852, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
+      propertyPath: playerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547092507928332852, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 1496346186}
@@ -2954,9 +2958,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5547092508809917387, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 5547092508809917388, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547092508809917389, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5547092508809917391, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}

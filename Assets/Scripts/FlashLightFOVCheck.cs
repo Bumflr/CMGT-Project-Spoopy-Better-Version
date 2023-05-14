@@ -27,7 +27,6 @@ public class FlashLightFOVCheck : MonoBehaviour
 
         if (TryGetComponent<Light>(out Light lighting))
         {
-            Debug.Log(lighting);
             this.lighting = lighting;
 
             if (lighting.type == LightType.Spot)
@@ -65,7 +64,7 @@ public class FlashLightFOVCheck : MonoBehaviour
 
         int numColliders = Physics.OverlapSphereNonAlloc(transform.position, radius, rangeChecks, targetMask);
 
-        if (numColliders > 0 && flashlight.flashlightToggle)
+        if (numColliders > 0 && flashlight != null ? flashlight.flashlightToggle : true)
         {
             for (int i = 0; i < numColliders; i++)
             {

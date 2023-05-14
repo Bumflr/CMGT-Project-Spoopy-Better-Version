@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class SC_PlayerMovement : MonoBehaviour
 {
-    [Header("Speeds")]
+    [Header("Dependencies")]
+    public Camera _cam;
+    private CharacterController _cController;
+
+    [Header("Settings")]
     public float SneakSpeed = 0.3f;
     public float WalkSpeed = 1.0f;
     public float RunSpeed = 2.0f;
     public float ExhaustSpeed = 0.5f;
-    public float Gravity = -12f;
+    [Space(20)]
+    public float turnSpeed;
+    public float SpeedSmoothTime = 0.1f;
+    public float lerpValueRotation;
 
     float velocityY;
     Vector3 savedVelocity;
 
-    public float turnSpeed;
-    public float SpeedSmoothTime = 0.1f;
-    public float lerpValueRotation;
+    float Gravity = -12f;
     float speedSmoothVelocity;
     float currentSpeed;
-    public Camera _cam;
-    private CharacterController _cController;
+
 
     // Start is called before the first frame update
     void Awake()
     {
         _cController = GetComponent<CharacterController>();
+        savedVelocity = Vector3.forward;
     }
 
     public void Move(Vector3 input, Vector3 inputDir, PlayerStates state)
@@ -78,7 +83,6 @@ public class SC_PlayerMovement : MonoBehaviour
         if (!Input.GetKey(KeyCode.LeftShift))
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(savedVelocity, Vector3.up), lerpValueRotation * Time.deltaTime);
-
         }
         else if (Input.GetKey(KeyCode.Q))
         {
