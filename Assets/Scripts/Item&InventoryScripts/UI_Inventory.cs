@@ -9,9 +9,12 @@ public class UI_Inventory : MonoBehaviour
 {
     private PlayerInventory inventory;
 
+    [Header("Dependencies")]
     [SerializeField] private Transform itemSlotContainer;
     [SerializeField] private Transform itemSlotTemplate;
     [SerializeField] private Transform equipItemSlotContainer;
+    [SerializeField] private Transform equipItemText;
+
     [SerializeField] private GameObject bgObject;
     private void Start()
     {
@@ -93,6 +96,7 @@ public class UI_Inventory : MonoBehaviour
 
         foreach (Transform child in equipItemSlotContainer)
         {
+            if (child == equipItemText) continue;
             Destroy(child.gameObject);
         }
 

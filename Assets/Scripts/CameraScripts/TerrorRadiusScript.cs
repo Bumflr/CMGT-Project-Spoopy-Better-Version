@@ -6,18 +6,19 @@ using UnityEngine;
 public class TerrorRadiusScript : MonoBehaviour
 {
     [Header("Dependencies")]
-    public CinemachineVirtualCamera vmCam;
+    public SC_CameraManager_SO cameraManager;
 
     [Header("Settings")]
     public LayerMask whatIsGhost;
     public float radius;
 
     private GameObject closestGhost;
-    private CinemachineImpulseSource impulseSource;
+    private SC_EnemyLogic closestGhostLogic;
 
     private void Awake()
     {
-        impulseSource = GetComponent<CinemachineImpulseSource>();
+        //Give a float value from 0 to 1, the cameraManager script can be used to configure how much we want the valeu to change
+        cameraManager.ChangeLensSize(1);
     }
 
     private void Update()
@@ -58,7 +59,7 @@ public class TerrorRadiusScript : MonoBehaviour
             }
             else
             {
-                vmCam.m_Lens.OrthographicSize = 6;
+                cameraManager.ChangeLensSize(1);
             }
         }
 
@@ -69,10 +70,11 @@ public class TerrorRadiusScript : MonoBehaviour
 
         var percentage = distance / radius;
 
-        var value = Mathf.Lerp(4.2f, 6.0f, percentage);
+        var value = Mathf.Lerp(.7f, 1f, percentage);
 
-        vmCam.m_Lens.OrthographicSize = value;
+        cameraManager.ChangeLensSize(value);
 
+        cameraManager.ShakeCamera(1 - value);
 
         SoundManager.PlaySound(SoundManager.Sound.TerrorRadiusSound, this.transform.position, percentage * 2 );
     }

@@ -19,12 +19,13 @@ public class SC_PlayerStateLogic : MonoBehaviour
     private SC_PlayerMovement playerMovement;
     private SC_PlayerHealth playerHealth;
 
+    [Header("Dependencies")]
+    public SC_HearingManager_SO hearingManager;
+
     [Header("Settings")]
     public float maxStamina = 5.0f;
     public float maxDurationHold;
-
-    [ReadOnly]
-    public PlayerStates playerState;
+    [ReadOnly] public PlayerStates playerState;
 
     private float stamina;
     private bool exhausted;
@@ -106,9 +107,24 @@ public class SC_PlayerStateLogic : MonoBehaviour
 
 
         playerMovement.Move(input, inputDir, playerState);
-   
+
+        MakeFootstepSounds(playerState);
         // float movementSpeed = ((running) ? 1 : 0.5f) * inputDir.magnitude;
         // _anim.SetFloat("movementSpeed", movementSpeed, SpeedSmoothTime, Time.deltaTime);
+    }
+    private void MakeFootstepSounds(PlayerStates playerState)
+    {
+        //Decide wether or not to make a sound or nah
+        switch (playerState)
+        {
+            case PlayerStates.Walking:
+                hearingManager.MakeASound(this.transform.position, 0.5f);
+                break;
+            case PlayerStates.Running:
+                hearingManager.MakeASound(this.transform.position, 1f);
+                break;
+            default: break;
+        }
     }
 
     private void EscapingGrab(Vector3 inputDir)

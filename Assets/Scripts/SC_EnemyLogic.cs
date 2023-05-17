@@ -1,34 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
+using UnityEngine.AI;
 
 public class SC_EnemyLogic : MonoBehaviour
 {
-    public EnemyStates enemyState;
+    [Header("Dependencies")]
+    public SC_EnemyMove move;
+    public SC_HearingManager_SO hearingManagerScriptableObject;
 
+    [Header("Settings")]
+    [ReadOnly, SerializeField] private EnemyStates enemyState;
+
+    public float hearRadius = 45;
     public float viewRadius = 15;                   //  Radius of the enemy view
     public float viewAngle = 90;                    //  Angle of the enemy view
-
     public LayerMask playerMask;                    //  To detect the player with the raycast
     public LayerMask obstacleMask;                  //  To detect the obstacles with the raycast
 
-    /* private void Update()
+    GameObject m_Player;
+    Vector3 currentTargetPosition;
+
+    void Start()
     {
-        if (IsPlayerInView())
-        {
-            enemyState = EnemyStates.Chasing;
-        }
+        SetEnemyState(EnemyStates.Patrolling);
+
+        m_Player = GameObject.FindGameObjectWithTag("Player");
+        hearingManagerScriptableObject.hearingEvent.AddListener(ListenToSounds);
     }
 
-    bool IsPlayerInView()
+    private void OnDestroy()
     {
-        Collider[] playerInRange = Physics.OverlapSphere(transform.position, viewRadius, playerMask);   //  Make an overlap sphere around the enemy to detect the playermask in the view radius
+        hearingManagerScriptableObject.hearingEvent.RemoveListener(ListenToSounds);
+    }
 
-        for (int i = 0; i < playerInRange.Length; i++)
+
+    private void Update()
+    {
+        //  Check whether or not the player is in the enemy's field of vision
+        if (EnemyViewCone())
         {
-            Transform player = playerInRange[i].transform;
+            currentTargetPosition = m_Player.transform.position;
+            SetEnemyState(EnemyStates.Chasing);
+        }
+        else if (enemyState != EnemyStates.Chasing && enemyState != EnemyStates.Investigating)
+        {
+            SetEnemyState(EnemyStates.Patrolling);
+        }
+
+        move.SetMoveAndState(enemyState, currentTargetPosition);
+
+        //I hate the getComponent shit so I will change that later!! Dont mind me writing shit code btw :ppp
+
+        if ((!EnemyViewCone() && Vector3.Distance(transform.position, m_Player.transform.position) >= 3f) || m_Player.GetComponent<SC_PlayerStateLogic>().isHiding)
+        {
+            //The enemy has a pretty limited view cone, so when It loses the player not directly in it's line of sight, it also checks if it is within 3 meters.
+            //If it is then it continues the chase by NOT setting the state to patrolling
+        
+            SetEnemyState(EnemyStates.Patrolling);
+        }
+
+    }
+
+    public void SetEnemyState(EnemyStates enemyState)
+    {
+        this.enemyState = enemyState;
+    }
+   
+    bool EnemyViewCone()
+    {
+        bool playerInRange = false;   //  If the player is in range of vision, state of chasing
+
+        Collider[] playerCollider = Physics.OverlapSphere(transform.position, viewRadius, playerMask);   //  Make an overlap sphere around the enemy to detect the playermask in the view radius
+
+        for (int i = 0; i < playerCollider.Length; i++)
+        {
+            Transform player = playerCollider[i].transform;
 
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
             if (Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2)
@@ -36,36 +83,37 @@ public class SC_EnemyLogic : MonoBehaviour
                 float dstToPlayer = Vector3.Distance(transform.position, player.position);          //  Distance of the enemy and the player
                 if (!Physics.Raycast(transform.position, dirToPlayer, dstToPlayer, obstacleMask))
                 {
-                    return true;             //  The player has been seeing by the enemy and then the nemy starts to chasing the player
-                   // m_IsPatrol = false;                 //  Change the state to chasing the player
+                    playerInRange = true; //  The player has been seeing by the enemy and then the nemy starts to chasing the player
                 }
                 else
                 {
-                    /*
-                     *  If the player is behind a obstacle the player position will not be registered
-                     * */
-                   // m_IsPatrol = true;
-                   // return false;
-               // }
-            //}
+                    playerInRange = false;
+                }
+            }
 
-           /* if (Vector3.Distance(transform.position, player.position) > viewRadius)
-{
-    /*
-     *  If the player is further than the view radius, then the enemy will no longer keep the player's current position.
-     *  Or the enemy is a safe zone, the enemy will no chase
-     * 
-   // return false;                //  Change the sate of chasing
-}
-
-            /*if (m_playerInRange)
+            if (playerInRange)
             {
                 /*
                  *  If the enemy no longer sees the player, then the enemy will go to the last position that has been registered
                  * */
-               /* m_PlayerPosition = player.transform.position;       //  Save the player's current position if the player is in range of vision
+                //playerLastPosition = player.transform.position;       //  Save the player's current position if the player is in range of vision
             }
         }
-    }*/
-   
+
+        return playerInRange;
+    }
+    private void ListenToSounds(Vector3 pos, float volume)
+    {
+        if (Vector3.Distance(transform.position, pos) <= hearRadius)
+        {
+            Debug.Log($"Heard a sound at: {pos.ToString()}, by: {this.gameObject.name}");
+
+            if (enemyState != EnemyStates.Chasing)
+            {
+                currentTargetPosition = pos;
+                SetEnemyState(EnemyStates.Investigating);
+            }
+        }
+    }
+
 }

@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Follow: {fileID: 87412055}
   m_Lens:
     FieldOfView: 82.43
-    OrthographicSize: 5.998841
+    OrthographicSize: 4.809626
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -1382,7 +1382,7 @@ Camera:
   far clip plane: 5000
   field of view: 82.43
   orthographic: 1
-  orthographic size: 5.998841
+  orthographic size: 4.809626
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2882,6 +2882,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 511313595180194015, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3747859926742578546, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
       propertyPath: attackRadius
       value: 0.97
@@ -2913,6 +2917,10 @@ PrefabInstance:
     - target: {fileID: 5547092507928332853, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
       propertyPath: m_Name
       value: Spooky Ghost !!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547092507928332853, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5547092507928332878, guid: 320c2801e19a0c24a81413b270246aaf, type: 3}
       propertyPath: m_RootOrder

@@ -33,8 +33,6 @@ public class UI_Health : MonoBehaviour
 
     public void SetHealthIcon(HealthState healthState)
     {
-        Debug.Log(healthState);
-
         switch (healthState)
         {
             case HealthState.Fine:

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892244b1f0bd8494ebcad1dba820f60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vmCam: {fileID: 0}
+  cameraManager: {fileID: 11400000, guid: 195e385d36f92954381bf50a41d4a18f, type: 2}
   whatIsGhost:
     serializedVersion: 2
     m_Bits: 64
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0876d48fd3966e5479bfc2f45585753b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hearingManager: {fileID: 11400000, guid: 65de57111c11eed4a878a36c6b0762f2, type: 2}
   maxStamina: 5
   maxDurationHold: 9
   playerState: 0

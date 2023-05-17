@@ -4,7 +4,7 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName ="HealthScriptableObject", menuName = "ScriptableObjects/Health Manager")]
 public class SC_Health_SO : ScriptableObject
 {
-    static HealthState[] healthStateTable =
+    [SerializeField] HealthState[] healthStateTable =
     {
         HealthState.Dead,
         HealthState.Wounded,
@@ -18,18 +18,19 @@ public class SC_Health_SO : ScriptableObject
         HealthState.Fine,
     };
 
-    static int healthCounter = healthStateTable.Length;
-
-    [ReadOnly] public int health = healthCounter;
+    int healthCounter;
+    [ReadOnly] public int health;
 
     [System.NonSerialized] public UnityEvent<HealthState> healthChangeEvent;
 
     private void OnEnable()
     {
+        healthCounter = healthStateTable.Length;
+
         health = healthCounter;
+
         if (healthChangeEvent == null)
             healthChangeEvent = new UnityEvent<HealthState>();
-
 
     }
 
