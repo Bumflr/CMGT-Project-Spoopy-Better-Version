@@ -29,7 +29,7 @@ public class SC_EnemyMove : MonoBehaviour
     int m_CurrentWaypointIndex;                     //  Current waypoint where the enemy is going to
  
  
-    float waitTime;                               //  Variable of the wait time that makes the delay
+    float waitTime = 4;                               //  Variable of the wait time that makes the delay
     float m_TimeToRotate;                           //  Variable of the wait time to rotate when the player is near that makes the delay
     
 
@@ -120,9 +120,12 @@ public class SC_EnemyMove : MonoBehaviour
         if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
         {
             //  If the enemy arrives to the target position then wait for a moment and go to the next
-            if (waitTime <= 0)
+            if (0f <= waitTime)
             {
-               // NextPoint();
+                // NextPoint();
+
+                enemyLogic.ReachedPoint();
+
                 m_CurrentWaypointIndex = (m_CurrentWaypointIndex + 1) % waypoints.Length;
 
                 SetSpeed(speedWalk);
@@ -191,11 +194,6 @@ public class SC_EnemyMove : MonoBehaviour
         //blab lae do this AND THEN DO THIS AND THEN IF THIS IS NOT THIS, THEN SEND THE CODE 
     }
 
-    public void NextPoint()
-    {
-       // navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);
-    }
- 
     void Stop()
     {
         navMeshAgent.isStopped = true;

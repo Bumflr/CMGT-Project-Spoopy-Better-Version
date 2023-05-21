@@ -25,7 +25,6 @@ public class SC_EnemyLogic : MonoBehaviour
     {
         SetEnemyState(EnemyStates.Patrolling);
 
-        m_Player = GameObject.FindGameObjectWithTag("Player");
         hearingManagerScriptableObject.hearingEvent.AddListener(ListenToSounds);
     }
 
@@ -40,26 +39,44 @@ public class SC_EnemyLogic : MonoBehaviour
         //  Check whether or not the player is in the enemy's field of vision
         if (EnemyViewCone())
         {
-            currentTargetPosition = m_Player.transform.position;
             SetEnemyState(EnemyStates.Chasing);
         }
-        else if (enemyState != EnemyStates.Chasing && enemyState != EnemyStates.Investigating)
+
+        switch (enemyState)
         {
-            SetEnemyState(EnemyStates.Patrolling);
+            case EnemyStates.Chasing:
+                currentTargetPosition = m_Player.transform.position;
+
+                if (!EnemyViewCone() && Vector3.Distance(transform.position, m_Player.transform.position) >= 5f)
+                {
+                    //You lost the enemy
+                    SetEnemyState(EnemyStates.Patrolling);
+                }
+                break;
+            default: break;
+ 
         }
 
         move.SetMoveAndState(enemyState, currentTargetPosition);
-
-        //I hate the getComponent shit so I will change that later!! Dont mind me writing shit code btw :ppp
-
-        if ((!EnemyViewCone() && Vector3.Distance(transform.position, m_Player.transform.position) >= 3f) || m_Player.GetComponent<SC_PlayerStateLogic>().isHiding)
+    }
+    public void ReachedPoint()
+    {
+        switch (enemyState) 
         {
-            //The enemy has a pretty limited view cone, so when It loses the player not directly in it's line of sight, it also checks if it is within 3 meters.
-            //If it is then it continues the chase by NOT setting the state to patrolling
-        
-            SetEnemyState(EnemyStates.Patrolling);
-        }
+            case EnemyStates.Investigating:
+                SetEnemyState(EnemyStates.Patrolling);
+                break;
+            case EnemyStates.Chasing:
 
+                if (m_Player.GetComponent<SC_PlayerStateLogic>().isHiding)
+                {
+                    Debug.Log("GETCHO ASS OUTTA THERE I SAW YO NON JORDAN HAVING ASS");
+
+                }
+                break;
+            default: break;
+
+        }
     }
 
     public void SetEnemyState(EnemyStates enemyState)
@@ -83,7 +100,10 @@ public class SC_EnemyLogic : MonoBehaviour
                 float dstToPlayer = Vector3.Distance(transform.position, player.position);          //  Distance of the enemy and the player
                 if (!Physics.Raycast(transform.position, dirToPlayer, dstToPlayer, obstacleMask))
                 {
-                    playerInRange = true; //  The player has been seeing by the enemy and then the nemy starts to chasing the player
+                    m_Player = player.gameObject;
+
+ 
+                    playerInRange = !m_Player.GetComponent<SC_PlayerStateLogic>().isHiding; //  The player has been seeing by the enemy and then the nemy starts to chasing the player
                 }
                 else
                 {
@@ -106,7 +126,7 @@ public class SC_EnemyLogic : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, pos) <= hearRadius)
         {
-            Debug.Log($"Heard a sound at: {pos.ToString()}, by: {this.gameObject.name}");
+            //Debug.Log($"Heard a sound at: {pos.ToString()}, by: {this.gameObject.name}");
 
             if (enemyState != EnemyStates.Chasing)
             {
