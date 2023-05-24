@@ -124,6 +124,8 @@ public class SC_EnemyLogic : MonoBehaviour
     }
     private void ListenToSounds(Vector3 pos, float volume)
     {
+        var hearRadius = this.hearRadius * volume;
+
         if (Vector3.Distance(transform.position, pos) <= hearRadius)
         {
             //Debug.Log($"Heard a sound at: {pos.ToString()}, by: {this.gameObject.name}");

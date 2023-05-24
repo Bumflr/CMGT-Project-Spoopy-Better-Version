@@ -12,8 +12,6 @@ public enum PlayerStates
     Exhausted,
     BeingHeld,
 }
-
-
 public class SC_PlayerStateLogic : MonoBehaviour
 {
     private SC_PlayerMovement playerMovement;
