@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: twink_light
+  m_Mask: 00000000000000000000000000000000000000000000000001000000000000000100000000000000000000000000000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature.005
+    m_Weight: 0
+  - m_Path: Armature.005/IKlegpol.L
+    m_Weight: 0
+  - m_Path: Armature.005/IKlegpol.L/IKlegpol.L_end
+    m_Weight: 0
+  - m_Path: Armature.005/IKlegpol.R
+    m_Weight: 0
+  - m_Path: Armature.005/IKlegpol.R/IKlegpol.R_end
+    m_Weight: 0
+  - m_Path: Armature.005/IKtarget.L
+    m_Weight: 0
+  - m_Path: Armature.005/IKtarget.L/IKtarget.L_end
+    m_Weight: 0
+  - m_Path: Armature.005/IKtarget.R
+    m_Weight: 0
+  - m_Path: Armature.005/IKtarget.R/IKtarget.R_end
+    m_Weight: 0
+  - m_Path: Armature.005/root
+    m_Weight: 0
+  - m_Path: Armature.005/root/back
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/neck
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/neck/head
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/neck/head/head_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/figner7.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/figner7.L/finger8.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/figner7.L/finger8.L/finger9.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/figner7.L/finger8.L/finger9.L/finger9.L_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger.L/finger1.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger.L/finger1.L/finger3.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger.L/finger1.L/finger3.L/finger3.L_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger4.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger4.L/finger5.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger4.L/finger5.L/finger6.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger4.L/finger5.L/finger6.L/finger6.L_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger10.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger10.L/finger11.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger10.L/finger11.L/finger12.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/finger10.L/finger11.L/finger12.L/finger12.L_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/thumb.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/thumb.L/thumb1.L
+    m_Weight: 1
+  - m_Path: Armature.005/root/back/back1/shoulder.L/arm1.L/arm2.L/hand3.L/thumb.L/thumb1.L/thumb1.L_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/figner7.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/figner7.R/finger8.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/figner7.R/finger8.R/finger9.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/figner7.R/finger8.R/finger9.R/finger9.R_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger.R/finger1.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger.R/finger1.R/finger3.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger.R/finger1.R/finger3.R/finger3.R_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger4.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger4.R/finger5.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger4.R/finger5.R/finger6.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger4.R/finger5.R/finger6.R/finger6.R_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger10.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger10.R/finger11.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger10.R/finger11.R/finger12.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/finger10.R/finger11.R/finger12.R/finger12.R_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/thumb.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/thumb.R/thumb1.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/back/back1/shoulder.R/arm1.R/arm2.R/hand3.R/thumb.R/thumb1.R/thumb1.R_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/leg.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/leg.L/leg1.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/leg.L/leg1.L/feet.L
+    m_Weight: 0
+  - m_Path: Armature.005/root/leg.L/leg1.L/feet.L/feet.L_end
+    m_Weight: 0
+  - m_Path: Armature.005/root/leg.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/leg.R/leg1.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/leg.R/leg1.R/feet.R
+    m_Weight: 0
+  - m_Path: Armature.005/root/leg.R/leg1.R/feet.R/feet.R_end
+    m_Weight: 0
+  - m_Path: backpack.006
+    m_Weight: 0
+  - m_Path: eyes.006
+    m_Weight: 0
+  - m_Path: glasses.007
+    m_Weight: 0
+  - m_Path: hair.006
+    m_Weight: 0
+  - m_Path: head.007
+    m_Weight: 0
+  - m_Path: hoodie.006
+    m_Weight: 0
+  - m_Path: pant.006
+    m_Weight: 0
