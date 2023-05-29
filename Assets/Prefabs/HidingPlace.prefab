@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7438550382946978084}
   - component: {fileID: 7438550382946978090}
-  - component: {fileID: 7438550382946978085}
   m_Layer: 0
   m_Name: HidingPlace
   m_TagString: Untagged
@@ -49,19 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHidingObject: {fileID: 0}
   obstacleCube: {fileID: 7438550382960892818}
---- !u!65 &7438550382946978085
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7438550382946978087}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7438550382960892818
 GameObject:
   m_ObjectHideFlags: 0
