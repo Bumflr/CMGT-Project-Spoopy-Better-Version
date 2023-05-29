@@ -15,6 +15,12 @@ public enum EnemyStates
 
 public class SC_EnemyMove : MonoBehaviour
 {
+    Animator animator;
+    int isIdleHash;
+    int isWalkingHash;
+    int isRunningHash;
+    int isLightWalkingHash;
+
     [Header("Dependencies")]
     public NavMeshAgent navMeshAgent;               //  Nav mesh agent component
     public SC_EnemyLogic enemyLogic;
@@ -35,7 +41,12 @@ public class SC_EnemyMove : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
 
+        isIdleHash = Animator.StringToHash("isIdle");
+        isWalkingHash = Animator.StringToHash("isWalking");
+        isRunningHash = Animator.StringToHash("isRunning");
+        isLightWalkingHash = Animator.StringToHash("isLightWalking");
        // m_PlayerHeard = false;
         waitTime = startWaitTime;                 //  Set the wait time variable that will change
         m_TimeToRotate = timeToRotate;
@@ -48,7 +59,17 @@ public class SC_EnemyMove : MonoBehaviour
         navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
     }
 
-  
+    private void Update()
+    {
+        bool moving = false;
+        if (!moving)
+        {
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isWalking", false);
+        }
+    }
+
     public void SetMoveAndState(EnemyStates enemyState, Vector3 target)
     {
         Vector3 targetPosition = Vector3.zero;
@@ -56,22 +77,31 @@ public class SC_EnemyMove : MonoBehaviour
         switch (enemyState)
         {
             case EnemyStates.Still:
+                animator.SetBool("isIdle", true);
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isWalking", false);
                 return;
 
             case EnemyStates.Chasing:
-
+                animator.SetBool("isIdle", false);
+                animator.SetBool("isRunning", true);
+                animator.SetBool("isWalking", false);
                 SetSpeed(speedRun);
                 targetPosition = target;
 
                 break;
             case EnemyStates.Patrolling:
-
+                animator.SetBool("isWalking", true);
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isIdle", false);
                 SetSpeed(speedWalk);
                 targetPosition = waypoints[m_CurrentWaypointIndex].position;
 
                 break;
             case EnemyStates.Investigating:
-
+                animator.SetBool("isWalking", true);
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isIdle", false);
                 SetSpeed(speedWalk);
                 targetPosition = target;
 
