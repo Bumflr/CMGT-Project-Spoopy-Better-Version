@@ -59,7 +59,17 @@ public class SC_EnemyMove : MonoBehaviour
         navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
     }
 
-  
+    private void Update()
+    {
+        bool moving = false;
+        if (!moving)
+        {
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isWalking", false);
+        }
+    }
+
     public void SetMoveAndState(EnemyStates enemyState, Vector3 target)
     {
         Vector3 targetPosition = Vector3.zero;
