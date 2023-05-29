@@ -8,6 +8,8 @@ public class SC_EnemyLogic : MonoBehaviour
     [Header("Dependencies")]
     public SC_EnemyMove move;
     public SC_HearingManager_SO hearingManagerScriptableObject;
+    public Animator animator;
+
 
     [Header("Settings")]
     [ReadOnly, SerializeField] private EnemyStates enemyState;
@@ -18,11 +20,25 @@ public class SC_EnemyLogic : MonoBehaviour
     public LayerMask playerMask;                    //  To detect the player with the raycast
     public LayerMask obstacleMask;                  //  To detect the obstacles with the raycast
 
+    int isIdleHash;
+    int isWalkingHash;
+    int isRunningHash;
+    int isLightWalkingHash;
+    int isGrabbing;
+
     GameObject m_Player;
     Vector3 currentTargetPosition;
 
     void Start()
     {
+        animator = GetComponentInChildren<Animator>();
+
+        isIdleHash = Animator.StringToHash("isIdle");
+        isWalkingHash = Animator.StringToHash("isWalking");
+        isRunningHash = Animator.StringToHash("isRunning");
+        isLightWalkingHash = Animator.StringToHash("isLightWalking");
+        isGrabbing = Animator.StringToHash("isGrabbing");
+
         SetEnemyState(EnemyStates.Patrolling);
 
         hearingManagerScriptableObject.hearingEvent.AddListener(ListenToSounds);
@@ -45,6 +61,12 @@ public class SC_EnemyLogic : MonoBehaviour
 
         switch (enemyState)
         {
+            case EnemyStates.Still:
+                animator.SetBool(isIdleHash, true);
+                animator.SetBool(isWalkingHash, false);
+                animator.SetBool(isRunningHash, false);
+                break;
+
             case EnemyStates.Chasing:
                 currentTargetPosition = m_Player.transform.position;
 
@@ -53,6 +75,19 @@ public class SC_EnemyLogic : MonoBehaviour
                     //You lost the enemy
                     SetEnemyState(EnemyStates.Patrolling);
                 }
+
+                animator.SetBool(isIdleHash, false);
+                animator.SetBool(isWalkingHash, false);
+                animator.SetBool(isRunningHash, true);
+                break;
+            case EnemyStates.Investigating:
+            case EnemyStates.Patrolling:
+                animator.SetBool(isIdleHash, false);
+                animator.SetBool(isWalkingHash, true);
+                animator.SetBool(isRunningHash, false);
+                break;
+            case EnemyStates.HoldingPlayer:
+                animator.SetBool(isGrabbing, true);
                 break;
             default: break;
         }
