@@ -37,7 +37,6 @@ public class SC_EnemyMove : MonoBehaviour
  
     float waitTime = 4;                               //  Variable of the wait time that makes the delay
     float m_TimeToRotate;                           //  Variable of the wait time to rotate when the player is near that makes the delay
-    
 
     void Start()
     {
@@ -47,6 +46,8 @@ public class SC_EnemyMove : MonoBehaviour
         isWalkingHash = Animator.StringToHash("isWalking");
         isRunningHash = Animator.StringToHash("isRunning");
         isLightWalkingHash = Animator.StringToHash("isLightWalking");
+
+
        // m_PlayerHeard = false;
         waitTime = startWaitTime;                 //  Set the wait time variable that will change
         m_TimeToRotate = timeToRotate;
