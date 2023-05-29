@@ -2,14 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyStates
+{
+    HoldingPlayer
+}
 public class SC_EnemyAttack : MonoBehaviour
 {
+    Animator animator;
+    int isGrabbing;
     public float attackRadius;
     public float secondsTilStriking = 0.5f;
     public Transform attackingPointOffset;
     public LayerMask whatIsPlayer;
 
     public bool holdingPlayer;
+
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+
+        isGrabbing = Animator.StringToHash("isGrabbing");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +34,7 @@ public class SC_EnemyAttack : MonoBehaviour
             //Play like a charging sound effect here or something
             Debug.Log("Grabbing!");
             StartCoroutine(AttackPlayer(other));
+            animator.SetBool("isGrabbing", true);
         }
     }
 
