@@ -7,7 +7,6 @@ public class SC_PlayerMovement : MonoBehaviour
     [Header("Dependencies")]
     public Camera _cam;
     private CharacterController _cController;
-
     [Header("Settings")]
     public float SneakSpeed = 0.3f;
     public float WalkSpeed = 1.0f;
@@ -17,6 +16,8 @@ public class SC_PlayerMovement : MonoBehaviour
     public float turnSpeed;
     public float SpeedSmoothTime = 0.1f;
     public float lerpValueRotation;
+    public LayerMask layerMask;
+
 
     float velocityY;
     Vector3 savedVelocity;
@@ -77,9 +78,11 @@ public class SC_PlayerMovement : MonoBehaviour
 
         Rotate(savedVelocity);
     }
+
     void Rotate(Vector3 savedVelocity)
     {
         //**Keypress Based Rotation
+
         if (!Input.GetKey(KeyCode.LeftShift))
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(savedVelocity, Vector3.up), lerpValueRotation * Time.deltaTime);
@@ -92,5 +95,26 @@ public class SC_PlayerMovement : MonoBehaviour
         {
             transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
         }
+        
+
+
+
+        //**MOUSE ROTATION**
+        /*if (!Input.GetKey(KeyCode.LeftShift))
+        {
+            Debug.Log(new Vector3(Input.mousePosition.normalized.x, Input.mousePosition.normalized.y, Input.mousePosition.normalized.z));
+
+            Ray cameraRay = _cam.ViewportPointToRay(new Vector3(Input.mousePosition.normalized.x, Input.mousePosition.normalized.y));
+
+            float rayLength = 99;
+            RaycastHit hitInfo;
+
+            if (Physics.Raycast(cameraRay, out hitInfo, rayLength, layerMask))
+            {
+                Debug.DrawLine(cameraRay.origin, hitInfo.point, Color.cyan);
+
+                transform.LookAt(new Vector3(hitInfo.point.x, transform.position.y, hitInfo.point.z));
+            }
+        }*/
     }
 }

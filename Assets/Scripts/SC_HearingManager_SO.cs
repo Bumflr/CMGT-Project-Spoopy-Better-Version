@@ -15,7 +15,4 @@ public class SC_HearingManager_SO : ScriptableObject
     }
 
     public void MakeASound(Vector3 position, float volume) { hearingEvent.Invoke(position, volume); }
-
-
-
 }

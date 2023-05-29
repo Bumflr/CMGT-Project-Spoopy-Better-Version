@@ -7687,6 +7687,10 @@ PrefabInstance:
       value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 1697204108851408001, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697204108851408001, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -7697,6 +7701,18 @@ PrefabInstance:
     - target: {fileID: 1697204108851408063, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697204109515050500, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697204109515050501, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697204109515050503, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1697204110211316224, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
       propertyPath: m_RootOrder
@@ -7747,10 +7763,15 @@ PrefabInstance:
       value: PixelPerfectCameraRender
       objectReference: {fileID: 0}
     - target: {fileID: 1697204110211316225, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697204110211316225, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1697204109515050501, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 02d1cbd215764da45b65b77133f557d2, type: 3}
 --- !u!1001 &279937239
 PrefabInstance:
@@ -59492,6 +59513,10 @@ PrefabInstance:
     - target: {fileID: 8666586690454081978, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: RunSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8666586690454081978, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 251
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
