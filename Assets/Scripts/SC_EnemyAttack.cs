@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SC_EnemyAttack : MonoBehaviour
 {
+    [Header("Dependencies")]
+    public SC_EnemyLogic enemyLogic;
+
     public float attackRadius;
     public float secondsTilStriking = 0.5f;
     public Transform attackingPointOffset;
@@ -11,6 +14,11 @@ public class SC_EnemyAttack : MonoBehaviour
 
     public bool holdingPlayer;
 
+    private void Awake()
+    {
+        enemyLogic = GetComponent<SC_EnemyLogic>();
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !holdingPlayer)
@@ -18,6 +26,8 @@ public class SC_EnemyAttack : MonoBehaviour
             //Caught Player
             //Now prepare an attack
             //Play like a charging sound effect here or something
+
+            
             Debug.Log("Grabbing!");
             StartCoroutine(AttackPlayer(other));
         }
@@ -34,13 +44,24 @@ public class SC_EnemyAttack : MonoBehaviour
         {
             if (b == playerCollider)
             {
-                b.GetComponent<SC_PlayerStateLogic>().Grabbed();
+                b.GetComponent<SC_PlayerStateLogic>().Grabbed(this);
 
-
-
+                enemyLogic.SetEnemyState(EnemyStates.HoldingPlayer);
                 //After grabbing the player, set the enemy state to something like grabbing , and stop the enemy of doing anything else  
             }
         }
+    }
+
+    public IEnumerator PlayerEscaped()
+    {
+        enemyLogic.SetEnemyState(EnemyStates.Stunned);
+
+        yield return new WaitForSeconds(1f);
+
+        enemyLogic.SetEnemyState(EnemyStates.Patrolling);
+
+        yield return null;
+
     }
 
     private void OnDrawGizmos()

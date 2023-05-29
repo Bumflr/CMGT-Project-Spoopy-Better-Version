@@ -30,6 +30,9 @@ public class SC_PlayerStateLogic : MonoBehaviour
     private bool mashButtonTracker; //The bool which alternates between true and false when mashing buttons/flicking the stick when In a grab
     private float heldTimer;
 
+
+    private SC_EnemyAttack attackingEnemy;
+
     [HideInInspector] public bool isHiding;
     void Start()
     {
@@ -140,11 +143,15 @@ public class SC_PlayerStateLogic : MonoBehaviour
         if (heldTimer >= maxDurationHold)
         {
             playerState = PlayerStates.Walking;
+
+            StartCoroutine(attackingEnemy.PlayerEscaped());
         }
     }
 
-    public void Grabbed()
+    public void Grabbed(SC_EnemyAttack attackingEnemy)
     {
+        this.attackingEnemy = attackingEnemy;
+
         playerState = PlayerStates.BeingHeld;
         heldTimer = 0;
     }

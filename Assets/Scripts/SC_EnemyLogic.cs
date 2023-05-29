@@ -36,8 +36,9 @@ public class SC_EnemyLogic : MonoBehaviour
 
     private void Update()
     {
+
         //  Check whether or not the player is in the enemy's field of vision
-        if (EnemyViewCone())
+        if (EnemyViewCone() && enemyState != EnemyStates.HoldingPlayer && enemyState != EnemyStates.Stunned)
         {
             SetEnemyState(EnemyStates.Chasing);
         }
@@ -54,10 +55,12 @@ public class SC_EnemyLogic : MonoBehaviour
                 }
                 break;
             default: break;
- 
         }
 
-        move.SetMoveAndState(enemyState, currentTargetPosition);
+        if (enemyState != EnemyStates.HoldingPlayer && enemyState != EnemyStates.Stunned)
+        {
+            move.SetMoveAndState(enemyState, currentTargetPosition);
+        }
     }
     public void ReachedPoint()
     {
@@ -130,7 +133,7 @@ public class SC_EnemyLogic : MonoBehaviour
         {
             //Debug.Log($"Heard a sound at: {pos.ToString()}, by: {this.gameObject.name}");
 
-            if (enemyState != EnemyStates.Chasing)
+            if (enemyState != EnemyStates.Chasing && enemyState != EnemyStates.Stunned && enemyState != EnemyStates.HoldingPlayer)
             {
                 currentTargetPosition = pos;
                 SetEnemyState(EnemyStates.Investigating);
