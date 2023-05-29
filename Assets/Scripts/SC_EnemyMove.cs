@@ -41,7 +41,7 @@ public class SC_EnemyMove : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
 
         isIdleHash = Animator.StringToHash("isIdle");
         isWalkingHash = Animator.StringToHash("isWalking");

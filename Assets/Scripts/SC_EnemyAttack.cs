@@ -23,7 +23,7 @@ public class SC_EnemyAttack : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
 
         isGrabbingHash = Animator.StringToHash("isGrabbing");
     }

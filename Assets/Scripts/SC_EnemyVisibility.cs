@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SC_EnemyVisibility : MonoBehaviour
 {
-    private MeshRenderer meshRenderer;
+    private SkinnedMeshRenderer meshRenderer;
 
     private bool beingLit;
 
@@ -13,7 +13,7 @@ public class SC_EnemyVisibility : MonoBehaviour
 
     private void Awake()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     private void LateUpdate()
