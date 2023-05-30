@@ -15,8 +15,10 @@ public class ItemAsset : MonoBehaviour
     [System.Serializable]
     public class SpriteItem
     {
-        public Sprite sprite; 
         public Item.ItemType itemType;
+        public Sprite sprite;
+        [TextArea]
+        public string description;
     }
 
     public SpriteItem[] spriteItems;
@@ -25,10 +27,11 @@ public class ItemAsset : MonoBehaviour
         foreach (var spriteItem in spriteItems)
         {
             spriteDictionary.Add(spriteItem.itemType, spriteItem.sprite);
+            descriptionDictionary.Add(spriteItem.itemType, spriteItem.description);
         }
     }
 
     public Dictionary<Item.ItemType, Sprite> spriteDictionary = new Dictionary<Item.ItemType, Sprite>();
-
+    public Dictionary<Item.ItemType, string> descriptionDictionary = new Dictionary<Item.ItemType, string>();
 
 }

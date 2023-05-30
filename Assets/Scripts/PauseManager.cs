@@ -32,6 +32,10 @@ public class PauseManager : MonoBehaviour
             {
                 GameStateManager.Instance.SetState(GameState.Paused);
             }
+            else if (GameStateManager.Instance.CurrentGameState == GameState.PickUpItemScreen)
+            {
+                GameStateManager.Instance.SetState(GameState.Gameplay);
+            }
         }
     }
 }

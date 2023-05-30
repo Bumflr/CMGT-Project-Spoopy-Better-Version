@@ -16,6 +16,7 @@ public class Item
         FlashLightBatteries,
         Coin,
         Medkit,
+        AudioLog1,
     }
 
     public ItemType itemType;
@@ -24,6 +25,10 @@ public class Item
     public Sprite GetSprite()
     {
         return ItemAsset.Instance.spriteDictionary[itemType];
+    }
+    public string GetDescription()
+    {
+        return ItemAsset.Instance.descriptionDictionary[itemType];
     }
 
     public bool isStackable()
@@ -38,6 +43,16 @@ public class Item
             case ItemType.FlashGrenade: return false;
             case ItemType.Lantern: return false;
             case ItemType.Medkit: return false;
+        }
+    }
+    public bool isLog()
+    {
+        switch (itemType)
+        {
+            case ItemType.AudioLog1:
+                return true;
+            default:
+                return false;
         }
     }
 

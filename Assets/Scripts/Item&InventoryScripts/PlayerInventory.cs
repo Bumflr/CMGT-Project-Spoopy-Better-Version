@@ -21,6 +21,9 @@ public class PlayerInventory
 
     public void AddItem(Item item)
     {
+        if (item.isLog())
+            return;
+
         if (item.isStackable())
         {
             bool itemAlreadyInInventory = false;
@@ -53,6 +56,9 @@ public class PlayerInventory
     }
     public void RemoveItem(Item item)
     {
+        if (item.isLog())
+            return;
+
         if (item.isStackable())
         {
             Item itemInInventory = null;

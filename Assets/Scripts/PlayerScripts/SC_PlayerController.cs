@@ -59,5 +59,4 @@ public class SC_PlayerController : MonoBehaviour
                 break;
         }
     }
-
 }

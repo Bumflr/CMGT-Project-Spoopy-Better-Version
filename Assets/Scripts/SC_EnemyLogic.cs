@@ -42,13 +42,28 @@ public class SC_EnemyLogic : MonoBehaviour
         SetEnemyState(EnemyStates.Patrolling);
 
         hearingManagerScriptableObject.hearingEvent.AddListener(ListenToSounds);
+
+        GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+    }
+
+    private void OnGameStateChanged(GameState newGameState)
+    {
+        if (newGameState != GameState.Gameplay)
+        {
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            this.gameObject.SetActive(true);
+        }
     }
 
     private void OnDestroy()
     {
+        GameStateManager.Instance.OnGameStateChanged -= OnGameStateChanged;
+
         hearingManagerScriptableObject.hearingEvent.RemoveListener(ListenToSounds);
     }
-
 
     private void Update()
     {

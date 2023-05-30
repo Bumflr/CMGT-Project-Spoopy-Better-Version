@@ -98,7 +98,6 @@ public class SC_EnemyMove : MonoBehaviour
         }
     }
 
-
     void Stop()
     {
         navMeshAgent.isStopped = true;

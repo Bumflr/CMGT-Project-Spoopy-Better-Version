@@ -45,15 +45,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteItems:
-  - sprite: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
-    itemType: 0
-  - sprite: {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
-    itemType: 1
-  - sprite: {fileID: 21300000, guid: 98dba44d1f02b6c4d8e0b5b9e4f1ee9f, type: 3}
-    itemType: 2
-  - sprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
-    itemType: 3
-  - sprite: {fileID: 21300000, guid: 874d8401331ede14087e8d8d486ddda6, type: 3}
-    itemType: 4
-  - sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
-    itemType: 5
+  - itemType: 0
+    sprite: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
+    description: 'A trusty flashlight
+
+      Seems reliable enough
+
+      Requires
+      AAs to function
+
+'
+  - itemType: 1
+    sprite: {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
+    description: "A rusty lantern...\nIt seems it requires some \ngas canisters to
+      function"
+  - itemType: 2
+    sprite: {fileID: 21300000, guid: 98dba44d1f02b6c4d8e0b5b9e4f1ee9f, type: 3}
+    description: 'Debug
+
+      Debug
+
+      Debug'
+  - itemType: 3
+    sprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
+    description: "A flashgrenade\nFor whatever reason could such military grade \nweaponry
+      be down here?"
+  - itemType: 4
+    sprite: {fileID: 21300000, guid: 874d8401331ede14087e8d8d486ddda6, type: 3}
+    description: 'AA Batteries
+
+      These could be used in a flashlight perhaps...'
+  - itemType: 5
+    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    description: 'Debug
+
+      Debug
+
+      Debug'
+  - itemType: 6
+    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    description: 'Debug
+
+      Debug
+
+      Debug'

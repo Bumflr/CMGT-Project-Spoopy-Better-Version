@@ -6,10 +6,15 @@ using static Item;
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
 public class PickupItem : MonoBehaviour
 {
-    private Item item;
+    [Header("Dependencies")]
+    public SC_PickUp_SO pickUpManager;
+
+    [Header("Settings")]
     public ItemType itemType;
     public int amount;
 
+    private Item item;
+    private SC_PlayerController pickingPlayer;
     private void Awake()
     {
         item = new Item { itemType = itemType, amount = this.amount };
@@ -17,26 +22,29 @@ public class PickupItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        SC_PlayerController pickingPlayer = other.GetComponent<SC_PlayerController>();
+        pickingPlayer = other.GetComponent<SC_PlayerController>();
+    }
 
-        if(pickingPlayer != null)
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space) && pickingPlayer != null)
         {
             pickingPlayer.playerInventory.AddItem(item);
+
+            pickUpManager.PickUpItem(item);
+            GameStateManager.Instance.SetState(GameState.PickUpItemScreen);
+
             OnPicked(pickingPlayer);
             Destroy(this.gameObject);
         }
     }
 
-    //TODO Make sure a prompt pops up to make sure the player actuall ypicks up the stuff because they might not want to do that.
-
     private void OnTriggerExit(Collider other)
     {
-        SC_PlayerController pickingPlayer = other.GetComponent<SC_PlayerController>();
-
-        if (pickingPlayer != null)
-        {
-        }
+        pickingPlayer = null;
     }
+
+    //TODO Make sure a prompt pops up to make sure the player actuall ypicks up the stuff because they might not want to do that.
 
     //Do the standard pickup song and dance but depending on what the player picked up
     //You can do other fun wacky shit

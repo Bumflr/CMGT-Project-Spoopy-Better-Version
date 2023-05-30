@@ -2,6 +2,7 @@ public enum GameState
 {
     Gameplay,
     Paused,
+    PickUpItemScreen,
     GameOver
 }
 public class GameStateManager
