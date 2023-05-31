@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private void Awake()
     {
-
         if (Instance == null)
         {
             Instance = this;
@@ -23,6 +22,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SoundManager.Initialize();   
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("Saved Game!!!");
+            DataPersistenceManager.instance.SaveGame();
+        }
     }
 
     public void ReloadScene()

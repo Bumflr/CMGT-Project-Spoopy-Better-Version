@@ -1,34 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static ItemAsset;
-using static UnityEditor.Progress;
 
-public class Item 
+public enum ItemType
 {
-    public enum ItemType
-    {
-        Flashlight,
-        Lantern,
-        Camera,
-        FlashGrenade,
+    Flashlight,
+    Lantern,
+    Camera,
+    FlashGrenade,
 
-        FlashLightBatteries,
-        Coin,
-        Medkit,
-        AudioLog1,
-    }
+    FlashLightBatteries,
+    Coin,
+    Medkit,
+    AudioLog1,
+}
 
-    public ItemType itemType;
-    public int amount;
-
+[Serializable]
+public class Item
+{
+    [SerializeField] public ItemType itemType;
+    [SerializeField] public int amount;
+  
     public Sprite GetSprite()
     {
-        return ItemAsset.Instance.spriteDictionary[itemType];
+        return Instance.spriteDictionary[itemType];
     }
     public string GetDescription()
     {
-        return ItemAsset.Instance.descriptionDictionary[itemType];
+        return Instance.descriptionDictionary[itemType];
     }
 
     public bool isStackable()
@@ -55,5 +56,6 @@ public class Item
                 return false;
         }
     }
+
 
 }

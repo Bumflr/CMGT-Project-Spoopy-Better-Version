@@ -2,9 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
-public class PlayerInventory 
+public class PlayerInventory
 {
     public event EventHandler OnItemListChanged;
     private List<Item> itemList;
@@ -16,7 +15,6 @@ public class PlayerInventory
         this.useItemAction = useItemAction;
 
         itemList = new List<Item>();
-
     }
 
     public void AddItem(Item item)
@@ -84,7 +82,8 @@ public class PlayerInventory
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
     public void UseItem(Item item) {  useItemAction(item); }
-    public void EquipItem(Item item)  { currentlyequippedItem = item; OnItemListChanged?.Invoke(this, EventArgs.Empty); }
+    public void EquipItem(Item item)  { currentlyequippedItem = item; OnItemListChanged?.Invoke(this, EventArgs.Empty); }   
+
 
     public void SetItem(Item item)
     {
@@ -114,4 +113,12 @@ public class PlayerInventory
     {
         return itemList;
     }
+
+    public void SetItemList(List<Item> newItemList)
+    {
+        this.itemList = newItemList;
+
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
+    }
+
 }

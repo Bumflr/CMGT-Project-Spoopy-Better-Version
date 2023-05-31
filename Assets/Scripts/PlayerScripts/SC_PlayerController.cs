@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SC_PlayerController : MonoBehaviour
+public class SC_PlayerController : MonoBehaviour, IDataPersistence
 {
     [Header("Dependencies")]
     public UI_Inventory uiInventory;
@@ -11,18 +12,31 @@ public class SC_PlayerController : MonoBehaviour
 
     public PlayerInventory playerInventory;
 
-    private void Start()
+    private void Awake()
     {
         playerInventory = new PlayerInventory(UseItem);
         uiInventory.SetInventory(playerInventory);
 
-        Item flashlight = new Item { itemType = Item.ItemType.Flashlight, amount = 1 };
+        Item flashlight = new Item { itemType = ItemType.Flashlight, amount = 1 };
         playerInventory.AddItem(flashlight);
         playerInventory.EquipItem(flashlight);
         playerWeaponScript.SwitchWeapon(flashlight);
 
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
     }
+
+    public void SaveData(GameData data)
+    {
+        data.playerItems = playerInventory.GetItemList();
+    }
+    public void LoadData(GameData data)
+    {
+        if (data.playerItems != null && data.playerItems.Count > 0)
+        {
+            playerInventory.SetItemList(data.playerItems);
+        }
+    }
+
     private void OnGameStateChanged(GameState newGameState)
     {
         if (newGameState != GameState.Gameplay)
@@ -43,17 +57,17 @@ public class SC_PlayerController : MonoBehaviour
     {
         switch (item.itemType) 
         {
-            case Item.ItemType.Camera:
-            case Item.ItemType.Flashlight:
-            case Item.ItemType.Lantern:
-            case Item.ItemType.FlashGrenade:
+            case ItemType.Camera:
+            case ItemType.Flashlight:
+            case ItemType.Lantern:
+            case ItemType.FlashGrenade:
                 playerWeaponScript.SwitchWeapon(item);
                 playerInventory.EquipItem(item);
                 break;
-            case Item.ItemType.FlashLightBatteries:
+            case ItemType.FlashLightBatteries:
                 playerWeaponScript.LoadAmmo(item);
                 break;
-            case Item.ItemType.Coin:
+            case ItemType.Coin:
                 break;
             default:
                 break;

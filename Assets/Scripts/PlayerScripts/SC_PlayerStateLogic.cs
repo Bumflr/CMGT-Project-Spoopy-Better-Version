@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -52,6 +52,21 @@ public class SC_PlayerStateLogic : MonoBehaviour
         if (isHiding)
             return;
 
+        /* Running Exhaustion Code */
+        if (playerState == PlayerStates.Running)
+        {
+            stamina -= 1 * Time.deltaTime;
+            if (stamina < 0) stamina = 0f;
+        }
+        else
+        {
+            stamina += 1 * Time.deltaTime;
+            if (stamina >= maxStamina)
+            {
+                stamina = maxStamina;
+            }
+        }
+
         if (playerState == PlayerStates.BeingHeld)
         {
             //If using keyboard and if using mouse change it from input to inputdir
@@ -68,20 +83,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
             playerState = PlayerStates.Running;
         }
 
-        /* Running Code */
-        if (playerState == PlayerStates.Running)
-        {
-            stamina -= 1 * Time.deltaTime;
-            if (stamina < 0) stamina = 0f;
-        }
-        else
-        {
-            stamina += 1 * Time.deltaTime;
-            if (stamina >= maxStamina)
-            {
-                stamina = maxStamina;
-            }
-        }
+ 
 
         if (stamina <= 0)
         {

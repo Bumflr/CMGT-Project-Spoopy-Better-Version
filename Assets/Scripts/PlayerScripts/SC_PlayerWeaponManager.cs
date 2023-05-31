@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
-using static Item;
+
 
 public class SC_PlayerWeaponManager : MonoBehaviour
 {
     private SC_PlayerController characterController;
-    public Dictionary<Item.ItemType, GameObject> usableItems = new Dictionary<Item.ItemType, GameObject>();
-    public Dictionary<GameObject, Item.ItemType> invertedUsableItems = new Dictionary<GameObject, Item.ItemType>();
+    public Dictionary<ItemType, GameObject> usableItems = new Dictionary<ItemType, GameObject>();
+    public Dictionary<GameObject, ItemType> invertedUsableItems = new Dictionary<GameObject, ItemType>();
 
     public int NUM_UsableItems => usableItems.Count;
 
@@ -19,7 +19,7 @@ public class SC_PlayerWeaponManager : MonoBehaviour
     public class WeaponThing 
     { 
         public GameObject weapon;
-        public Item.ItemType type;
+        public ItemType type;
     }
 
     public WeaponThing[] weaponPrefabs;
@@ -62,8 +62,8 @@ public class SC_PlayerWeaponManager : MonoBehaviour
 
         switch (item.itemType)
         {
-            case Item.ItemType.FlashLightBatteries:
-                thisItem = usableItems[Item.ItemType.Flashlight].GetComponent<UsableItem>();
+            case ItemType.FlashLightBatteries:
+                thisItem = usableItems[ItemType.Flashlight].GetComponent<UsableItem>();
                 thisItem.Ammo += item.amount;
                 break;
             default:

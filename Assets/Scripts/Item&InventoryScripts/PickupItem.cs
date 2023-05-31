@@ -4,8 +4,15 @@ using UnityEngine;
 using static Item;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
-public class PickupItem : MonoBehaviour
+public class PickupItem : MonoBehaviour, IDataPersistence
 {
+    [SerializeField] private string id;
+    [ContextMenu("Generate guid for id")]
+    private void GenerateGuid()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
+
     [Header("Dependencies")]
     public SC_PickUp_SO pickUpManager;
 
@@ -15,6 +22,8 @@ public class PickupItem : MonoBehaviour
 
     private Item item;
     private SC_PlayerController pickingPlayer;
+    private bool collected;
+
     private void Awake()
     {
         item = new Item { itemType = itemType, amount = this.amount };
@@ -23,6 +32,25 @@ public class PickupItem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         pickingPlayer = other.GetComponent<SC_PlayerController>();
+    }
+
+    public void LoadData(GameData data)
+    {
+        data.skillObjectsCollected.TryGetValue(id, out collected);
+
+        if (collected)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    public void SaveData(GameData data)
+    {
+        if (data.skillObjectsCollected.ContainsKey(id))
+        {
+            data.skillObjectsCollected.Remove(id);
+        }
+        data.skillObjectsCollected.Add(id, collected);
     }
 
     private void Update()
@@ -35,7 +63,10 @@ public class PickupItem : MonoBehaviour
             GameStateManager.Instance.SetState(GameState.PickUpItemScreen);
 
             OnPicked(pickingPlayer);
-            Destroy(this.gameObject);
+
+            collected = true;
+            this.gameObject.SetActive(false);
+            //Destroy(this.gameObject);
         }
     }
 

@@ -15,7 +15,7 @@ public class ItemAsset : MonoBehaviour
     [System.Serializable]
     public class SpriteItem
     {
-        public Item.ItemType itemType;
+        public ItemType itemType;
         public Sprite sprite;
         [TextArea]
         public string description;
@@ -31,7 +31,7 @@ public class ItemAsset : MonoBehaviour
         }
     }
 
-    public Dictionary<Item.ItemType, Sprite> spriteDictionary = new Dictionary<Item.ItemType, Sprite>();
-    public Dictionary<Item.ItemType, string> descriptionDictionary = new Dictionary<Item.ItemType, string>();
+    public Dictionary<ItemType, Sprite> spriteDictionary = new Dictionary<ItemType, Sprite>();
+    public Dictionary<ItemType, string> descriptionDictionary = new Dictionary<ItemType, string>();
 
 }

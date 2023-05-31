@@ -8,12 +8,12 @@ using static Item;
 [CreateAssetMenu(fileName = "PickUpManagerScriptableObject", menuName = "ScriptableObjects/Pickup Manager")]
 public class SC_PickUp_SO : ScriptableObject
 {
-    [System.NonSerialized] public UnityEvent<string, Sprite, string, bool> pickUpEvent;
+    [System.NonSerialized] public UnityEvent<string, Sprite, string> pickUpEvent;
 
     private void OnEnable()
     {
         if (pickUpEvent == null)
-            pickUpEvent = new UnityEvent<string, Sprite, string, bool>();
+            pickUpEvent = new UnityEvent<string, Sprite, string>();
     }
 
     //Display the item, but also what it is, but also an description, and also how many if that is relevant, but also make it applicable for the logs
@@ -21,6 +21,6 @@ public class SC_PickUp_SO : ScriptableObject
 
     private void SendItemDetails(Item item) 
     {
-        pickUpEvent.Invoke(item.itemType.ToString(), item.GetSprite(), item.GetDescription(), item.isLog());
+        pickUpEvent.Invoke(item.itemType.ToString(), item.GetSprite(), item.GetDescription());
     }
 }
