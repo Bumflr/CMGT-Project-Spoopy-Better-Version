@@ -9,7 +9,8 @@ public enum EnemyStates
     Chasing,
     Investigating,
     HoldingPlayer,
-    Stunned
+    Stunned,
+    BeingLit
 }
 
 
@@ -24,11 +25,11 @@ public class SC_EnemyMove : MonoBehaviour
     public float timeToRotate = 2;                  //  Wait time when the enemy detect near the player without seeing
     public float speedWalk = 6;                     //  Walking speed, speed in the nav mesh agent
     public float speedRun = 9;                      //  Running speed
-   
-    public Transform[] waypoints;                   //  All the waypoints where the enemy patrols
+
+    int amountOfWayPoints = 3;
+    Vector3[] waypoints;                   //  All the waypoints where the enemy patrols
     int m_CurrentWaypointIndex;                     //  Current waypoint where the enemy is going to
- 
- 
+
     float waitTime = 4;                               //  Variable of the wait time that makes the delay
     float m_TimeToRotate;                           //  Variable of the wait time to rotate when the player is near that makes the delay
 
@@ -43,7 +44,19 @@ public class SC_EnemyMove : MonoBehaviour
  
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speedWalk;             //  Set the navemesh speed with the normal speed of the enemy
-        navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
+
+        waypoints = new Vector3[1];
+
+        waypoints[0] = this.transform.position;
+        /*for (int i = 0; i < amountOfWayPoints; i++)
+        {
+            RandomPoint(this.transform.position, 5f, out waypoints[i]);
+
+            Debug.Log($"{i} + {waypoints[i]}");
+        }*/
+
+        navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex]);    //  Set the destination to the first waypoint
+
     }
 
     public void SetMoveAndState(EnemyStates enemyState, Vector3 target)
@@ -58,9 +71,13 @@ public class SC_EnemyMove : MonoBehaviour
                 SetSpeed(speedRun);
                 targetPosition = target;
                 break;
+            case EnemyStates.BeingLit:
+                SetSpeed(speedWalk);
+                targetPosition = target;
+                break;
             case EnemyStates.Patrolling:
                 SetSpeed(speedWalk);
-                targetPosition = waypoints[m_CurrentWaypointIndex].position;
+                targetPosition = waypoints[m_CurrentWaypointIndex];
                 break;
             case EnemyStates.Investigating:
                 SetSpeed(speedWalk);
@@ -114,8 +131,10 @@ public class SC_EnemyMove : MonoBehaviour
     {
         Vector3 randomPoint = center + Random.insideUnitSphere * range; //random point in a sphere 
         NavMeshHit hit;
+
         if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) //documentation: https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html
-        { 
+        {
+            Debug.DrawRay(randomPoint, hit.position);
             //the 1.0f is the max distance from the random point to a point on the navmesh, might want to increase if range is big
             //or add a for loop like in the documentation
             result = hit.position;

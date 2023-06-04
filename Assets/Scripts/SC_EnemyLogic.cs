@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class SC_EnemyLogic : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class SC_EnemyLogic : MonoBehaviour
     public SC_EnemyMove move;
     public SC_HearingManager_SO hearingManagerScriptableObject;
     public Animator animator;
-
+    public SC_EnemyVisibility visibility;
 
     [Header("Settings")]
     [ReadOnly, SerializeField] private EnemyStates enemyState;
@@ -19,6 +20,8 @@ public class SC_EnemyLogic : MonoBehaviour
     public float viewAngle = 90;                    //  Angle of the enemy view
     public LayerMask playerMask;                    //  To detect the player with the raycast
     public LayerMask obstacleMask;                  //  To detect the obstacles with the raycast
+
+    public bool isSpiderEnemy;
 
     int isIdleHash;
     int isWalkingHash;
@@ -32,6 +35,7 @@ public class SC_EnemyLogic : MonoBehaviour
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
+        visibility = GetComponent<SC_EnemyVisibility>();
 
         isIdleHash = Animator.StringToHash("isIdle");
         isWalkingHash = Animator.StringToHash("isWalking");
@@ -44,6 +48,11 @@ public class SC_EnemyLogic : MonoBehaviour
         hearingManagerScriptableObject.hearingEvent.AddListener(ListenToSounds);
 
         GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged;
+
+        if (isSpiderEnemy)
+        {
+            m_Player = GameObject.FindGameObjectWithTag("Player");
+        }
     }
 
     private void OnGameStateChanged(GameState newGameState)
@@ -67,11 +76,16 @@ public class SC_EnemyLogic : MonoBehaviour
 
     private void Update()
     {
-
         //  Check whether or not the player is in the enemy's field of vision
-        if (EnemyViewCone() && enemyState != EnemyStates.HoldingPlayer && enemyState != EnemyStates.Stunned)
+
+        if ((isSpiderEnemy || EnemyViewCone()) && enemyState != EnemyStates.HoldingPlayer && enemyState != EnemyStates.Stunned)
         {
             SetEnemyState(EnemyStates.Chasing);
+        }
+
+        if (visibility.BeingLit && enemyState == EnemyStates.Chasing)
+        {
+            SetEnemyState(EnemyStates.BeingLit);
         }
 
         switch (enemyState)
@@ -85,12 +99,26 @@ public class SC_EnemyLogic : MonoBehaviour
             case EnemyStates.Chasing:
                 currentTargetPosition = m_Player.transform.position;
 
-                if (!EnemyViewCone() && Vector3.Distance(transform.position, m_Player.transform.position) >= 5f)
+                if ((!isSpiderEnemy && !EnemyViewCone()) && Vector3.Distance(transform.position, m_Player.transform.position) >= 5f)
                 {
                     //You lost the enemy
                     SetEnemyState(EnemyStates.Patrolling);
                 }
 
+                animator.SetBool(isIdleHash, false);
+                animator.SetBool(isWalkingHash, false);
+                animator.SetBool(isRunningHash, true);
+                break;
+            case EnemyStates.BeingLit:
+                currentTargetPosition = isSpiderEnemy ? this.transform.position - m_Player.transform.position : m_Player.transform.position;
+
+                if ((!isSpiderEnemy && !EnemyViewCone()) && Vector3.Distance(transform.position, m_Player.transform.position) >= 5f)
+                {
+                    //You lost the enemy
+                    SetEnemyState(EnemyStates.Patrolling);
+                }
+
+             
                 animator.SetBool(isIdleHash, false);
                 animator.SetBool(isWalkingHash, false);
                 animator.SetBool(isRunningHash, true);
@@ -104,6 +132,7 @@ public class SC_EnemyLogic : MonoBehaviour
             case EnemyStates.HoldingPlayer:
                 animator.SetBool(isGrabbing, true);
                 break;
+         
             default: break;
         }
 
@@ -111,11 +140,19 @@ public class SC_EnemyLogic : MonoBehaviour
         {
             move.SetMoveAndState(enemyState, currentTargetPosition);
         }
+
     }
+
     public void ReachedPoint()
     {
         switch (enemyState) 
         {
+            case EnemyStates.Still:
+                SetEnemyState(EnemyStates.Still);
+                break;
+            case EnemyStates.Patrolling:
+                SetEnemyState(EnemyStates.Still);
+                break;
             case EnemyStates.Investigating:
                 SetEnemyState(EnemyStates.Patrolling);
                 break;
@@ -127,8 +164,15 @@ public class SC_EnemyLogic : MonoBehaviour
 
                 }
                 break;
-            default: break;
+            case EnemyStates.BeingLit:
 
+                if (m_Player.GetComponent<SC_PlayerStateLogic>().isHiding)
+                {
+                    Debug.Log("GETCHO ASS OUTTA THERE I SAW YO NON JORDAN HAVING ASS");
+
+                }
+                break;
+            default: break;
         }
     }
 
@@ -183,7 +227,7 @@ public class SC_EnemyLogic : MonoBehaviour
         {
             //Debug.Log($"Heard a sound at: {pos.ToString()}, by: {this.gameObject.name}");
 
-            if (enemyState != EnemyStates.Chasing && enemyState != EnemyStates.Stunned && enemyState != EnemyStates.HoldingPlayer)
+            if (enemyState != EnemyStates.Chasing && enemyState != EnemyStates.BeingLit && enemyState != EnemyStates.Stunned && enemyState != EnemyStates.HoldingPlayer)
             {
                 currentTargetPosition = pos;
                 SetEnemyState(EnemyStates.Investigating);

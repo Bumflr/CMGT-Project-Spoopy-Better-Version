@@ -8,6 +8,8 @@ public class SC_EnemyVisibility : MonoBehaviour
     private ParticleSystem particleSystem;
 
     private bool beingLit;
+    public bool BeingLit { get { return justVisuals ? false :beingLit; } }
+    private bool justVisuals;
 
     public float delayUntilInvisble = .1f;
     private float timeStamp;
@@ -34,11 +36,13 @@ public class SC_EnemyVisibility : MonoBehaviour
         }
     }
 
-    public void BeingLit()
+    public void Lit(bool justVisuals)
     {
         //NBeinf lit af fam
+        this.justVisuals = justVisuals;
 
         beingLit = true;
+
         timeStamp = Time.time + delayUntilInvisble;
 
         particleSystem.Play();

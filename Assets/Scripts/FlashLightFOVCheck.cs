@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class FlashLightFOVCheck : MonoBehaviour
 {
+    [Header("Settings")]
     public float radius;
     [Range(0, 360)]
     public float angle;
@@ -14,6 +15,8 @@ public class FlashLightFOVCheck : MonoBehaviour
     public LayerMask obstructionMask;
 
     public GameObject playerRef;
+    public bool justVisuals;
+
     //public Toggle testToggle;
     private UsableItem flashlight;
 
@@ -81,7 +84,7 @@ public class FlashLightFOVCheck : MonoBehaviour
 
                         SoundManager.PlaySound(SoundManager.Sound.DetectingGhost, this.transform.position);
 
-                        target.gameObject.GetComponent<SC_EnemyVisibility>().BeingLit();
+                        target.gameObject.GetComponent<SC_EnemyVisibility>().Lit(justVisuals);
                         //SoundManager.PlaySound(SoundManager.Sound.MetalPipe);
                     }
                     else
