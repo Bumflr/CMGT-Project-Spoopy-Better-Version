@@ -1079,6 +1079,10 @@ PrefabInstance:
       propertyPath: turnSpeed
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 4515499420534818542, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+      propertyPath: maxStamina
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4515499420534818543, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: flashLightPrefab
       value: 
