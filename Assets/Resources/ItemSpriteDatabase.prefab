@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteItems:
   - itemType: 0
-    sprite: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
+    sprite: {fileID: 21300000, guid: 923a437798b022542874deb575593eb4, type: 3}
     description: 'A trusty flashlight
 
       Seems reliable enough
