@@ -182,6 +182,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   playerRef: {fileID: 0}
+  justVisuals: 0
   lighting: {fileID: 0}
 --- !u!1001 &294264718038725280
 PrefabInstance:

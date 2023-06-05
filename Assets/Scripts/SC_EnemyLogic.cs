@@ -91,9 +91,7 @@ public class SC_EnemyLogic : MonoBehaviour
         switch (enemyState)
         {
             case EnemyStates.Still:
-                animator.SetBool(isIdleHash, true);
-                animator.SetBool(isWalkingHash, false);
-                animator.SetBool(isRunningHash, false);
+                SetAnimations(true, false, false);
                 break;
 
             case EnemyStates.Chasing:
@@ -104,10 +102,7 @@ public class SC_EnemyLogic : MonoBehaviour
                     //You lost the enemy
                     SetEnemyState(EnemyStates.Patrolling);
                 }
-
-                animator.SetBool(isIdleHash, false);
-                animator.SetBool(isWalkingHash, false);
-                animator.SetBool(isRunningHash, true);
+                SetAnimations(false, false, true);
                 break;
             case EnemyStates.BeingLit:
                 currentTargetPosition = isSpiderEnemy ? this.transform.position - m_Player.transform.position : m_Player.transform.position;
@@ -117,19 +112,16 @@ public class SC_EnemyLogic : MonoBehaviour
                     //You lost the enemy
                     SetEnemyState(EnemyStates.Patrolling);
                 }
-
-             
-                animator.SetBool(isIdleHash, false);
-                animator.SetBool(isWalkingHash, false);
-                animator.SetBool(isRunningHash, true);
+                SetAnimations(false, false, true);
                 break;
             case EnemyStates.Investigating:
             case EnemyStates.Patrolling:
-                animator.SetBool(isIdleHash, false);
-                animator.SetBool(isWalkingHash, true);
-                animator.SetBool(isRunningHash, false);
+                SetAnimations(false, true, false);
                 break;
             case EnemyStates.HoldingPlayer:
+
+                if (isSpiderEnemy)
+                    return;
                 animator.SetBool(isGrabbing, true);
                 break;
          
@@ -141,6 +133,16 @@ public class SC_EnemyLogic : MonoBehaviour
             move.SetMoveAndState(enemyState, currentTargetPosition);
         }
 
+    }
+
+    public void SetAnimations(bool idle, bool walk, bool run)
+    {
+        if (isSpiderEnemy)
+            return;
+
+        animator.SetBool(isIdleHash, idle);
+        animator.SetBool(isWalkingHash, walk);
+        animator.SetBool(isRunningHash, run);
     }
 
     public void ReachedPoint()

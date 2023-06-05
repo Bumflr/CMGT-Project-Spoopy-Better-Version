@@ -17,7 +17,9 @@ public class SC_EnemyVisibility : MonoBehaviour
     private void Awake()
     {
         meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+
         particleSystem = GetComponentInChildren<ParticleSystem>();
+
     }
 
     private void LateUpdate()
@@ -26,8 +28,12 @@ public class SC_EnemyVisibility : MonoBehaviour
         {
             //Not being lit anymore
             meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
-            particleSystem.Pause();
-            particleSystem.Clear();
+
+            if (particleSystem != null)
+            {
+                particleSystem.Pause();
+                particleSystem.Clear();
+            }
         }
 
         if (timeStamp <= Time.time)
@@ -44,8 +50,10 @@ public class SC_EnemyVisibility : MonoBehaviour
         beingLit = true;
 
         timeStamp = Time.time + delayUntilInvisble;
-
-        particleSystem.Play();
+        if (particleSystem != null)
+        {
+            particleSystem.Play();
+        }
         meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
     }
 }

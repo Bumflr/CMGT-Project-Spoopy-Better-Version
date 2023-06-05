@@ -30,11 +30,11 @@ public class SnakeController : MonoBehaviour
     {
 
         //move forward
-        transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+        //transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
         //steer
-        float steerDirection = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up * steerDirection * SteerSpeed * Time.deltaTime);
+        //float steerDirection = Input.GetAxis("Horizontal");
+        //transform.Rotate(Vector3.up * steerDirection * SteerSpeed * Time.deltaTime);
 
         //store position history
         PositionsHistory.Insert (0, transform.position);
@@ -54,6 +54,9 @@ public class SnakeController : MonoBehaviour
     private void GrowSnake()
     {
         GameObject body = Instantiate(BodyPrefab);
+
+        body.transform.localScale = this.transform.localScale;
+
         BodyParts.Add(body);
 
         body.GetComponent<Animator>().enabled = true;

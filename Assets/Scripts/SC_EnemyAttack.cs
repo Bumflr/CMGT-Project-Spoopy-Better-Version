@@ -70,7 +70,7 @@ public class SC_EnemyAttack : MonoBehaviour
 
         enemyLogic.SetEnemyState(EnemyStates.Stunned);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
 
         enemyLogic.SetEnemyState(EnemyStates.Patrolling);
 
