@@ -56,7 +56,11 @@ public class SC_PlayerStateLogic : MonoBehaviour
         bool moving = false;
 
         if (isHiding)
+        {
+            //aniamtion do the funny hide
+
             return;
+        }
 
         AnimatePlayer(playerState);
 

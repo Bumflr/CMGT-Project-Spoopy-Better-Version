@@ -3328,6 +3328,7 @@ GameObject:
   - component: {fileID: 7158437708295884280}
   - component: {fileID: 7158437708295884274}
   - component: {fileID: 7158437708295884171}
+  - component: {fileID: 7158437708295884281}
   m_Layer: 6
   m_Name: Spider Enemy
   m_TagString: Ghost
@@ -3414,6 +3415,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   isSpiderEnemy: 1
+--- !u!114 &7158437708295884281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158437708295884275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86381c84970ee141a626f31a8d891dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyLogic: {fileID: 7158437708295884280}
+  attackRadius: 0.4
+  secondsTilStriking: 0.5
+  attackingPointOffset: {fileID: 7158437708295884168}
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 8
+  holdingPlayer: 0
 --- !u!1001 &7438904183092459948
 PrefabInstance:
   m_ObjectHideFlags: 0
