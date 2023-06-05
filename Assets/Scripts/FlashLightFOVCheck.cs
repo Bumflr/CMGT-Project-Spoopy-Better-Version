@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class FlashLightFOVCheck : MonoBehaviour
 {
+    [Header("Settings")]
     public float radius;
     [Range(0, 360)]
     public float angle;
@@ -14,6 +15,8 @@ public class FlashLightFOVCheck : MonoBehaviour
     public LayerMask obstructionMask;
 
     public GameObject playerRef;
+    public bool justVisuals;
+
     //public Toggle testToggle;
     private UsableItem flashlight;
 
@@ -62,26 +65,27 @@ public class FlashLightFOVCheck : MonoBehaviour
         //Collider[] rangeChecks;
         rangeChecks = new Collider[10];
 
-        int numColliders = Physics.OverlapSphereNonAlloc(transform.position, radius, rangeChecks, targetMask);
+
+        int numColliders = Physics.OverlapSphereNonAlloc(transform.parent != null ? transform.parent.position : transform.position, radius, rangeChecks, targetMask);
 
         if (numColliders > 0 && flashlight != null ? flashlight.flashlightToggle : true)
         {
             for (int i = 0; i < numColliders; i++)
             {
                 Transform target = rangeChecks[i].transform;
-                Vector3 directionToTarget = (target.position - transform.position).normalized;
+                Vector3 directionToTarget = (target.position - (transform.parent != null ? transform.parent.position : transform.position)).normalized;
 
                 if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
                 {
-                    float distanceToTarget = Vector3.Distance(transform.position, target.position);
+                    float distanceToTarget = Vector3.Distance(transform.parent != null ? transform.parent.position : transform.position, target.position);
 
-                    if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                    if (!Physics.Raycast(transform.parent != null ? transform.parent.position : transform.position, directionToTarget, distanceToTarget, obstructionMask))
                     {
                         canSeeEnemy = true;
 
-                        SoundManager.PlaySound(SoundManager.Sound.DetectingGhost, this.transform.position);
+                        SoundManager.PlaySound(SoundManager.Sound.DetectingGhost, transform.parent != null ? transform.parent.position : transform.position);
 
-                        target.gameObject.GetComponent<SC_EnemyVisibility>().BeingLit();
+                        target.gameObject.GetComponent<SC_EnemyVisibility>().Lit(justVisuals);
                         //SoundManager.PlaySound(SoundManager.Sound.MetalPipe);
                     }
                     else

@@ -11,6 +11,8 @@ public enum PlayerStates
     Running,
     Exhausted,
     BeingHeld,
+    Crouching,
+    Hiding,
 }
 public class SC_PlayerStateLogic : MonoBehaviour
 {
@@ -30,6 +32,8 @@ public class SC_PlayerStateLogic : MonoBehaviour
     private bool mashButtonTracker; //The bool which alternates between true and false when mashing buttons/flicking the stick when In a grab
     private float heldTimer;
 
+    //finn
+    private Animator animator;
 
     private SC_EnemyAttack attackingEnemy;
 
@@ -39,6 +43,8 @@ public class SC_PlayerStateLogic : MonoBehaviour
         stamina = maxStamina;
         playerMovement = GetComponent<SC_PlayerMovement>();
         playerHealth = GetComponent<SC_PlayerHealth>();
+        //finn
+        animator = GetComponentInChildren<Animator>(); 
     }
 
     void Update()
@@ -50,7 +56,13 @@ public class SC_PlayerStateLogic : MonoBehaviour
         bool moving = false;
 
         if (isHiding)
+        {
+            //aniamtion do the funny hide
+
             return;
+        }
+
+        AnimatePlayer(playerState);
 
         /* Running Exhaustion Code */
         if (playerState == PlayerStates.Running)
@@ -102,11 +114,32 @@ public class SC_PlayerStateLogic : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            playerState = PlayerStates.Sneaking;
+            if (inputDir != Vector3.zero)
+            {
+                playerState = PlayerStates.Sneaking;
+            }
+            else
+            {
+                playerState = PlayerStates.Crouching;
+            }
+            //playerstate = inputDir != Vector3.zero ? PlayerStates.Sneaking : PlayerStates.Hiding:
         }
 
 
-        if (!moving) playerState = PlayerStates.Still;
+        //if (!moving) playerState = PlayerStates.Still;
+
+        if (!moving)
+        {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                playerState = PlayerStates.Sneaking;
+            }
+            else
+            {
+                playerState = PlayerStates.Still;
+            }
+        }
+
 
 
         playerMovement.Move(input, inputDir, playerState);
@@ -114,6 +147,109 @@ public class SC_PlayerStateLogic : MonoBehaviour
         MakeFootstepSounds(playerState);
         // float movementSpeed = ((running) ? 1 : 0.5f) * inputDir.magnitude;
         // _anim.SetFloat("movementSpeed", movementSpeed, SpeedSmoothTime, Time.deltaTime);
+
+        if (playerState == PlayerStates.Sneaking)
+        {
+            if (inputDir != Vector3.zero)
+            {
+                animator.SetFloat("crouch", 1, 0.1f, Time.deltaTime);
+
+            }
+            else
+            {
+                animator.SetFloat("crouch", 0, 0.1f, Time.deltaTime);
+            }
+        }
+
+    }
+    //finns code
+    public void AnimatePlayer(PlayerStates currentPlayerState)
+    {
+
+        if (playerState == PlayerStates.Sneaking)
+        {
+            animator.SetBool("mhm", true);
+        }
+        else
+        {
+            animator.SetBool("mhm", false);
+        }
+
+        if (playerState == PlayerStates.BeingHeld)
+        {
+            animator.SetBool("grab", true);
+        }
+        else
+        {
+            animator.SetBool("grab", false);
+        }
+
+        if (playerState == PlayerStates.BeingHeld)
+        {
+            animator.SetBool("hide", true);
+        }
+        else
+        {
+            animator.SetBool("hide", false);
+        }
+
+
+
+        switch (currentPlayerState)
+        {
+            case PlayerStates.Still:
+                animator.SetFloat("speed", 0, 0.1f, Time.deltaTime);
+                break;
+            case PlayerStates.Walking:
+                animator.SetFloat("speed", 0.5f, 0.1f, Time.deltaTime);
+                break;
+            case PlayerStates.Running:
+                animator.SetFloat("speed", 1, 0.1f, Time.deltaTime);
+                break;
+            case PlayerStates.BeingHeld:
+                break;
+
+            // case PlayerStates.Sneaking:
+
+
+            // if (inputDir != Vector3.zero)
+            //  {
+            //   animator.SetFloat("speed", 1, 0.1f, Time.deltaTime);
+
+            //  }
+            // else
+            //   {
+            // animator.SetFloat("speed", 0, 0.1f, Time.deltaTime);
+            // }
+            //  break;
+
+
+
+            //if (playerState == PlayerStates.Sneaking)
+            //  {
+            //      animator.SetBool("mhm", true);
+            //  }
+            //  else
+            //  {
+            //      animator.SetBool("mhm", false);
+            //  }
+
+
+
+            // if (case PlayerStates.Sneaking:)
+            //{
+            //    animator.SetBool("mhm", true);
+            //  }
+            //  else
+            //   {
+            //      animator.SetBool("mhm", false);
+            //   }
+            //   break;
+
+            case PlayerStates.Exhausted:
+                break;
+
+        }
     }
     private void MakeFootstepSounds(PlayerStates playerState)
     {

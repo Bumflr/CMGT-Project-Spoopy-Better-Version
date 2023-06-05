@@ -8,6 +8,8 @@ public class SC_EnemyVisibility : MonoBehaviour
     private ParticleSystem particleSystem;
 
     private bool beingLit;
+    public bool BeingLit { get { return justVisuals ? false :beingLit; } }
+    private bool justVisuals;
 
     public float delayUntilInvisble = .1f;
     private float timeStamp;
@@ -15,7 +17,9 @@ public class SC_EnemyVisibility : MonoBehaviour
     private void Awake()
     {
         meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+
         particleSystem = GetComponentInChildren<ParticleSystem>();
+
     }
 
     private void LateUpdate()
@@ -24,8 +28,12 @@ public class SC_EnemyVisibility : MonoBehaviour
         {
             //Not being lit anymore
             meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
-            particleSystem.Pause();
-            particleSystem.Clear();
+
+            if (particleSystem != null)
+            {
+                particleSystem.Pause();
+                particleSystem.Clear();
+            }
         }
 
         if (timeStamp <= Time.time)
@@ -34,14 +42,18 @@ public class SC_EnemyVisibility : MonoBehaviour
         }
     }
 
-    public void BeingLit()
+    public void Lit(bool justVisuals)
     {
         //NBeinf lit af fam
+        this.justVisuals = justVisuals;
 
         beingLit = true;
-        timeStamp = Time.time + delayUntilInvisble;
 
-        particleSystem.Play();
+        timeStamp = Time.time + delayUntilInvisble;
+        if (particleSystem != null)
+        {
+            particleSystem.Play();
+        }
         meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
     }
 }
