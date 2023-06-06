@@ -15,6 +15,7 @@ public class PickupItem : MonoBehaviour, IDataPersistence
 
     [Header("Dependencies")]
     public SC_PickUp_SO pickUpManager;
+    public SC_Notes_SO notesManager;
 
     [Header("Settings")]
     public ItemType itemType;
@@ -59,8 +60,14 @@ public class PickupItem : MonoBehaviour, IDataPersistence
         {
             pickingPlayer.playerInventory.AddItem(item);
 
-            pickUpManager.PickUpItem(item);
-            GameStateManager.Instance.SetState(GameState.PickUpItemScreen);
+            if (item.isLog())
+            {
+                notesManager.StartReadingItem(item);
+            }
+            else
+            {
+                pickUpManager.PickUpItem(item);
+            }
 
             OnPicked(pickingPlayer);
 

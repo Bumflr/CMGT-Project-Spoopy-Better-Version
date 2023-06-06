@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2469f9401ff7f734782420420c83c4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   pickUpManager: {fileID: 11400000, guid: 9bc45d4a10f63834498087a82a0540ef, type: 2}
+  notesManager: {fileID: 11400000, guid: 871c4b63bfed1be479c25a741981df58, type: 2}
   itemType: 1
   amount: 1
 --- !u!65 &1602620181473807479

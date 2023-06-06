@@ -14,10 +14,11 @@ public class SC_PickUp_SO : ScriptableObject
     {
         if (pickUpEvent == null)
             pickUpEvent = new UnityEvent<string, Sprite, string>();
+
     }
 
     //Display the item, but also what it is, but also an description, and also how many if that is relevant, but also make it applicable for the logs
-    public void PickUpItem(Item item) { SendItemDetails(item); }
+    public void PickUpItem(Item item) { SendItemDetails(item); GameStateManager.Instance.SetState(GameState.PickUpItemScreen); }
 
     private void SendItemDetails(Item item) 
     {

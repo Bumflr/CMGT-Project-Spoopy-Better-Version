@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static ItemAsset;
+
 
 public enum ItemType
 {
@@ -15,6 +15,7 @@ public enum ItemType
     Coin,
     Medkit,
     AudioLog1,
+    AudioLog2,
 }
 
 [Serializable]
@@ -25,11 +26,15 @@ public class Item
   
     public Sprite GetSprite()
     {
-        return Instance.spriteDictionary[itemType];
+        return ItemAsset.Instance.spriteDictionary[itemType];
     }
     public string GetDescription()
     {
-        return Instance.descriptionDictionary[itemType];
+        return ItemAsset.Instance.descriptionDictionary[itemType];
+    }
+    public string[] GetText()
+    {
+        return NoteAsset.Instance.textDictionary[itemType];
     }
 
     public bool isStackable()
@@ -51,6 +56,8 @@ public class Item
         switch (itemType)
         {
             case ItemType.AudioLog1:
+                return true;
+            case ItemType.AudioLog2:
                 return true;
             default:
                 return false;
