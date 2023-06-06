@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 2520095744293270146}
   - component: {fileID: 3163085536151340119}
   - component: {fileID: 4252918806409810975}
-  - component: {fileID: 2093328317818345545}
+  - component: {fileID: 8408515839779432781}
+  - component: {fileID: 5794648454646928513}
+  - component: {fileID: 6445146324843522728}
   m_Layer: 0
   m_Name: Mine Pillars (57)
   m_TagString: Untagged
@@ -84,8 +86,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2093328317818345545
-MeshCollider:
+--- !u!65 &8408515839779432781
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +96,32 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5053925668127403250, guid: 68aed9bb6fb8e044e9b4b54ba0358098, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.020000005, y: 0.02, z: 0.20023951}
+  m_Center: {x: 0.0000000054724043, y: 0.005, z: 0.36724687}
+--- !u!65 &5794648454646928513
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491328864651451598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000005, y: 0.14858739, z: 0.02}
+  m_Center: {x: 0.000000005472404, y: -0.058520235, z: 0.455}
+--- !u!65 &6445146324843522728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491328864651451598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000005, y: 0.14858739, z: 0.02}
+  m_Center: {x: 0.000000005472404, y: -0.058520235, z: 0.281}
