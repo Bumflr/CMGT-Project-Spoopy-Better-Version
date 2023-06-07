@@ -17,14 +17,14 @@ public class PlayerInventory
         itemList = new List<Item>();
     }
 
-    public void AddItem(Item item)
+    public bool AddItem(Item item)
     {
         if (item.isLog())
-            return;
+            return false;
+        bool itemAlreadyInInventory = false;
 
         if (item.isStackable())
         {
-            bool itemAlreadyInInventory = false;
             foreach (Item inventoryItem in itemList)
             {
                 if (item.itemType == inventoryItem.itemType)
@@ -37,7 +37,6 @@ public class PlayerInventory
         }
         else
         {
-            bool itemAlreadyInInventory = false;
             foreach (Item inventoryItem in itemList)
             {
                 if (item.itemType == inventoryItem.itemType)
@@ -51,6 +50,8 @@ public class PlayerInventory
         }
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
+
+        return itemAlreadyInInventory;
     }
     public void RemoveItem(Item item)
     {

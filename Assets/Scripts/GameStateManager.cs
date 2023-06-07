@@ -3,7 +3,8 @@ public enum GameState
     Gameplay,
     Paused,
     PickUpItemScreen,
-    GameOver
+    GameOver,
+    ReadScreen
 }
 public class GameStateManager
 {

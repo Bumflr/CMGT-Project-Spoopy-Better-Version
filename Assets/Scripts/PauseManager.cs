@@ -36,6 +36,10 @@ public class PauseManager : MonoBehaviour
             {
                 GameStateManager.Instance.SetState(GameState.Gameplay);
             }
+            else if (GameStateManager.Instance.CurrentGameState == GameState.ReadScreen)
+            {
+                GameStateManager.Instance.SetState(GameState.Gameplay);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
