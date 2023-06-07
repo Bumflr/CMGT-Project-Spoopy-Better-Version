@@ -116,7 +116,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   playerRef: {fileID: 4515499420534818540}
-  justVisuals: 0
+  justVisuals: 1
   lighting: {fileID: 0}
 --- !u!1 &2280334828485587185
 GameObject:
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cam: {fileID: 0}
   SneakSpeed: 1.25
-  WalkSpeed: 3
+  WalkSpeed: 2
   RunSpeed: 4
   ExhaustSpeed: 1
   turnSpeed: 250

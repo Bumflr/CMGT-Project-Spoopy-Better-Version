@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CameraManagerScriptableObject
   m_EditorClassIdentifier: 
   minimumLensSize: 0
-  maximumLensSize: 6
+  maximumLensSize: 5
