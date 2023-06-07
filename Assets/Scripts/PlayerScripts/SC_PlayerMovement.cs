@@ -15,6 +15,7 @@ public class SC_PlayerMovement : MonoBehaviour
     public float ExhaustSpeed = 0.5f;
     [Space(20)]
     public float turnSpeed;
+    [Range(0f, 1f)]
     public float SpeedSmoothTime = 0.1f;
     public float lerpValueRotation;
 

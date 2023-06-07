@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 980208968693173642}
   - component: {fileID: 241161100574964930}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: TerrorRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 6537689745666629953}
   - component: {fileID: 4515499420534818543}
   - component: {fileID: 4515499420534818533}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

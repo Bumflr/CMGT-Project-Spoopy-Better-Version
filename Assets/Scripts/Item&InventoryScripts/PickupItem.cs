@@ -30,10 +30,7 @@ public class PickupItem : MonoBehaviour, IDataPersistence
         item = new Item { itemType = itemType, amount = this.amount };
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        pickingPlayer = other.GetComponent<SC_PlayerController>();
-    }
+
 
     public void LoadData(GameData data)
     {
@@ -58,7 +55,6 @@ public class PickupItem : MonoBehaviour, IDataPersistence
     {
         if (Input.GetKey(KeyCode.Space) && pickingPlayer != null)
         {
-            
             if (item.isLog())
             {
                 notesManager.StartReadingItem(item);
@@ -75,10 +71,20 @@ public class PickupItem : MonoBehaviour, IDataPersistence
             //Destroy(this.gameObject);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            pickingPlayer = other.GetComponent<SC_PlayerController>();
+        }
+    }
 
     private void OnTriggerExit(Collider other)
     {
-        pickingPlayer = null;
+        if (other.CompareTag("Player"))
+        {
+            pickingPlayer = null;
+        }
     }
 
     //TODO Make sure a prompt pops up to make sure the player actuall ypicks up the stuff because they might not want to do that.
