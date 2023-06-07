@@ -58,13 +58,12 @@ public class PickupItem : MonoBehaviour, IDataPersistence
     {
         if (Input.GetKey(KeyCode.Space) && pickingPlayer != null)
         {
-            pickingPlayer.playerInventory.AddItem(item);
-
+            
             if (item.isLog())
             {
                 notesManager.StartReadingItem(item);
             }
-            else
+            else if (!pickingPlayer.playerInventory.AddItem(item))
             {
                 pickUpManager.PickUpItem(item);
             }
