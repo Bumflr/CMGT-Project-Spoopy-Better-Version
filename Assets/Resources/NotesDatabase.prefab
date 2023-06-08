@@ -47,14 +47,234 @@ MonoBehaviour:
   noteItems:
   - itemType: 7
     textPages:
-    - Dab
-    - On Dem haters
-    - On Dem haters1
-    - 2
+    - ------FILE 001 LOCATED------
+    - ------TRANSMISSION BEGINS------
+    - 'Michael Hall
+
+
+      Wait, that''s it?'
+    - 'Emily Miller:
+
+
+      What did you expect?'
+    - 'Michael Hall:
+
+
+      I''m not sure... maybe something smaller?'
+    - 'Anna Dekker:
+
+
+      The island inhabited more than 5000 people. I suppose
+      it is quite a bit bigger than what the briefing made us believe.'
+    - 'Anthony Beckett:
+
+
+      You''re not allowed to know too much after all.'
+    - 'Emily Miller:
+
+
+      Of course. Because that is such a good way a preforming
+      science, keeping information.'
+    - "Anne Dekker: \n\nLet's not fret. Just get ready to get on land and do what
+      we are tasked to do. "
+    - 'Anthony Beckett:
+
+
+      Well said. The only reason you guys are here is for
+      a second a opinion after all, and you all signed the contract to do so. '
+    - "Emily Miller: \n\nWell quite... *sigh* Let's just get this over with."
+    - 'Anna Dekker:
+
+
+      Michael, you have audio log duties-'
+    - "Michael Hall: \n\nAlready started recording Doctor Dekker!"
+    - 'Anna Dekker:
+
+
+      Ah wonderful, thank you. Doctor Emily, I suppose our
+      task on the matter is clear?'
+    - "Emily Miller: \n\nVery, now let's start this party."
+    - ------TRANSMISSION ENDS------
   - itemType: 8
     textPages:
-    - So like
-    - what is up with airline food?
-    - .
-    - .
-    - .
+    - ------FILE 005 LOCATED------
+    - ------TRANSMISSION BEGINS------
+    - "Emily Miller: \n\nWill you be alright here?"
+    - 'Michael Hall:
+
+
+      I should be fine. It''s just a sprained ankle.'
+    - "Emily Miller: \n\nI told you to watch your step."
+    - 'Michael Hall:
+
+
+      Sorry.... hey what are you guys doing?'
+    - "Anna Dekker: \n\nAnthony says there was something wrong with the camp site
+      we are traveling to. We'll take a look and see if we can fix it before taking
+      you that way. It could save you an unnecessary trip."
+    - "Anthony Beckett: \n\nWell, we don't have all day."
+    - "Emily Miller: \n\nWe're coming, give us a second."
+    - "Anna Dekker: \n\nDo you need anything else?"
+    - 'Michael Hall:
+
+
+      I''m fine, thanks.'
+    - "Emily Miller: \n\nGood, now don't eat all the snacks whilst we're gone."
+    - "Michael Hall: \n\nNo promises!"
+    - 'Anna Dekker:
+
+
+      We will see you in a bit.'
+    - 
+    - ???
+    - 
+    - ??????????????
+    - "Michael Hall: \n\nEh.... guys?"
+    - ??????????????
+    - "Michael Hall: \n\nCome on guys this isn't funny"
+    - ------UNKNOWN AUDIO SOURCE DETECTED------
+    - "Michael Hall: \n\nGUYS?!"
+    - ------AUDIO FILE CORRUPTED------
+    - ------TRANSMISSION ENDS------
+  - itemType: 9
+    textPages:
+    - ------FILE 006 LOCATED------
+    - ------TRANSMISSION BEGINS------
+    - 'Emily Miller:
+
+
+      What do you mean ''the site is gone''?'
+    - "Anthony Beckett: \n\nThe crew site that the previous expedition set up is
+      destroyed. You won't have some of the equipment you were planning to rely on."
+    - "Emily Miller: \n\nHow could that even happen?"
+    - "Anthony Beckett: \n\nThat remains to be seen."
+    - "Emily Miller: \n\n*huff* Anna?"
+    - "Anna Dekker: \n\nThis certainly is not idea. What do you expect us to do without
+      basic necessities?"
+    - "Anthony Beckett: \n\nYou will still be able to do the bare minimum."
+    - "Anna Dekker: \n\nIt would help to know what we are supposed to be looking
+      for."
+    - "Anthony Beckett: \n\nYou know that that information is clasified for a reason-"
+    - ------UNKNOWN AUDIO SOURCE DETECTED------
+    - ???????????????????
+    - 'Emily Miller:
+
+
+      Did you guys hear that?'
+    - "Anthony Beckett: \n\nHear what?"
+    - "Anna Dekker: \n\n*sigh* Let's just go back to Michael. I hope he can walk
+      the rest of the way."
+    - ------TRANSMISSION ENDS------
+  - itemType: 10
+    textPages:
+    - ------FILE 015 LOCATED------
+    - ------TRANSMISSION BEGINS------
+    - "Anna Dekker: \n\nMichael, are you rolling?\n\n\n\nAnna Dekker: Thank you Michael.
+      Alright then. Audio log #015. We tried to salvage most of the equipment at
+      the old crew site, but our efforts were proven unfruitful. Most of the project
+      work cannot be done, and we are still trying to come up with a compromise"
+    - "????????: \n\nYes Ma'am! Go on"
+    - "Anna Dekker: \n\nThank you Michael. Alright then. Audio log #015. We tried
+      to salvage most of the equipment at the old crew site, but our efforts were
+      proven unfruitful. Most of the project work cannot be done, and we are still
+      trying to come up with a compromise"
+    - "Anthony Beckett: \n\nWhich we're still in disagreement on."
+    - "Emily Miller: \n\nTell me about it *huff*"
+    - "Anthony Beckett: \n\nI am still very sure we can continue with the main idea.
+      Most of the important equipment was brought with us anyway."
+    - "Emily Miller: \n\nIt is quite easy for you to say, since you won't be the
+      one to be conducting the experiments-....."
+    - "Anna Dekker: \n\nCreating a hypothesis would be unwise in this instance, but
+      we could try to figure out more this supposed 'unique wild life' O.Z.A. talked
+      about."
+    - "Anthony Beckett: \n\nExactly."
+    - "Emily Miller: \n\nThis is unwise. We haven't even seen this 'wildlife' yet.
+      All I've seen till now are just some clawmarks on trees."
+    - "Anna Dekker: \n\nWe'll figure it out"
+    - "????????: \n\nThat we wil! So what's next?"
+    - "Emily Miller: \n\nTracking the species till we find one of them doesn't sound
+      like the worst idea."
+    - "Anna Dekker: \n\nSeconded. Let's take the rest of the equipment and set our
+      own crew site up closer to the middle of the island. That way we're better
+      protected from the wind."
+    - "????????: \n\nSounds like a plan!"
+    - ------TRANSMISSION ENDS------
+  - itemType: 11
+    textPages:
+    - ------FILE 024 LOCATED------
+    - ------TRANSMISSION BEGINS------
+    - "????????: \n\nSo you did notice. How curious\nAnna Dekker: Thank you Michael.
+      Alright then. Audio log #015. We tried to salvage most of the equipment at
+      the old crew site, but our efforts were proven unfruitful. Most of the project
+      work cannot be done, and we are still trying to come up with a compromise"
+    - "Anthony Beckett: \n\nWho are you?"
+    - "????????: \n\nWhat an interesting question"
+    - "Anthony Beckett: \n\nWhat do you want with us?"
+    - '????????:
+
+
+      My my, you got lovely skin.'
+    - "Anthony Beckett: \n\nw-what?"
+    - ------UNKNOWN AUDIO SOURCE DETECTED------
+    - "Anthony Beckett: \n\nO-oh god Please no. NO-"
+    - ------AUDIO FILE CORRUPTED------
+    - ------TRANSMISSION ENDS------
+  - itemType: 12
+    textPages:
+    - ------FILE 043 LOCATED------
+    - ------TRANSMISSION BEGINS------
+    - "Emily Miller: \n\nWhat did you do with Anthony?"
+    - "????????: \n\nI am Anthony!"
+    - ------UNKNOWN AUDIO SOURCE DETECTED------
+    - "Emily Miller: \n\nYou're not him. Shut up!"
+    - "????????: \n\n*chuckling* I am a little bit of everyone. And now I will be
+      you"
+    - "Emily Miller: \n\nWhat? Why-"
+    - "????????: \n\nunimportant. It ends up with me being free of this stupid island.
+      I was weaker then, so I took them, and now I am strong. I'll leave this cage
+      and that stupid scientist out there will help me do so."
+    - 'Emily Miller: Anna is not going to let you leave.'
+    - '????????:
+
+
+      Anna is figuring out a way to get Emily and her off the
+      island. I will enjoy her after I stepped on to main land.'
+    - "Emily Miller: \n\nOh- oh no-"
+    - "????????: \n\nYes, now enjoy your eternity on the island like I have."
+    - ------AUDIO LEVELS ABNORMAL------
+    - ------AUDIO FILE CORRUPTED------
+    - ------TRANSMISSION ENDS------
+  - itemType: 12
+    textPages:
+    - ------FILE 044 LOCATED------
+    - ------TRANSMISSION BEGINS------
+    - "????????: \n\nIs everything ready?"
+    - "Anna Dekker: \n\nYes, the explosives that were left in the mines should do
+      the trick."
+    - "????????: \n\nAnd then we'll be heading off the island?"
+    - "Anna Dekker: \n\nHopefully. Now let's get this door open."
+    - "????????: \n\nOfcourse"
+    - ------AUDIO MUCH LIKE METAL SCREECHING AND GROANING------
+    - 'Anna Dekker: Wonderful. The last equipment we need is in here.'
+    - '????????: What is it we are looking for again?'
+    - ------SOUNDS OF STRUGGLING AND METAL SCREECHING------
+    - "????????: \n\n....what are you doing Anna?"
+    - "Anna Dekker: \n\nYou know, you can learn a lot when you read through the letters
+      the locals left."
+    - "????????: \n\nAh.... I see"
+    - "Anna Dekker: \n\nYou're not Emily, are you?"
+    - .....
+    - "????????: \n\nYou know, you can probably find her wandering around somewhere
+      close... well... whatever is left of her *chuckling*"
+    - "Anna Dekker: \n\nWha- no. The echoes?"
+    - "????????: \n\nHow do I get off the island?"
+    - 'Anna Dekker: The echoes were just your victims all along???-'
+    - '????????: HOW?'
+    - ------SOUNDS OF LAUGHTER------
+    - "Anna Dekker: \n\nI smashed the receiver. There is no way off this island.
+      You're trapped here, with me."
+    - "????????: \n\nWith you..."
+    - "????????: \n\nYou are... really stupid. Say hi to the others for me."
+    - ------AUDIO LEVELS ABNORMAL------
+    - ------AUDIO FILE CORRUPTED------
+    - ------TRANSMISSION ENDS------
