@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SC_PlayerMovement : MonoBehaviour
@@ -93,5 +95,13 @@ public class SC_PlayerMovement : MonoBehaviour
         {
             transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
         }
+    }
+
+    public void Teleport(Vector3 position, Quaternion rotation)
+    {
+        transform.position = position;
+        Physics.SyncTransforms();
+        //NOTE: Something needed to save the player rotation, reference (Timestamped:https://youtu.be/I7M8T3qU-_E?t=71)
+        savedVelocity = Vector3.zero;
     }
 }

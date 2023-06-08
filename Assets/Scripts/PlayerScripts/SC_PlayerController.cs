@@ -64,6 +64,8 @@ public class SC_PlayerController : MonoBehaviour, IDataPersistence
                 playerWeaponScript.SwitchWeapon(item);
                 playerInventory.EquipItem(item);
                 break;
+            case ItemType.FlareGun:
+                
             case ItemType.FlashLightBatteries:
                 playerWeaponScript.LoadAmmo(item);
                 break;

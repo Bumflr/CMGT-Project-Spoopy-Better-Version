@@ -8,7 +8,7 @@ public class SC_PlayerWeaponManager : MonoBehaviour
     private SC_PlayerController characterController;
     public Dictionary<ItemType, GameObject> usableItems = new Dictionary<ItemType, GameObject>();
     public Dictionary<GameObject, ItemType> invertedUsableItems = new Dictionary<GameObject, ItemType>();
-
+    
     public int NUM_UsableItems => usableItems.Count;
 
 
@@ -54,6 +54,19 @@ public class SC_PlayerWeaponManager : MonoBehaviour
        // SetAmountOfAmmo(currentlyEquippedWeapon.gameObject, (int)currentlyEquippedWeapon.maxAmmo);
 
         currentlyEquippedWeapon.Enter();
+    }
+    void Shoot()
+    {
+        GetComponent<AudioSource>().PlayOneShot(flareShotSound);
+		
+			
+        Rigidbody bulletInstance;			
+        bulletInstance = Instantiate(flareBullet,barrelEnd.position,barrelEnd.rotation) as Rigidbody; //INSTANTIATING THE FLARE PROJECTILE
+			
+			
+        bulletInstance.AddForce(barrelEnd.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE
+			
+        Instantiate(muzzleParticles, barrelEnd.position,barrelEnd.rotation);	//INSTANTIATING THE GUN'S MUZZLE SPARKS	
     }
     public void LoadAmmo(Item item)
     {
