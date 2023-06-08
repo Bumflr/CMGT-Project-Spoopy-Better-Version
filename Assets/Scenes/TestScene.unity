@@ -2368,7 +2368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1602620181473807476, guid: 63dd023a21789ef4d9384af58668204e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -46.86
+      value: -40.27
       objectReference: {fileID: 0}
     - target: {fileID: 1602620181473807476, guid: 63dd023a21789ef4d9384af58668204e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2950,6 +2950,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 98dba44d1f02b6c4d8e0b5b9e4f1ee9f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
+--- !u!95 &2070437549 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 83000730487599332, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+  m_PrefabInstance: {fileID: 4515499420615183293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2105853862 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7438550382946978087, guid: 648030699c4c08541ae8c15647a311ca, type: 3}
@@ -2975,6 +2980,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 83000730487599332, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: aa06c81d864f63646b193a7ee97decc6, type: 2}
+    - target: {fileID: 83000730487599332, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 241161100574964930, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: vmCam
       value: 
@@ -3084,6 +3097,10 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4515499420534818543, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2070437549}
+    - target: {fileID: 4515499420534818543, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: flashLightPrefab
       value: 
       objectReference: {fileID: 2458075781402345264, guid: a095879d4974b684e835c46815b84295, type: 3}
@@ -3158,7 +3175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7158437708295884275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.47, y: -0.2, z: -38.693024}
+  m_LocalPosition: {x: 26, y: -0.2, z: -38.693024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

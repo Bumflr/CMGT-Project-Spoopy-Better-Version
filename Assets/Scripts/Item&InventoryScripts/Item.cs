@@ -23,6 +23,7 @@ public class Item
     [SerializeField] public ItemType itemType;
     [SerializeField] public int amount;
   
+    
     public Sprite GetSprite()
     {
         return Instance.spriteDictionary[itemType];
