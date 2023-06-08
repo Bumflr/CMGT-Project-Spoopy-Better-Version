@@ -6,11 +6,13 @@ public class SC_EnemyVisibility : MonoBehaviour
 {
     private SkinnedMeshRenderer meshRenderer;
     private ParticleSystem particleSystem;
+    private LineRenderer lineRenderer;
 
     private bool beingLit;
     public bool BeingLit { get { return justVisuals ? false :beingLit; } }
     private bool justVisuals;
 
+    public bool isSpiderEnemy;
     public float delayUntilInvisble = .1f;
     private float timeStamp;
 
@@ -19,6 +21,9 @@ public class SC_EnemyVisibility : MonoBehaviour
         meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
 
         particleSystem = GetComponentInChildren<ParticleSystem>();
+
+        if (isSpiderEnemy)
+            lineRenderer = GetComponentInChildren<LineRenderer>();
 
     }
 
@@ -33,6 +38,10 @@ public class SC_EnemyVisibility : MonoBehaviour
             {
                 particleSystem.Pause();
                 particleSystem.Clear();
+            }
+            if (lineRenderer != null)
+            {
+                lineRenderer.enabled = false;
             }
         }
 
@@ -53,6 +62,11 @@ public class SC_EnemyVisibility : MonoBehaviour
         if (particleSystem != null)
         {
             particleSystem.Play();
+        }
+
+        if (lineRenderer != null)
+        {
+            lineRenderer.enabled = true;
         }
         meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
     }

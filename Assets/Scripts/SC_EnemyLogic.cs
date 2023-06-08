@@ -52,6 +52,8 @@ public class SC_EnemyLogic : MonoBehaviour
         if (isSpiderEnemy)
         {
             m_Player = GameObject.FindGameObjectWithTag("Player");
+
+            currentTargetPosition = m_Player.transform.position;
         }
     }
 
@@ -229,7 +231,7 @@ public class SC_EnemyLogic : MonoBehaviour
         {
             //Debug.Log($"Heard a sound at: {pos.ToString()}, by: {this.gameObject.name}");
 
-            if (enemyState != EnemyStates.Chasing && enemyState != EnemyStates.BeingLit && enemyState != EnemyStates.Stunned && enemyState != EnemyStates.HoldingPlayer)
+            if (enemyState != EnemyStates.Chasing && enemyState != EnemyStates.BeingLit && enemyState != EnemyStates.Stunned && enemyState != EnemyStates.HoldingPlayer && !isSpiderEnemy)
             {
                 currentTargetPosition = pos;
                 SetEnemyState(EnemyStates.Investigating);
