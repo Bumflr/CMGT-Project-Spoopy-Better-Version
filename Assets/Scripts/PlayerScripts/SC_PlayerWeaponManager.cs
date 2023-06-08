@@ -55,19 +55,7 @@ public class SC_PlayerWeaponManager : MonoBehaviour
 
         currentlyEquippedWeapon.Enter();
     }
-    void Shoot()
-    {
-        GetComponent<AudioSource>().PlayOneShot(flareShotSound);
-		
-			
-        Rigidbody bulletInstance;			
-        bulletInstance = Instantiate(flareBullet,barrelEnd.position,barrelEnd.rotation) as Rigidbody; //INSTANTIATING THE FLARE PROJECTILE
-			
-			
-        bulletInstance.AddForce(barrelEnd.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE
-			
-        Instantiate(muzzleParticles, barrelEnd.position,barrelEnd.rotation);	//INSTANTIATING THE GUN'S MUZZLE SPARKS	
-    }
+
     public void LoadAmmo(Item item)
     {
         UsableItem thisItem = null;
