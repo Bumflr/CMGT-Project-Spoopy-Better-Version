@@ -10,6 +10,8 @@ public class Dialogue : MonoBehaviour
 
     private int index; 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +34,17 @@ public class Dialogue : MonoBehaviour
                 TextComponent.text = lines[index];
             }
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            StartDialogue();
+
+        }
     }
 
     void StartDialogue() 
     { 
         index = 0;
+        this.gameObject.SetActive(true);
         StartCoroutine(Typeline());
     }
 
