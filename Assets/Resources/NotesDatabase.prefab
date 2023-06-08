@@ -244,7 +244,7 @@ MonoBehaviour:
     - ------AUDIO LEVELS ABNORMAL------
     - ------AUDIO FILE CORRUPTED------
     - ------TRANSMISSION ENDS------
-  - itemType: 12
+  - itemType: 13
     textPages:
     - ------FILE 044 LOCATED------
     - ------TRANSMISSION BEGINS------
@@ -278,3 +278,54 @@ MonoBehaviour:
     - ------AUDIO LEVELS ABNORMAL------
     - ------AUDIO FILE CORRUPTED------
     - ------TRANSMISSION ENDS------
+  - itemType: 14
+    textPages:
+    - '9 April 1863
+
+
+      Dear Gerald,
+
+
+      I know the rumours have been spreading,
+      and I am sad to confirm them. There is an evil that is feasting on the misery
+      of the town. You know how these things spread throughout the community, and
+      one of the most wellknown theories running around at this moment is the rumours
+      of a cult.'
+    - Supposedly a cult in our midst is worshipping the devil and summoning its creatures
+      to invest this town. Whether I believe this or not remains to be seen, but
+      the result is all the same. People are fearfull. They're feeding the creature
+      without even knowing it.
+    - 'I managed to secure a spot on the last boat leaving the island. I am headed
+      towards London to try my fortune over there now that Caroline is gone. I hope
+      to hear from you once I have settled. I will stay in touch.
+
+
+      Kind Regards,
+
+
+      J,
+      Bennett'
+  - itemType: 15
+    textPages:
+    - '15 April, 1863
+
+
+      Dear Mirian,
+
+
+      I say with deep regret I must
+      cut ties with you immediately as things are going terribly at the town.
+
+
+      I
+      see more and more souls step into the church everyday, touched by the devil''s
+      beast. The priest is preaching about demons having been let into the town,
+      feeding on the guilty minds and I cannot help but be counted amongst them.'
+    - 'I cannot put what we have over the fate of the town. Though I am sad, I shan''t
+      be sorry.
+
+
+      Yours truly,
+
+
+      Julia'

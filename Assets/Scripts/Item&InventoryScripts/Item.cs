@@ -21,8 +21,11 @@ public enum ItemType
     AudioLog5, 
     AudioLog6,
     AudioLog7,
-    AudioLog8,
-    AudioLog9,
+    Letter1,
+    Letter2,
+    Letter3,
+    Letter4,
+    Letter5,
 }
 
 [Serializable]
@@ -76,9 +79,15 @@ public class Item
                 return true;
             case ItemType.AudioLog7:
                 return true;
-            case ItemType.AudioLog8:
+            case ItemType.Letter1:
                 return true;
-            case ItemType.AudioLog9:
+            case ItemType.Letter2:
+                return true;
+            case ItemType.Letter3:
+                return true;
+            case ItemType.Letter4:
+                return true;
+            case ItemType.Letter5:
                 return true;
 
             default:
