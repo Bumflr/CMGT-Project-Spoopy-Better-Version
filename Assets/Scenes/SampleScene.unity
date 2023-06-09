@@ -58779,7 +58779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2769786467122990890, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4117340238537325923, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -58817,7 +58817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767933408953028773, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4767933409329347780, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
       propertyPath: m_IsActive
@@ -59109,7 +59109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767933410779371413, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4767933410871564833, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
       propertyPath: m_fontSize
@@ -59403,6 +59403,10 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 87412055}
+    - target: {fileID: 8252272197387429933, guid: 16f57a11955c54f439a17aa0d4a93bd0, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8252272197387429935, guid: 16f57a11955c54f439a17aa0d4a93bd0, type: 3}
       propertyPath: m_RootOrder
       value: 8

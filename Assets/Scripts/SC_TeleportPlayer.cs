@@ -7,6 +7,14 @@ public class SC_TeleportPlayer : MonoBehaviour
 {
     [SerializeField] private Transform destination;
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && other.TryGetComponent<SC_PlayerMovement>(out var playerMovement))
+        {
+            playerMovement.Teleport(destination.position);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;

@@ -96,12 +96,9 @@ public class SC_PlayerMovement : MonoBehaviour
             transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
         }
     }
-
-    public void Teleport(Vector3 position, Quaternion rotation)
+    public void Teleport(Vector3 position)
     {
         transform.position = position;
         Physics.SyncTransforms();
-        //NOTE: Something needed to save the player rotation, reference (Timestamped:https://youtu.be/I7M8T3qU-_E?t=71)
-        savedVelocity = Vector3.zero;
     }
 }
