@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SC_FlareGun : UsableItem
 {
-public Rigidbody flareBullet;
+	public Rigidbody flareBullet;
 	public Transform barrelEnd;
 	public GameObject muzzleParticles;
 	public int bulletSpeed = 2000;
