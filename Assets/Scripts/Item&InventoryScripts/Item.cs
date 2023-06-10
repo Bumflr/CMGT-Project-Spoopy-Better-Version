@@ -10,6 +10,7 @@ public enum ItemType
     Lantern,
     Camera,
     FlashGrenade,
+    FlareGun,
 
     FlashLightBatteries,
     Coin,

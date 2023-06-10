@@ -121,8 +121,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _ThresholdHigh: 1
-    - _ThresholdLow: 0
+    - _ThresholdHigh: 0.586
+    - _ThresholdLow: 0.558
     - _TransitionFalloff: 3.08
     - _UVSec: 0
     - _ZWrite: 1

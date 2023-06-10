@@ -8,7 +8,7 @@ public class SC_PlayerWeaponManager : MonoBehaviour
     private SC_PlayerController characterController;
     public Dictionary<ItemType, GameObject> usableItems = new Dictionary<ItemType, GameObject>();
     public Dictionary<GameObject, ItemType> invertedUsableItems = new Dictionary<GameObject, ItemType>();
-
+    
     public int NUM_UsableItems => usableItems.Count;
 
 
@@ -55,6 +55,7 @@ public class SC_PlayerWeaponManager : MonoBehaviour
 
         currentlyEquippedWeapon.Enter();
     }
+
     public void LoadAmmo(Item item)
     {
         UsableItem thisItem = null;

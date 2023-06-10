@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SC_PlayerMovement : MonoBehaviour
@@ -93,5 +95,10 @@ public class SC_PlayerMovement : MonoBehaviour
         {
             transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime);
         }
+    }
+    public void Teleport(Vector3 position)
+    {
+        transform.position = position;
+        Physics.SyncTransforms();
     }
 }
