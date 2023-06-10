@@ -44,7 +44,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  m_Color: {r: 0.37647063, g: 0.37647063, b: 0.37647063, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Light: {fileID: 0}
-  normalColor: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
+  normalColor: {r: 0.3773585, g: 0.3752225, b: 0.3752225, a: 1}
   totalDarknessColor: {r: 0, g: 0, b: 0, a: 1}
   safeAreaColor: {r: 0.845995, g: 0.95370114, b: 0.9811321, a: 1}
   amountOftime: 1

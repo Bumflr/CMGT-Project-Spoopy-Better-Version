@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hearingManager: {fileID: 11400000, guid: 65de57111c11eed4a878a36c6b0762f2, type: 2}
-  maxStamina: 5
+  maxStamina: 9
   maxDurationHold: 9
   playerState: 0
   isHiding: 0
