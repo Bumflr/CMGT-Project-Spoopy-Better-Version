@@ -140,6 +140,8 @@ public class SC_PlayerStateLogic : MonoBehaviour
             }
         }
 
+        if (!moving) playerState = PlayerStates.Still;
+        else  SoundManager.PlaySound(SoundManager.Sound.WalkingSingle,this.transform.position);
 
 
         playerMovement.Move(input, inputDir, playerState);
@@ -253,6 +255,8 @@ public class SC_PlayerStateLogic : MonoBehaviour
     }
     private void MakeFootstepSounds(PlayerStates playerState)
     {
+          
+
         //Decide wether or not to make a sound or nah
         switch (playerState)
         {

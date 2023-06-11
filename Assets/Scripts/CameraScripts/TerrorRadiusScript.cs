@@ -76,7 +76,7 @@ public class TerrorRadiusScript : MonoBehaviour
 
         cameraManager.ShakeCamera(1 - value);
 
-        SoundManager.PlaySound(SoundManager.Sound.TerrorRadiusSound, this.transform.position, percentage * 2 );
+        //SoundManager.PlaySound(SoundManager.Sound.TerrorRadiusSound, this.transform.position, percentage * 2 );
     }
 
     float closestDistance(GameObject closestGhost)
