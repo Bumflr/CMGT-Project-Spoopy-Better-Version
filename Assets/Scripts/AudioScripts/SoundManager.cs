@@ -11,10 +11,26 @@ public static class SoundManager
 {
     public enum Sound
     {
-        DetectingGhost,
-        GhostIdle,
-        GhostChase,
-        TerrorRadiusSound
+        WalkingSingle,
+        Medkit,
+        GasLantern,
+        BatteryAmmo,
+        GasCanisterAmmo,
+        FlashLightOnOff,
+        FlashGranade,
+        FlareGun,
+        ButtonSelectOne,
+        ButtonPressOne,
+        ButtonSelectTwo,
+        ButtonPressTwo,
+        FallingAmbience,
+        RollingAmbience,
+        MainTheme,
+        GhostSound,
+        FullStringAmbience,
+        HorrorAmbience,
+        DelayAmbience,
+        AmbienceBonus,
     }
 
 
@@ -32,10 +48,11 @@ public static class SoundManager
         soundTimerDictionary = new Dictionary<Sound, float>();
 
         //bruh you can't iterate over Dictionary's apparantly so for every Sound that will be played we need to do = 0f;
-        soundTimerDictionary[Sound.DetectingGhost] = Time.time;
-        soundTimerDictionary[Sound.GhostIdle] = Time.time;
-        soundTimerDictionary[Sound.GhostChase] = Time.time;
-        soundTimerDictionary[Sound.TerrorRadiusSound] = Time.time;
+        //soundTimerDictionary[Sound.DetectingGhost] = Time.time;
+        //soundTimerDictionary[Sound.GhostIdle] = Time.time;
+        //soundTimerDictionary[Sound.GhostChase] = Time.time;
+        //soundTimerDictionary[Sound.TerrorRadiusSound] = Time.time;
+        soundTimerDictionary[Sound.WalkingSingle] = Time.time;
     }
 
     // TODO adding VOLUME with the audio groups
@@ -148,50 +165,13 @@ public static class SoundManager
         {
             //This code doesnt work that well, it doesnt start playing any sound until the TimerMax time so if there is a 
             //particurarly long sound effect it only starts playing 11 seconds in
-            case Sound.DetectingGhost:
+            case Sound.WalkingSingle:
                 if (soundTimerDictionary.ContainsKey(sound))
                 {
                     float lastTimePlayed = soundTimerDictionary[sound];
-                    float TimerMax = 1f;
+                    float TimerMax = 0.3f;
 
                     if (lastTimePlayed + TimerMax < Time.time)
-                    {
-                        soundTimerDictionary[sound] = Time.time;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-            case Sound.GhostIdle:
-                if (soundTimerDictionary.ContainsKey(sound))
-                {
-                    float lastTimePlayed = soundTimerDictionary[sound];
-                    float TimerMax = 4f;
-                    if (lastTimePlayed + TimerMax < Time.time)
-                    {
-                        soundTimerDictionary[sound] = Time.time;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-            case Sound.TerrorRadiusSound:
-                if (soundTimerDictionary.ContainsKey(sound))
-                {
-                    float lastTimePlayed = soundTimerDictionary[sound];       
-                    if (lastTimePlayed + rate + 1f < Time.time)
                     {
                         soundTimerDictionary[sound] = Time.time;
                         return true;
@@ -207,10 +187,9 @@ public static class SoundManager
                 }
             default:
                 return true;
-        }
     }
-    //
-
+    }
+    
     public static AudioClip GetAudioClip(Sound sound)
     {
         foreach (SoundAsset.SoundAudioClip soundAudioClip in SoundAsset.Instance.soundAudioClipArray)

@@ -79,7 +79,7 @@ public class FlashLightFOVCheck : MonoBehaviour
                     {
                         canSeeEnemy = true;
 
-                        SoundManager.PlaySound(SoundManager.Sound.DetectingGhost, this.transform.position);
+                       // SoundManager.PlaySound(SoundManager.Sound.DetectingGhost, this.transform.position);
 
                         target.gameObject.GetComponent<SC_EnemyVisibility>().BeingLit();
                         //SoundManager.PlaySound(SoundManager.Sound.MetalPipe);
