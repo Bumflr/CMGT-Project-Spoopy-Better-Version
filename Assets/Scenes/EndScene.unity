@@ -312,6 +312,7 @@ RectTransform:
   - {fileID: 803519818}
   - {fileID: 1135759852}
   - {fileID: 711711493}
+  - {fileID: 445003479}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -346,17 +347,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445003478}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 803519818}
-  m_RootOrder: 0
+  m_Father: {fileID: 330938380}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 11, y: 18}
   m_SizeDelta: {x: 491.5054, y: 192.2112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &445003480
@@ -379,7 +380,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suddenly, you realized. You left the stove on...
+  m_text: 'Suddenly you feel chills running down your spine as you sense...
+
+
+    Something
+    sinister is watching you from afar.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d514f08cfc3010343a1828bcabd722ce, type: 2}
   m_sharedMaterial: {fileID: 6603891938402128550, guid: d514f08cfc3010343a1828bcabd722ce, type: 2}
@@ -582,8 +587,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 445003479}
+  m_Children: []
   m_Father: {fileID: 330938380}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -665,7 +669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095367, y: 0.0000038147}
+  m_AnchoredPosition: {x: -0.0000095367, y: -857}
   m_SizeDelta: {x: 1390.5, y: 363.1825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088618790
@@ -801,7 +805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2}
+  m_AnchoredPosition: {x: -3, y: -935}
   m_SizeDelta: {x: 491.5054, y: 192.2112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1135759853
