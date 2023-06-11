@@ -112,6 +112,7 @@ MonoBehaviour:
   flashlightToggle: 0
   maxAmmo: 30
   lighting: {fileID: 5654375235630486900}
+  isLantern: 1
   lightingCurve:
     serializedVersion: 2
     m_Curve:

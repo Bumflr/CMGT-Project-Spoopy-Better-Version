@@ -83,6 +83,7 @@ public class SC_EnemyLogic : MonoBehaviour
         if ((isSpiderEnemy || EnemyViewCone()) && enemyState != EnemyStates.HoldingPlayer && enemyState != EnemyStates.Stunned)
         {
             SetEnemyState(EnemyStates.Chasing);
+            SoundManager.PlaySound(SoundManager.Sound.GhostSound);
         }
 
         if (visibility.BeingLit && enemyState == EnemyStates.Chasing)
@@ -202,6 +203,7 @@ public class SC_EnemyLogic : MonoBehaviour
                 if (!Physics.Raycast(transform.position, dirToPlayer, dstToPlayer, obstacleMask))
                 {
                     m_Player = player.gameObject;
+
 
  
                     playerInRange = !m_Player.GetComponent<SC_PlayerStateLogic>().isHiding; //  The player has been seeing by the enemy and then the nemy starts to chasing the player

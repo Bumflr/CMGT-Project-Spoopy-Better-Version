@@ -57,10 +57,31 @@ public class SC_PlayerController : MonoBehaviour, IDataPersistence
     {
         switch (item.itemType) 
         {
+            case ItemType.FlareGun:
+            SoundManager.PlaySound(SoundManager.Sound.ButtonPressOne);
+            playerWeaponScript.SwitchWeapon(item);
+                playerInventory.EquipItem(item);
+            break;
+
             case ItemType.Camera:
+            SoundManager.PlaySound(SoundManager.Sound.FlashLightOnOff);
+                playerWeaponScript.SwitchWeapon(item);
+                playerInventory.EquipItem(item);
+            break;
             case ItemType.Flashlight:
+            SoundManager.PlaySound(SoundManager.Sound.FlashLightOnOff);
+                playerWeaponScript.SwitchWeapon(item);
+                playerInventory.EquipItem(item);
+            break;
+
             case ItemType.FlashGrenade:
+            SoundManager.PlaySound(SoundManager.Sound.ButtonPressOne);
+                playerWeaponScript.SwitchWeapon(item);
+                playerInventory.EquipItem(item);
+            break;
+
             case ItemType.Lantern:
+            SoundManager.PlaySound(SoundManager.Sound.GasLantern);
                 playerWeaponScript.SwitchWeapon(item);
                 playerInventory.EquipItem(item);
                 break;
@@ -75,6 +96,7 @@ public class SC_PlayerController : MonoBehaviour, IDataPersistence
             case ItemType.Medkit:
                 SoundManager.PlaySound(SoundManager.Sound.Medkit);
                 break;
+            
             default:
                 break;
         }

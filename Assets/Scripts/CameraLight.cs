@@ -45,6 +45,7 @@ public class CameraLight : UsableItem
         if (tapInput && !flashlightToggle)
         {
             UsedTap();
+            SoundManager.PlaySound(SoundManager.Sound.FlashGranade);
 
             Ammo -= 1f;
 

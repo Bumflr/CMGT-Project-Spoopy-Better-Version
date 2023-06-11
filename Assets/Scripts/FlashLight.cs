@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class FlashLight : UsableItem
 {
     public Light lighting;
+    public bool isLantern;
+
 
 
     public AnimationCurve lightingCurve;
@@ -43,6 +45,12 @@ public class FlashLight : UsableItem
 
         if (tapInput)
         {
+            if (isLantern){
+                SoundManager.PlaySound(SoundManager.Sound.GasLantern);
+            }
+            else{
+                SoundManager.PlaySound(SoundManager.Sound.FlashLightOnOff);
+            }
             UsedTap();
 
             flashlightToggle = !flashlightToggle;

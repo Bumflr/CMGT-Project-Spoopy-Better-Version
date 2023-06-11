@@ -14,6 +14,9 @@ public class SC_FlareGun : UsableItem
 		if (tapInput)
 		{
 			UsedTap();
+			
+			SoundManager.PlaySound(SoundManager.Sound.FlareGun);
+
 			if (Ammo > 0)
 			{
 				Shoot();

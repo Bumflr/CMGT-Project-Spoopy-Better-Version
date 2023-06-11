@@ -56,6 +56,11 @@ public class UI_Inventory : MonoBehaviour
         RefreshInventoryItems();
     }
 
+    private void PlayPressSound(){
+        SoundManager.PlaySound(SoundManager.Sound.ButtonPressTwo);
+
+    }
+
     private void RefreshInventoryItems()
     {
         foreach(Transform child in itemSlotContainer)
@@ -73,6 +78,8 @@ public class UI_Inventory : MonoBehaviour
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
 
             itemSlotRectTransform.GetComponentInChildren<Button>().onClick.AddListener(delegate { inventory.UseItem(item); });
+
+            itemSlotRectTransform.GetComponentInChildren<Button>().onClick.AddListener(delegate { PlayPressSound(); });
 
             itemSlotRectTransform.gameObject.SetActive(true);
             itemSlotRectTransform.anchoredPosition = new Vector2(itemSlotTemplate.localPosition.x + (x * itemSlotCellSize), itemSlotTemplate.localPosition.y + (y * itemSlotCellSize));
