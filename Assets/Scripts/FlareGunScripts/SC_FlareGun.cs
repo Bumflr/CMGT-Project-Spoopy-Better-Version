@@ -47,12 +47,12 @@ public class SC_FlareGun : UsableItem
 	void Shoot()
 	{
 		Ammo -= 1f;
-		Debug.Log("BANGS");
-		/*Rigidbody bulletInstance;			
-			bulletInstance = Instantiate(flareBullet,barrelEnd.position,barrelEnd.rotation) as Rigidbody; //INSTANTIATING THE FLARE PROJECTILE
+		Rigidbody bulletInstance;			
+
+		bulletInstance = Instantiate(flareBullet, barrelEnd.position,barrelEnd.rotation) as Rigidbody; //INSTANTIATING THE FLARE PROJECTILE
 			
-			bulletInstance.AddForce(barrelEnd.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE
+		bulletInstance.AddForce(barrelEnd.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE
 			
-			Instantiate(muzzleParticles, barrelEnd.position,barrelEnd.rotation);	//INSTANTIATING THE GUN'S MUZZLE SPARKS*/
+		Instantiate(muzzleParticles, barrelEnd.position,barrelEnd.rotation);	//INSTANTIATING THE GUN'S MUZZLE SPARKS*/
 	}
 }
