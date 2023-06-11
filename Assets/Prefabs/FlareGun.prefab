@@ -49,9 +49,9 @@ MonoBehaviour:
   weaponsManager: {fileID: 0}
   flashlightToggle: 0
   maxAmmo: 3
-  flareBullet: {fileID: 0}
+  flareBullet: {fileID: 7523544162174181340, guid: 7dfb6e6da566c294bae3fbf2d2301ad7, type: 3}
   barrelEnd: {fileID: 8723373926800091249}
-  muzzleParticles: {fileID: 0}
+  muzzleParticles: {fileID: 9168859549591094888, guid: 000dcbdd97af3304b8ee0c640aa98593, type: 3}
   bulletSpeed: 2000
 --- !u!1 &5328093838279704274
 GameObject:

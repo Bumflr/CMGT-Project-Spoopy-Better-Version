@@ -45,7 +45,8 @@ public class SC_FlareGun : UsableItem
 	{
 		Ammo -= 1f;
 		Debug.Log("BANGS");
-		/*Rigidbody bulletInstance;			
+		
+		Rigidbody bulletInstance;			
 			bulletInstance = Instantiate(flareBullet,barrelEnd.position,barrelEnd.rotation) as Rigidbody; //INSTANTIATING THE FLARE PROJECTILE
 			
 			bulletInstance.AddForce(barrelEnd.forward * bulletSpeed); //ADDING FORWARD FORCE TO THE FLARE PROJECTILE

@@ -5,7 +5,6 @@ public class SC_FlareBullet : MonoBehaviour {
 			
 
     private Light flarelight;
-    private AudioSource flaresound;
     private ParticleSystemRenderer smokepParSystem;
     private bool myCoroutine;
     private float smooth = 2.4f;
@@ -20,7 +19,6 @@ public class SC_FlareBullet : MonoBehaviour {
 		
         GetComponent<AudioSource>().PlayOneShot(flareBurningSound);
         flarelight = GetComponent<Light>();
-        flaresound = GetComponent<AudioSource>();
         smokepParSystem = GetComponent<ParticleSystemRenderer>();
 
 		
@@ -42,8 +40,7 @@ public class SC_FlareBullet : MonoBehaviour {
 			
         {
             flarelight.intensity =  Mathf.Lerp(flarelight.intensity,0f,Time.deltaTime * smooth);
-            flarelight.range =  Mathf.Lerp(flarelight.range,0f,Time.deltaTime * smooth);			
-            flaresound.volume = Mathf.Lerp(flaresound.volume,0f,Time.deltaTime * smooth);
+            flarelight.range =  Mathf.Lerp(flarelight.range,0f,Time.deltaTime * smooth);
             smokepParSystem.maxParticleSize = Mathf.Lerp(smokepParSystem.maxParticleSize,0f,Time.deltaTime * 5);
 
 
