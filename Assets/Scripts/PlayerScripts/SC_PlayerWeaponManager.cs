@@ -10,8 +10,6 @@ public class SC_PlayerWeaponManager : MonoBehaviour
     public Dictionary<GameObject, ItemType> invertedUsableItems = new Dictionary<GameObject, ItemType>();
     
     public int NUM_UsableItems => usableItems.Count;
-
-
     private UsableItem currentlyEquippedWeapon;
 
     [System.Serializable]
@@ -37,6 +35,8 @@ public class SC_PlayerWeaponManager : MonoBehaviour
             usableItems.Add(weapon.type, newWeapon);
             invertedUsableItems.Add(newWeapon, weapon.type);
         }
+        //finn
+      
     }
 
     public void SwitchWeapon(Item item)
@@ -48,6 +48,8 @@ public class SC_PlayerWeaponManager : MonoBehaviour
         }
 
         currentlyEquippedWeapon = usableItems[item.itemType].GetComponent<UsableItem>();
+
+        characterController.playerMovementScript.dab(item.itemType);
 
         Debug.Log($"currentlyEquippedWeapon is: {currentlyEquippedWeapon}");
          

@@ -44,7 +44,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
         playerMovement = GetComponent<SC_PlayerMovement>();
         playerHealth = GetComponent<SC_PlayerHealth>();
         //finn
-        animator = GetComponentInChildren<Animator>(); 
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -57,9 +57,11 @@ public class SC_PlayerStateLogic : MonoBehaviour
 
         if (isHiding)
         {
-            //aniamtion do the funny hide
-
-            return;
+            animator.SetBool("hide", true);
+        }
+        else
+        {
+            animator.SetBool("hide", false);
         }
 
         AnimatePlayer(playerState);
@@ -95,7 +97,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
             playerState = PlayerStates.Running;
         }
 
- 
+
 
         if (stamina <= 0)
         {
@@ -134,6 +136,10 @@ public class SC_PlayerStateLogic : MonoBehaviour
             {
                 playerState = PlayerStates.Sneaking;
             }
+            if (playerState == PlayerStates.Exhausted)
+            {
+                playerState = PlayerStates.Exhausted;
+            }
             else
             {
                 playerState = PlayerStates.Still;
@@ -150,7 +156,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
         // float movementSpeed = ((running) ? 1 : 0.5f) * inputDir.magnitude;
         // _anim.SetFloat("movementSpeed", movementSpeed, SpeedSmoothTime, Time.deltaTime);
 
-        if (playerState == PlayerStates.Sneaking)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             if (inputDir != Vector3.zero)
             {
@@ -163,18 +169,42 @@ public class SC_PlayerStateLogic : MonoBehaviour
             }
         }
 
+        if (playerState == PlayerStates.Exhausted)
+        {
+            if (inputDir != Vector3.zero)
+            {
+                animator.SetFloat("tired", 1, 0.1f, Time.deltaTime);
+
+            }
+            else
+            {
+                animator.SetFloat("tired", 0, 0.1f, Time.deltaTime);
+            }
+        }
+
     }
     //finns code
     public void AnimatePlayer(PlayerStates currentPlayerState)
     {
 
-        if (playerState == PlayerStates.Sneaking)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             animator.SetBool("mhm", true);
         }
         else
         {
             animator.SetBool("mhm", false);
+        }
+
+
+
+        if (playerState == PlayerStates.Exhausted)
+        {
+            animator.SetBool("very tired", true);
+        }
+        else
+        {
+            animator.SetBool("very tired", false);
         }
 
         if (playerState == PlayerStates.BeingHeld)
@@ -186,13 +216,14 @@ public class SC_PlayerStateLogic : MonoBehaviour
             animator.SetBool("grab", false);
         }
 
-        if (playerState == PlayerStates.BeingHeld)
+
+        // if (playerState == PlayerStates.Hiding)
         {
-            animator.SetBool("hide", true);
+            //    animator.SetBool("hide", true);
         }
-        else
+        // else
         {
-            animator.SetBool("hide", false);
+            //     animator.SetBool("hide", false);
         }
 
 
@@ -208,52 +239,70 @@ public class SC_PlayerStateLogic : MonoBehaviour
             case PlayerStates.Running:
                 animator.SetFloat("speed", 1, 0.1f, Time.deltaTime);
                 break;
+            case PlayerStates.Exhausted:
+                break;
             case PlayerStates.BeingHeld:
                 break;
 
-            // case PlayerStates.Sneaking:
+                // case PlayerStates.Sneaking:
 
 
-            // if (inputDir != Vector3.zero)
-            //  {
-            //   animator.SetFloat("speed", 1, 0.1f, Time.deltaTime);
+                // if (inputDir != Vector3.zero)
+                //  {
+                //   animator.SetFloat("speed", 1, 0.1f, Time.deltaTime);
 
-            //  }
-            // else
-            //   {
-            // animator.SetFloat("speed", 0, 0.1f, Time.deltaTime);
-            // }
-            //  break;
-
-
-
-            //if (playerState == PlayerStates.Sneaking)
-            //  {
-            //      animator.SetBool("mhm", true);
-            //  }
-            //  else
-            //  {
-            //      animator.SetBool("mhm", false);
-            //  }
+                //  }
+                // else
+                //   {
+                // animator.SetFloat("speed", 0, 0.1f, Time.deltaTime);
+                // }
+                //  break;
 
 
 
-            // if (case PlayerStates.Sneaking:)
-            //{
-            //    animator.SetBool("mhm", true);
-            //  }
-            //  else
-            //   {
-            //      animator.SetBool("mhm", false);
-            //   }
-            //   break;
+                //if (playerState == PlayerStates.Sneaking)
+                //  {
+                //      animator.SetBool("mhm", true);
+                //  }
+                //  else
+                //  {
+                //      animator.SetBool("mhm", false);
+                //  }
 
-            case PlayerStates.Exhausted:
-                break;
+
+
+                // if (case PlayerStates.Sneaking:)
+                //{
+                //    animator.SetBool("mhm", true);
+                //  }
+                //  else
+                //   {
+                //      animator.SetBool("mhm", false);
+                //   }
+                //   break;
+
+
 
         }
     }
-    private void MakeFootstepSounds(PlayerStates playerState)
+    public void dab(ItemType itemtype)
+    {
+        
+
+        if (itemtype == ItemType.Camera)
+        {
+            animator.SetBool("camera", true);
+        }
+        else
+        {
+            animator.SetBool("camera", false);
+        }
+
+
+    }
+
+
+private void MakeFootstepSounds(PlayerStates playerState)
     {
           
 
