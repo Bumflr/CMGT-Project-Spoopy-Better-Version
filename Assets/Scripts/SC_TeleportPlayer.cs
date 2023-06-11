@@ -22,4 +22,6 @@ public class SC_TeleportPlayer : MonoBehaviour
         var direction = destination.TransformDirection((Vector3.forward));
         Gizmos.DrawRay(destination.position, direction);
     }
+    
+    
 }
