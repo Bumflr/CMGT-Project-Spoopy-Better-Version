@@ -3108,7 +3108,6 @@ GameObject:
   - component: {fileID: 754735115}
   - component: {fileID: 754735114}
   - component: {fileID: 754735113}
-  - component: {fileID: 754735116}
   m_Layer: 5
   m_Name: Audio Button
   m_TagString: Untagged
@@ -3181,13 +3180,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 754735116}
-        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
+      - m_Target: {fileID: 1556372195}
+        m_TargetAssemblyTypeName: UI_Settings, Assembly-CSharp
         m_MethodName: OpenPanel
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1158670029}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3231,19 +3230,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754735111}
   m_CullTransparentMesh: 1
---- !u!114 &754735116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 754735111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040233cc6ff48c9448265fb80d5185f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Panel: {fileID: 1158670029}
 --- !u!1 &831498002
 GameObject:
   m_ObjectHideFlags: 0
@@ -5565,7 +5551,6 @@ GameObject:
   - component: {fileID: 1264191733}
   - component: {fileID: 1264191732}
   - component: {fileID: 1264191731}
-  - component: {fileID: 1264191734}
   m_Layer: 5
   m_Name: Controls Button
   m_TagString: Untagged
@@ -5638,13 +5623,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1264191734}
-        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
+      - m_Target: {fileID: 1556372195}
+        m_TargetAssemblyTypeName: UI_Settings, Assembly-CSharp
         m_MethodName: OpenPanel
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1660819366}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5688,19 +5673,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264191729}
   m_CullTransparentMesh: 1
---- !u!114 &1264191734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264191729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040233cc6ff48c9448265fb80d5185f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Panel: {fileID: 1660819366}
 --- !u!1 &1264839466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6590,8 +6562,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1556372194}
+  - component: {fileID: 1556372195}
   m_Layer: 5
-  m_Name: UI_TitleScreen
+  m_Name: UI_SettingsScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6619,6 +6592,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1556372195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556372193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe89289eae3fdd64ba68b6645b056035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panels:
+  - {fileID: 733244356}
+  - {fileID: 1660819366}
+  - {fileID: 1158670029}
+  - {fileID: 585669086}
 --- !u!1 &1557381429
 GameObject:
   m_ObjectHideFlags: 0
@@ -7447,7 +7437,6 @@ GameObject:
   - component: {fileID: 1754204688}
   - component: {fileID: 1754204687}
   - component: {fileID: 1754204686}
-  - component: {fileID: 1754204689}
   m_Layer: 5
   m_Name: Graphics Button
   m_TagString: Untagged
@@ -7520,13 +7509,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1754204689}
-        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
+      - m_Target: {fileID: 1556372195}
+        m_TargetAssemblyTypeName: UI_Settings, Assembly-CSharp
         m_MethodName: OpenPanel
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 585669086}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7570,19 +7559,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754204684}
   m_CullTransparentMesh: 1
---- !u!114 &1754204689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754204684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040233cc6ff48c9448265fb80d5185f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Panel: {fileID: 585669086}
 --- !u!1 &1790063407
 GameObject:
   m_ObjectHideFlags: 0
@@ -7675,7 +7651,6 @@ GameObject:
   - component: {fileID: 1801492801}
   - component: {fileID: 1801492800}
   - component: {fileID: 1801492799}
-  - component: {fileID: 1801492802}
   m_Layer: 5
   m_Name: Gameplay Button
   m_TagString: Untagged
@@ -7748,13 +7723,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1801492802}
-        m_TargetAssemblyTypeName: PanelOpener, Assembly-CSharp
+      - m_Target: {fileID: 1556372195}
+        m_TargetAssemblyTypeName: UI_Settings, Assembly-CSharp
         m_MethodName: OpenPanel
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 733244356}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7798,19 +7773,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801492797}
   m_CullTransparentMesh: 1
---- !u!114 &1801492802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801492797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040233cc6ff48c9448265fb80d5185f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Panel: {fileID: 733244356}
 --- !u!1 &1808421714
 GameObject:
   m_ObjectHideFlags: 0
