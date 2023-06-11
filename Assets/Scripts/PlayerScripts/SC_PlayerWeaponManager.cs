@@ -66,10 +66,15 @@ public class SC_PlayerWeaponManager : MonoBehaviour
                 thisItem = usableItems[ItemType.Flashlight].GetComponent<UsableItem>();
                 thisItem.Ammo += item.amount;
                 break;
+            case ItemType.GasCanister:
+                thisItem = usableItems[ItemType.Lantern].GetComponent<UsableItem>();
+                thisItem.Ammo += item.amount;
+                break;
             default:
                 Debug.Log("This item cannot be used as ammo!");
                 return;
         }
+        Debug.Log("This item can be used as ammo!");
 
         characterController.playerInventory.RemoveItem(item);
 
