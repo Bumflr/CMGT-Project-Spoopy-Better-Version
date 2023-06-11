@@ -17,6 +17,16 @@ public enum ItemType
     Medkit,
     AudioLog1,
     AudioLog2,
+    AudioLog3,
+    AudioLog4,
+    AudioLog5, 
+    AudioLog6,
+    AudioLog7,
+    Letter1,
+    Letter2,
+    Letter3,
+    Letter4,
+    Letter5,
 }
 
 [Serializable]
@@ -61,6 +71,27 @@ public class Item
                 return true;
             case ItemType.AudioLog2:
                 return true;
+            case ItemType.AudioLog3:
+                return true;
+            case ItemType.AudioLog4:
+                return true;
+            case ItemType.AudioLog5:
+                return true;
+            case ItemType.AudioLog6:
+                return true;
+            case ItemType.AudioLog7:
+                return true;
+            case ItemType.Letter1:
+                return true;
+            case ItemType.Letter2:
+                return true;
+            case ItemType.Letter3:
+                return true;
+            case ItemType.Letter4:
+                return true;
+            case ItemType.Letter5:
+                return true;
+
             default:
                 return false;
         }

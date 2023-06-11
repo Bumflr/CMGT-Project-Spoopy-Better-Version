@@ -287,8 +287,6 @@ public class SC_PlayerStateLogic : MonoBehaviour
     }
     public void dab(ItemType itemtype)
     {
-        
-
         if (itemtype == ItemType.Camera)
         {
             animator.SetBool("camera", true);
@@ -297,8 +295,6 @@ public class SC_PlayerStateLogic : MonoBehaviour
         {
             animator.SetBool("camera", false);
         }
-
-
     }
 
 

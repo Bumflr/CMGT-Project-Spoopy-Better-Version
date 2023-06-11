@@ -49,7 +49,7 @@ public class SC_PlayerWeaponManager : MonoBehaviour
 
         currentlyEquippedWeapon = usableItems[item.itemType].GetComponent<UsableItem>();
 
-        characterController.playerMovementScript.dab(item.itemType);
+        //characterController.playerMovementScript.dab(item.itemType);
 
         Debug.Log($"currentlyEquippedWeapon is: {currentlyEquippedWeapon}");
          

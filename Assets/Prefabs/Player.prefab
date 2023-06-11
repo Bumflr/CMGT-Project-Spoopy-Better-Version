@@ -411,6 +411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_thetwink_with more animations
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 1f60a17ad34c2924aaf6e20c6a1e3f8b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: aa06c81d864f63646b193a7ee97decc6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f60a17ad34c2924aaf6e20c6a1e3f8b, type: 3}
 --- !u!4 &6324967495307520670 stripped
