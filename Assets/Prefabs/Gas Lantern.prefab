@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponsManager: {fileID: 0}
   flashlightToggle: 0
-  maxAmmo: 10
+  maxAmmo: 30
   lighting: {fileID: 5654375235630486900}
   lightingCurve:
     serializedVersion: 2
@@ -181,4 +181,5 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   playerRef: {fileID: 0}
+  justVisuals: 0
   lighting: {fileID: 0}

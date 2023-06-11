@@ -60,22 +60,17 @@ public class SC_PlayerController : MonoBehaviour, IDataPersistence
             case ItemType.Camera:
             case ItemType.Flashlight:
             case ItemType.FlashGrenade:
+            case ItemType.Lantern:
                 playerWeaponScript.SwitchWeapon(item);
                 playerInventory.EquipItem(item);
                 break;
             case ItemType.FlashLightBatteries:
                 SoundManager.PlaySound(SoundManager.Sound.BatteryAmmo);
-
                 playerWeaponScript.LoadAmmo(item);
                 break;
-
-            case ItemType.Lantern:
+            case ItemType.GasCanister:
                 SoundManager.PlaySound(SoundManager.Sound.GasCanisterAmmo);
-
                 playerWeaponScript.LoadAmmo(item);
-                break;
-
-            case ItemType.Coin:
                 break;
             case ItemType.Medkit:
                 SoundManager.PlaySound(SoundManager.Sound.Medkit);

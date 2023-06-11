@@ -13,7 +13,7 @@ public enum ItemType
     FlareGun,
 
     FlashLightBatteries,
-    Coin,
+    GasCanister,
     Medkit,
     AudioLog1,
     AudioLog2,
@@ -44,7 +44,7 @@ public class Item
         {
             default:
             case ItemType.FlashLightBatteries:
-            case ItemType.Coin: return true;
+            case ItemType.GasCanister: return true;
             case ItemType.Camera: return false;
             case ItemType.Flashlight: return false;
             case ItemType.FlashGrenade: return false;
