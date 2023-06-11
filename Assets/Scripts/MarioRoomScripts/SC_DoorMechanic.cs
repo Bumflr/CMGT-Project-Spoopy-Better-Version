@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoorMechanic : MonoBehaviour
+public class SC_DoorMechanic : MonoBehaviour
 {
     public GameObject[] roomPrefabs;
     private GameObject currentRoom;
@@ -8,17 +8,17 @@ public class DoorMechanic : MonoBehaviour
     [SerializeField] private Transform teleportDestination;
     private int correctChoicesCount = 0;
 
-    private HallwayManager hallwayManager;
+    private SC_HallwayManager hallwayManager;
     
-    //NOTE: There needs to be some variable that changes the player's teleportation desitation depending on the door the player hit
+    //NOTE: There needs to be some variable that changes the player's teleportation desitation depending on the door the player collided with
 
     private void Start()
     {
         // Instantiate the initial room
         currentRoom = Instantiate(roomPrefabs[0], transform.position, Quaternion.identity);
 
-        // Get the HallwayManager component
-        hallwayManager = FindObjectOfType<HallwayManager>();
+        // Get the SC_HallwayManager component
+        hallwayManager = FindObjectOfType<SC_HallwayManager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,7 +36,7 @@ public class DoorMechanic : MonoBehaviour
 
                 correctChoicesCount++;
 
-                // Switch the correct door in the HallwayManager
+                // Switch the correct door in the SC_HallwayManager
                 hallwayManager.SwitchCorrectDoor();
                 
                 //Teleport the player

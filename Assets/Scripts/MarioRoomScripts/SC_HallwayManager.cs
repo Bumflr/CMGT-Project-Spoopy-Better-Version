@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HallwayManager : MonoBehaviour
+public class SC_HallwayManager : MonoBehaviour
 {
     public GameObject[] doors;
     private GameObject correctDoor;
