@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundAudioClipArray:
   - sound: 0
-    audioClip: {fileID: 8300000, guid: 26d7aa11711637b44872a8f0faa82cc7, type: 3}
-    volume: 0
+    audioClip: {fileID: 8300000, guid: 5704def22bf74f94a8bfaab48f596ccd, type: 3}
+    volume: 1
     audioMixerGroup: {fileID: 24300002, guid: 1ee8cb8efca1f234aa24f4a0e55419b6, type: 2}
   - sound: 1
     audioClip: {fileID: 8300000, guid: a0156d71f49b19343ac73b8a775070a6, type: 3}
