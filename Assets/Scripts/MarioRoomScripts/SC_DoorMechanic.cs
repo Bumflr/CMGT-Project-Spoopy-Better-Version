@@ -7,7 +7,7 @@ public class SC_DoorMechanic : MonoBehaviour
     [SerializeField] private Transform teleportDestination;
     private SC_HallwayManager hallwayManager;
     
-    //NOTE: There needs to be some variable that changes the player's teleportation desitation depending on the door the player collided with
+    public GameObject[] emenmyPrefabs;
 
     private void Start()
     {
@@ -38,7 +38,7 @@ public class SC_DoorMechanic : MonoBehaviour
                 // Player chose the wrong door
                 // Implement your desired behavior here
                 Debug.Log("Ha you chose the wrong door idiot");
-
+                Instantiate(emenmyPrefabs[0], emenmyPrefabs.position, Quaternion.identity);
                 playerMovement.Teleport(teleportDestination.position);
 
             }
@@ -47,7 +47,7 @@ public class SC_DoorMechanic : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(teleportDestination.position, .4f);
+        Gizmos.DrawWireSphere(teleportDestination.position, .5f);
         var direction = teleportDestination.TransformDirection((Vector3.forward));
         Gizmos.DrawRay(teleportDestination.position, direction);
     }

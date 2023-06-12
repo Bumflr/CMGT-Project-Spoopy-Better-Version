@@ -5,6 +5,7 @@ using UnityEngine.ProBuilder.Shapes;
 public class SC_HallwayManager : MonoBehaviour
 {
     public GameObject[] roomPrefabs;
+    public Transform roomPosition;
     private GameObject currentRoom;
 
     public GameObject[] doors; //Initiliaze this shit manually
@@ -16,7 +17,7 @@ public class SC_HallwayManager : MonoBehaviour
     private void Start()
     {
         // Instantiate the initial room
-        currentRoom = Instantiate(roomPrefabs[0], transform.position, Quaternion.identity);
+        currentRoom = Instantiate(roomPrefabs[0], roomPosition.position, Quaternion.identity);
 
         doorMechanics = new SC_DoorMechanic[doors.Length];
 
@@ -56,7 +57,7 @@ public class SC_HallwayManager : MonoBehaviour
         // Randomly select the next room prefab
         GameObject nextRoomPrefab = roomPrefabs[UnityEngine.Random.Range(0, roomPrefabs.Length)];
         Destroy(currentRoom);
-        currentRoom = Instantiate(nextRoomPrefab, transform.position, Quaternion.identity);
+        currentRoom = Instantiate(nextRoomPrefab, roomPosition.position, Quaternion.identity);
 
     }
 }
