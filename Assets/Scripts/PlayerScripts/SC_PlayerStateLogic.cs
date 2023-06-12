@@ -92,7 +92,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
 
         playerState = PlayerStates.Walking;
 
-        if (Input.GetKey(KeyCode.RightShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             playerState = PlayerStates.Running;
         }
@@ -114,7 +114,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             if (inputDir != Vector3.zero)
             {
@@ -132,7 +132,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
 
         if (!moving)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftControl))
             {
                 playerState = PlayerStates.Sneaking;
             }
@@ -156,7 +156,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
         // float movementSpeed = ((running) ? 1 : 0.5f) * inputDir.magnitude;
         // _anim.SetFloat("movementSpeed", movementSpeed, SpeedSmoothTime, Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             if (inputDir != Vector3.zero)
             {
@@ -187,7 +187,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
     public void AnimatePlayer(PlayerStates currentPlayerState)
     {
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             animator.SetBool("mhm", true);
         }

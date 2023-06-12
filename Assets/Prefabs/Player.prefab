@@ -224,7 +224,7 @@ MonoBehaviour:
   uiInventory: {fileID: 0}
   playerWeaponScript: {fileID: 4515499420534818543}
   playerMovementScript: {fileID: 4515499420534818542}
-  playerBlow: {fileID: 0}
+  playerBlow: {fileID: 627315149039003869}
 --- !u!114 &4515499420534818542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea9eccbe3348e647970a5c92247aeb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 2044484619703749112}
+  bigDoor: {fileID: 0}
+  explosion: {fileID: 0}
   isTouchingDoor: 0
 --- !u!1 &4515499421523219163
 GameObject:
