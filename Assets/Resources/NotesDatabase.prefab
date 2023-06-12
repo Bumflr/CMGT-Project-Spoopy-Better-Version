@@ -329,3 +329,49 @@ MonoBehaviour:
 
 
       Julia'
+  - itemType: 21
+    textPages:
+    - '*Incoming call*
+
+
+      -------------------------------------------
+
+'
+    - 'Noah King: Still can''t believe you''re not coming with me.
+
+
+      Gavin:
+      Unlike you, my boss would notice it if I ran off to an island and trespass
+      on their island. I already risked my neck to look into her research files for
+      you.'
+    - 'Noah King: You''re right. I''m sorry
+
+
+      Gavin: Hey man, it''s fine. We''ll
+      call it even when she gets back save, alright?
+
+
+      Noah King: I hope she''s
+      alright...'
+    - 'Gavin: Me too. But it''s Anna. She does stupid stuff, but she somehow always
+      manages to be alright. I''m sure she''s fine.
+
+
+      Noah King: Alright. I
+      will find her, and bring her back'
+    - 'Gavin: That''s the spirit! I don''t think you''ll have service on the island,
+      so god speed my friend. I will be waiting for you on the other side of the
+      coast when you both get back.
+
+
+      Noah King: Try to not get fired whilst
+      I''m gone
+
+
+      Gavin: No promises!'
+    - '-------------------------------------------
+
+      *Call Disconnected*'
+  - itemType: 22
+    textPages:
+    - You succesfully escaped the mines!

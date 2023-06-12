@@ -147,3 +147,11 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
     description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
       door.\nthe bioor."
+  - itemType: 21
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
+    description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
+      door.\nthe bioor."
+  - itemType: 22
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
+    description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
+      door.\nthe bioor."
