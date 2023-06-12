@@ -7,6 +7,7 @@ public class UI_TitleScreen : MonoBehaviour
 {
     [Header("Dependencies")]
     public GameObject SaveSelectMenu;
+    public GameObject SettingsMenu;
     public SC_LoadNewArea loadNewArea;
 
     public void StartGame()
@@ -20,6 +21,7 @@ public class UI_TitleScreen : MonoBehaviour
     {
         Debug.Log("Opening Title Menu");
         SaveSelectMenu.SetActive(false);
+        SettingsMenu.SetActive(false);
         this.gameObject.SetActive(true);
     }
     public void QuitGame()
