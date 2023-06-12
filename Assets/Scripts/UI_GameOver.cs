@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI_GameOver : MonoBehaviour
 {
@@ -36,6 +37,11 @@ public class UI_GameOver : MonoBehaviour
     public void RestartGame()
     {
         GameManager.Instance.ReloadScene();
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("Title Screen");
     }
 
 }
