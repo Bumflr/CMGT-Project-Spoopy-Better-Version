@@ -111,8 +111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponsManager: {fileID: 0}
   flashlightToggle: 0
-  maxAmmo: 60
+  maxAmmo: 120
   lighting: {fileID: 2458075781402345265}
+  isLantern: 0
   lightingCurve:
     serializedVersion: 2
     m_Curve:
@@ -126,13 +127,13 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.041082386
     - serializedVersion: 3
-      time: 1
-      value: 4
-      inSlope: -5.4913235
-      outSlope: -5.4913235
+      time: 1.2708334
+      value: 6.106655
+      inSlope: -7.427497
+      outSlope: -7.427497
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.023882568
+      inWeight: 0.05901643
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -150,13 +151,13 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.11907696
     - serializedVersion: 3
-      time: 1
-      value: 0.75
-      inSlope: -2.282031
-      outSlope: -2.282031
+      time: 1.2583354
+      value: 1.6689364
+      inSlope: -5.67872
+      outSlope: -5.67872
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.024000704
+      inWeight: 0.048654933
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
