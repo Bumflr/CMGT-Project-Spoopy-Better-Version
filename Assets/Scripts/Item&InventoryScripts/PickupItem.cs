@@ -30,8 +30,6 @@ public class PickupItem : MonoBehaviour, IDataPersistence
         item = new Item { itemType = itemType, amount = this.amount };
     }
 
-
-
     public void LoadData(GameData data)
     {
         data.skillObjectsCollected.TryGetValue(id, out collected);
