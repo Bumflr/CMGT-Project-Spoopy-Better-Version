@@ -71,7 +71,7 @@ public class UI_Inventory : MonoBehaviour
 
         int x = 0;
         int y = 0;
-        float itemSlotCellSize = 133 + (1/3);
+        float itemSlotCellSize = 148;
 
         foreach (Item item in inventory.GetItemList())
         {

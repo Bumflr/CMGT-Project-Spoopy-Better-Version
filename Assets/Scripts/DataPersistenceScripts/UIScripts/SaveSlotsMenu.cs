@@ -45,7 +45,7 @@ public class SaveSlotsMenu : MonoBehaviour
     {
         DataPersistenceManager.instance.SaveGame();
         //Load the scene
-        SceneManager.LoadSceneAsync("Mines");
+        SceneManager.LoadSceneAsync("Intro");
     }
 
     public void OnClearClicked(SaveSlot saveSlot)

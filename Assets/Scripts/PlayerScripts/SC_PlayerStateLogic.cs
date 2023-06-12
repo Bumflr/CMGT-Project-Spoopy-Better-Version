@@ -74,7 +74,7 @@ public class SC_PlayerStateLogic : MonoBehaviour
         }
         else
         {
-            stamina += 1 * Time.deltaTime;
+            stamina += exhausted ? 3 : 2 * Time.deltaTime;
             if (stamina >= maxStamina)
             {
                 stamina = maxStamina;

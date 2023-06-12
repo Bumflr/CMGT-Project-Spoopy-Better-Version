@@ -106,6 +106,7 @@ MonoBehaviour:
   move: {fileID: 3998449682137654514}
   hearingManagerScriptableObject: {fileID: 11400000, guid: 65de57111c11eed4a878a36c6b0762f2, type: 2}
   animator: {fileID: 0}
+  visibility: {fileID: 0}
   enemyState: 0
   hearRadius: 9
   viewRadius: 6
@@ -116,6 +117,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 192
+  isSpiderEnemy: 0
 --- !u!114 &3998449682137654514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,10 +135,7 @@ MonoBehaviour:
   startWaitTime: 4
   timeToRotate: 2
   speedWalk: 1.5
-  speedRun: 2.8
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  speedRun: 2.2
 --- !u!114 &3998449682137654411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20078617b6a7ee04da5b5f89b6300489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSpiderEnemy: 0
   delayUntilInvisble: 0.05
 --- !u!114 &5730110676596399028
 MonoBehaviour:
