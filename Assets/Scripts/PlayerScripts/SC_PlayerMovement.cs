@@ -83,7 +83,7 @@ public class SC_PlayerMovement : MonoBehaviour
     void Rotate(Vector3 savedVelocity)
     {
         //**Keypress Based Rotation
-        if (!Input.GetKey(KeyCode.LeftShift))
+        if (!Input.GetKey(KeyCode.LeftControl))
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(savedVelocity, Vector3.up), lerpValueRotation * Time.deltaTime);
         }

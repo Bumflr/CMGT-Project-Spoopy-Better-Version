@@ -12,7 +12,7 @@ public class SC_HidingSpot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && amHoveringOverHideyHole)
+        if (Input.GetKeyDown(KeyCode.LeftControl) && amHoveringOverHideyHole)
         {
             obstacleCube.SetActive(true);
 
@@ -20,7 +20,7 @@ public class SC_HidingSpot : MonoBehaviour
             currentHidingObject.playerMovementScript.isHiding = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift) || !amHoveringOverHideyHole)
+        if (Input.GetKeyUp(KeyCode.LeftControl) || !amHoveringOverHideyHole)
         {
             obstacleCube.SetActive(true);
             if (currentHidingObject != null)

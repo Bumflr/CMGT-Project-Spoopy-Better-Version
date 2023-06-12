@@ -4,12 +4,33 @@ using UnityEngine;
 
 public class SC_BigDoor : MonoBehaviour
 {
-    public bool isTouchingDoor;
-    public void BlowUpDoor(int amount)
+    [Header("Dependencies")]
+    public SC_PlayerController playerController;
+
+    public GameObject bigDoor;
+    public GameObject explosion;
+
+    public bool isTouchingDoor =  true;
+
+    private void Awake()
     {
-        if (amount >= 3 && isTouchingDoor)
+        bigDoor = GameObject.FindGameObjectWithTag("Door");
+    }
+
+    public void BlowUpDoor(int amountOfDynamite)
+    {
+        if (amountOfDynamite >= 2 && isTouchingDoor)
         {
             Debug.Log("Kablooey!");
+
+            GameStateManager.Instance.SetState(GameState.Gameplay);
+
+            Item item = new Item { itemType = ItemType.DynamiteStaff, amount = amountOfDynamite };
+
+            playerController.playerInventory.RemoveItem(item);
+
+            bigDoor.SetActive(false);
+            explosion.SetActive(true);
         }
         else
         {
