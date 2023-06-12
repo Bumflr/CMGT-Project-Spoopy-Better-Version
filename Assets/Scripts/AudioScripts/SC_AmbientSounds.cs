@@ -16,7 +16,7 @@ public float timer;
 
             //Play sound
 
-            var value = UnityEngine.Random.Range(0, 6);
+            var value = UnityEngine.Random.Range(0, 5);
 
             switch (value)
             {
@@ -33,9 +33,6 @@ public float timer;
                     SoundManager.PlaySound(SoundManager.Sound.FullStringAmbience);
                     break;
                 case 4:
-                    SoundManager.PlaySound(SoundManager.Sound.HorrorAmbience);
-                    break;
-                case 5:
                     SoundManager.PlaySound(SoundManager.Sound.RollingAmbience);
                     break;
                 default: break;
