@@ -67,7 +67,7 @@ public class SnakeController : MonoBehaviour
 
     private void GrowSnake()
     {
-        GameObject body = Instantiate(BodyPrefab);
+        GameObject body = Instantiate(BodyPrefab, this.transform.position, Quaternion.identity);
 
         body.transform.localScale = this.transform.localScale;
 
