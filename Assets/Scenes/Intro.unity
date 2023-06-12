@@ -432,6 +432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Audio Log
       objectReference: {fileID: 0}
+    - target: {fileID: 3608095520904809926, guid: 3ee75165f972a5243969033666b47e6b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6028355448385241498, guid: 3ee75165f972a5243969033666b47e6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

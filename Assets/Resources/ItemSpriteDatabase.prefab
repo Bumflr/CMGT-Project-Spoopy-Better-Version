@@ -138,10 +138,6 @@ MonoBehaviour:
       Debug
 
       Debug'
-  - itemType: 20
-    sprite: {fileID: 21300000, guid: c1f820d98bd30b94c8379f92cb9dd88e, type: 3}
-    description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
-      door.\nthe bioor."
   - itemType: 21
     sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big

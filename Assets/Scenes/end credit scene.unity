@@ -695,13 +695,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Bolong Jin
-
-    Eran Schekkerman
+  m_text: 'Eran Schekkerman
 
 
 
     Daniel Meijer
+
+    Bolong Jin
 
 
 
@@ -713,21 +713,21 @@ MonoBehaviour:
 
     Daniel Meijer
 
-    Eran Schekkerman
 
 
 
     Ernests Jercums
 
-    Janine
-    Koster
+    Janine Koster
 
-    Quinten Kuiper
+    Quinten
+    Kuiper
 
     Eran Schekkerman
 
     Finn van der Vleuten
 
+    Bolong jin
 
 
     Ernests
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -139.76514, y: 0, z: -44.193207, w: -742.5134}
+  m_margin: {x: -139.76514, y: 0, z: -44.193207, w: -932.4659}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -903,7 +903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thanks for playing our Game
+  m_text: Thanks for playing our Demo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38e7971466ad67a43b3fa034151cfb97, type: 2}
   m_sharedMaterial: {fileID: 5649215146878236841, guid: 38e7971466ad67a43b3fa034151cfb97, type: 2}
@@ -1038,58 +1038,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Director
-
-
-
-
-    Co-Director
-
-
-
-
-    Programmers
-
-
-
-
-
-
-    3D Modelers
-
-
-
-
-
-
-
-    Texture
-    Artist
-
-
-
-
-
-    Animators
-
-
-
-
-    Narrative Designers
-
-
-
-
-    Sound Designer
-
-
-
-    UI
-    Artist
-
-
-
-    Level Designers'
+  m_text: "Director\n\n\n\nCo-Director\n\n\n\nProgrammers\n\n\n\n\n\n3D Modelers\n\n\n\n\n\n\nTexture
+    Artist\n\n\n\n\nAnimators\n\n\n\nNarrative Designers\n\n\n\nSound Designer\n\n\nUI
+    Artist\n\n\nLevel Designers \n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38e7971466ad67a43b3fa034151cfb97, type: 2}
   m_sharedMaterial: {fileID: 5649215146878236841, guid: 38e7971466ad67a43b3fa034151cfb97, type: 2}
@@ -1152,7 +1103,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -284.06107, y: 0, z: 126.98392, w: -707.88245}
+  m_margin: {x: -284.06107, y: 0, z: 126.98392, w: -912.5407}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
