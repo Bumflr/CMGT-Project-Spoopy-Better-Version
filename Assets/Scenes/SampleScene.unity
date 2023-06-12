@@ -58614,6 +58614,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 83000730487599332, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: aa06c81d864f63646b193a7ee97decc6, type: 2}
+    - target: {fileID: 83000730487599332, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 83000730487599332, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 241161100574964930, guid: 56183cdc3af794c40a3eed5eb048c543, type: 3}
       propertyPath: vmCam
       value: 

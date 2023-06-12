@@ -125,3 +125,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 3c7082b91053ce3499a0ad6a0b95ea73, type: 3}
     volume: 1
     audioMixerGroup: {fileID: 24300002, guid: 1ee8cb8efca1f234aa24f4a0e55419b6, type: 2}
+  - sound: 20
+    audioClip: {fileID: 8300000, guid: 5a457ec81062887488208b16a196c6d0, type: 3}
+    volume: 1
+    audioMixerGroup: {fileID: 24300002, guid: 1ee8cb8efca1f234aa24f4a0e55419b6, type: 2}

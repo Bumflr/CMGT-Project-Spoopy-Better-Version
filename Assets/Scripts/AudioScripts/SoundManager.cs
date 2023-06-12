@@ -30,6 +30,7 @@ public static class SoundManager
         HorrorAmbience,
         DelayAmbience,
         AmbienceBonus,
+        HeartBeat
     }
 
 
@@ -47,12 +48,9 @@ public static class SoundManager
         soundTimerDictionary = new Dictionary<Sound, float>();
 
         //bruh you can't iterate over Dictionary's apparantly so for every Sound that will be played we need to do = 0f;
-        //soundTimerDictionary[Sound.DetectingGhost] = Time.time;
-        //soundTimerDictionary[Sound.GhostIdle] = Time.time;
-        //soundTimerDictionary[Sound.GhostChase] = Time.time;
-        //soundTimerDictionary[Sound.TerrorRadiusSound] = Time.time;
-        soundTimerDictionary[Sound.GhostSound] = Time.time;
 
+        soundTimerDictionary[Sound.HeartBeat] = Time.time;
+        soundTimerDictionary[Sound.GhostSound] = Time.time;
         soundTimerDictionary[Sound.WalkingSingle] = Time.time;
     }
 
@@ -191,6 +189,26 @@ public static class SoundManager
                 {
                     float lastTimePlayed = soundTimerDictionary[sound];
                     float TimerMax = 1f;
+
+                    if (lastTimePlayed + TimerMax < Time.time)
+                    {
+                        soundTimerDictionary[sound] = Time.time;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            case Sound.HeartBeat:
+                if (soundTimerDictionary.ContainsKey(sound))
+                {
+                    float lastTimePlayed = soundTimerDictionary[sound];
+                    float TimerMax = 2f;
 
                     if (lastTimePlayed + TimerMax < Time.time)
                     {
