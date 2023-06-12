@@ -127,13 +127,13 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.041082386
     - serializedVersion: 3
-      time: 1
-      value: 4
-      inSlope: -11.433765
-      outSlope: -11.433765
+      time: 1.2708334
+      value: 6.106655
+      inSlope: -7.427497
+      outSlope: -7.427497
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.020486653
+      inWeight: 0.05901643
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -151,13 +151,13 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.11907696
     - serializedVersion: 3
-      time: 1
-      value: 0.74627686
-      inSlope: -9.088979
-      outSlope: -9.088979
+      time: 1.2583354
+      value: 1.6689364
+      inSlope: -5.67872
+      outSlope: -5.67872
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.012927234
+      inWeight: 0.048654933
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
