@@ -1,41 +1,62 @@
+using System;
 using UnityEngine;
+using UnityEngine.ProBuilder.Shapes;
 
 public class SC_HallwayManager : MonoBehaviour
 {
-    public GameObject[] doors;
+    public GameObject[] roomPrefabs;
+    private GameObject currentRoom;
+
+    public GameObject[] doors; //Initiliaze this shit manually
+    public int correctChoicesCount = 0;
+    private SC_DoorMechanic[] doorMechanics;
+
     private GameObject correctDoor;
 
     private void Start()
     {
+        // Instantiate the initial room
+        currentRoom = Instantiate(roomPrefabs[0], transform.position, Quaternion.identity);
+
+        doorMechanics = new SC_DoorMechanic[doors.Length];
+
+        for (int i = 0; i < doors.Length; i ++)
+        {
+            doorMechanics[i] = doors[i].GetComponent<SC_DoorMechanic>();
+        }
+
         // Assign the initial correct door randomly from the available doors
-        correctDoor = doors[Random.Range(0, doors.Length)];
-        correctDoor.tag = "CorrectDoor";
+        correctDoor = doors[UnityEngine.Random.Range(0, doors.Length)];
+        correctDoor.GetComponent<SC_DoorMechanic>().correctDoor = true;
     }
 
     public void SwitchCorrectDoor()
     {
+        SpawnNextRoom();
+
         // Find the current correct door and remove the "CorrectDoor" tag
-        foreach (GameObject door in doors)
+        foreach (SC_DoorMechanic door in doorMechanics)
         {
-            if (door.CompareTag("CorrectDoor"))
+            if (door.correctDoor)
             {
-                door.tag = "Untagged";
-                
-                
-                
+                door.correctDoor = false;
                 break;
             }
         }
 
-        // Randomly select a new correct door from the other doors
-        GameObject newCorrectDoor;
-        do
-        {
-            newCorrectDoor = doors[Random.Range(0, doors.Length)];
-        } while (newCorrectDoor == correctDoor);
+        SC_DoorMechanic newCorrectDoor;
+        newCorrectDoor = doorMechanics[UnityEngine.Random.Range(0, doors.Length)];
 
-        // Assign the "CorrectDoor" tag to the new correct door
-        newCorrectDoor.tag = "CorrectDoor";
-        correctDoor = newCorrectDoor;
+        newCorrectDoor.correctDoor = true;
+        correctDoor = newCorrectDoor.gameObject;
+    }
+
+    public void SpawnNextRoom()
+    {
+        // Randomly select the next room prefab
+        GameObject nextRoomPrefab = roomPrefabs[UnityEngine.Random.Range(0, roomPrefabs.Length)];
+        Destroy(currentRoom);
+        currentRoom = Instantiate(nextRoomPrefab, transform.position, Quaternion.identity);
+
     }
 }
