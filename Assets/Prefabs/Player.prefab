@@ -295,6 +295,8 @@ MonoBehaviour:
     type: 2
   - weapon: {fileID: 2458075781402345264, guid: 772e846472d37604c9fe74088c6eb72c, type: 3}
     type: 3
+  - weapon: {fileID: 1344135218974903337, guid: d7abbac0b1ca11b4fbaa811af9dc8aac, type: 3}
+    type: 4
 --- !u!143 &4515499420534818533
 CharacterController:
   m_ObjectHideFlags: 0

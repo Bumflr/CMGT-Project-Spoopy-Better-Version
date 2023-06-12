@@ -9,7 +9,7 @@ public class SC_PlayerController : MonoBehaviour, IDataPersistence
     public UI_Inventory uiInventory;
     public SC_PlayerWeaponManager playerWeaponScript;
     public SC_PlayerStateLogic playerMovementScript;
-
+    public SC_BigDoor playerBlow;
     public PlayerInventory playerInventory;
 
     private void Awake()
@@ -57,6 +57,9 @@ public class SC_PlayerController : MonoBehaviour, IDataPersistence
     {
         switch (item.itemType) 
         {
+            case ItemType.DynamiteStaff:
+                playerBlow.BlowUpDoor(item.amount);
+                break;
             case ItemType.FlareGun:
             SoundManager.PlaySound(SoundManager.Sound.ButtonPressOne);
             playerWeaponScript.SwitchWeapon(item);

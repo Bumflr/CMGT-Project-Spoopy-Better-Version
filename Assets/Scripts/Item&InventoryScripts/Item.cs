@@ -27,6 +27,8 @@ public enum ItemType
     Letter3,
     Letter4,
     Letter5,
+
+    DynamiteStaff,
 }
 
 [Serializable]
@@ -68,30 +70,18 @@ public class Item
         switch (itemType)
         {
             case ItemType.AudioLog1:
-                return true;
             case ItemType.AudioLog2:
-                return true;
             case ItemType.AudioLog3:
-                return true;
             case ItemType.AudioLog4:
-                return true;
             case ItemType.AudioLog5:
-                return true;
             case ItemType.AudioLog6:
-                return true;
             case ItemType.AudioLog7:
-                return true;
             case ItemType.Letter1:
-                return true;
             case ItemType.Letter2:
-                return true;
             case ItemType.Letter3:
-                return true;
             case ItemType.Letter4:
-                return true;
             case ItemType.Letter5:
                 return true;
-
             default:
                 return false;
         }
