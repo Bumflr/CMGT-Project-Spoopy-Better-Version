@@ -62,7 +62,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: ef0f3667587ebd64aa1b934deda1aa03, type: 3}
     description: It's a camera.
   - itemType: 3
-    sprite: {fileID: 21300000, guid: 84b42480faa3a2841ae419d218d797a2, type: 3}
+    sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     description: "A flashgrenade?\nFor what reason could such military grade \nweaponry
       be down here?"
   - itemType: 4
@@ -72,24 +72,19 @@ MonoBehaviour:
       These might come in handy.'
   - itemType: 5
     sprite: {fileID: 21300000, guid: 36de6325140283747b5b9bf31f1989c5, type: 3}
-    description: 'Debug
-
-      Debug
-
-      Debug'
+    description: Just what I need.
   - itemType: 6
     sprite: {fileID: 21300000, guid: 84d331553f1af264ca2255caac8176ba, type: 3}
-    description: Such a lifesaver.
+    description: A gas cannister for the lantern.
   - itemType: 7
     sprite: {fileID: 21300000, guid: e80024e769c897f409d200c7ba7f1d35, type: 3}
-    description: 'Debug
-
-      Debug
-
-      Debug'
+    description: Such a lifesaver.
   - itemType: 8
     sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
-    description: 'Debug
+    description: It's an audio recorder.
+  - itemType: 20
+    sprite: {fileID: 21300000, guid: b9504795d3df0d7469ab33a38cae33ec, type: 3}
+    description: 'Holy smokes! It''s a dynamite!
 
       Debug
 

@@ -59244,7 +59244,7 @@ PrefabInstance:
     - target: {fileID: 4767933410539743747, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
       propertyPath: m_Text
       value: "WASD = Move     \nESC = Pause Menu  \nInteract/Light/Item = Spacebar\nSneak
-        = Left Shift    \nRun = Right shift"
+        = Left CTRL  \nRun = Right shift"
       objectReference: {fileID: 0}
     - target: {fileID: 4767933410752909024, guid: 20e1907e5ea70944f8795bde76ef370b, type: 3}
       propertyPath: m_SizeDelta.x
