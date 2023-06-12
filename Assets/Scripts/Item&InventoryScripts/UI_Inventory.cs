@@ -86,6 +86,7 @@ public class UI_Inventory : MonoBehaviour
 
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
+            image.preserveAspect = true;
 
             TextMeshProUGUI text = itemSlotRectTransform.Find("AmountText").GetComponent<TextMeshProUGUI>();
             if (item.amount > 1)
@@ -119,6 +120,7 @@ public class UI_Inventory : MonoBehaviour
 
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = inventory.currentlyequippedItem.GetSprite();
+            image.preserveAspect = true;
 
             TextMeshProUGUI text = itemSlotRectTransform.Find("AmountText").GetComponent<TextMeshProUGUI>();
             if (inventory.currentlyequippedItem.amount > 1)

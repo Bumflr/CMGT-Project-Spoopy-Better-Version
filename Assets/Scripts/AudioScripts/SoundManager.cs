@@ -51,6 +51,8 @@ public static class SoundManager
         //soundTimerDictionary[Sound.GhostIdle] = Time.time;
         //soundTimerDictionary[Sound.GhostChase] = Time.time;
         //soundTimerDictionary[Sound.TerrorRadiusSound] = Time.time;
+        soundTimerDictionary[Sound.GhostSound] = Time.time;
+
         soundTimerDictionary[Sound.WalkingSingle] = Time.time;
     }
 
@@ -169,6 +171,26 @@ public static class SoundManager
                 {
                     float lastTimePlayed = soundTimerDictionary[sound];
                     float TimerMax = 0.6f;
+
+                    if (lastTimePlayed + TimerMax < Time.time)
+                    {
+                        soundTimerDictionary[sound] = Time.time;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            case Sound.GhostSound:
+                if (soundTimerDictionary.ContainsKey(sound))
+                {
+                    float lastTimePlayed = soundTimerDictionary[sound];
+                    float TimerMax = 1f;
 
                     if (lastTimePlayed + TimerMax < Time.time)
                     {

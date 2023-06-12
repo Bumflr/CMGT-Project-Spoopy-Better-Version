@@ -80,9 +80,10 @@ public class SC_EnemyLogic : MonoBehaviour
     {
         //  Check whether or not the player is in the enemy's field of vision
 
-        if ((isSpiderEnemy || EnemyViewCone()) && enemyState != EnemyStates.HoldingPlayer && enemyState != EnemyStates.Stunned)
+        if ((isSpiderEnemy || EnemyViewCone()) && enemyState != EnemyStates.Chasing && enemyState != EnemyStates.HoldingPlayer && enemyState != EnemyStates.Stunned)
         {
             SetEnemyState(EnemyStates.Chasing);
+
             SoundManager.PlaySound(SoundManager.Sound.GhostSound);
         }
 
