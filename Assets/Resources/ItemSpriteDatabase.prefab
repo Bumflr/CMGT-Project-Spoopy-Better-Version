@@ -47,34 +47,29 @@ MonoBehaviour:
   spriteItems:
   - itemType: 0
     sprite: {fileID: 21300000, guid: 923a437798b022542874deb575593eb4, type: 3}
-    description: 'A trusty flashlight
+    description: 'Ah! A flashlight!
 
-      Seems reliable enough
+      *click, click*
 
-      Requires
-      AAs to function
+      Hmm it needs batteries.
 
 '
   - itemType: 1
-    sprite: {fileID: 21300000, guid: f9161c6c9e06dc445ada3ee16d991f90, type: 3}
-    description: "A rusty lantern...\nIt seems it requires some \ngas canisters to
-      function"
+    sprite: {fileID: 21300000, guid: 783c7ddccf4dd6444bd3f4fc1a28f743, type: 3}
+    description: "Look at this rusty old timer!\nIt seems it requires some \ngas
+      canisters to function."
   - itemType: 2
-    sprite: {fileID: 21300000, guid: 98dba44d1f02b6c4d8e0b5b9e4f1ee9f, type: 3}
-    description: 'Debug
-
-      Debug
-
-      Debug'
+    sprite: {fileID: 21300000, guid: ef0f3667587ebd64aa1b934deda1aa03, type: 3}
+    description: It's a camera.
   - itemType: 3
-    sprite: {fileID: 21300000, guid: 02800fb9cff14da47a04572790384d8b, type: 3}
-    description: "A flashgrenade\nFor whatever reason could such military grade \nweaponry
+    sprite: {fileID: 21300000, guid: ed64f3a17f2ede646be21ed6edc9161a, type: 3}
+    description: "A flashgrenade?\nFor what reason could such military grade \nweaponry
       be down here?"
   - itemType: 4
     sprite: {fileID: 21300000, guid: 874d8401331ede14087e8d8d486ddda6, type: 3}
     description: 'AA Batteries
 
-      These could be used in a flashlight perhaps...'
+      These might come in handy.'
   - itemType: 5
     sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
     description: 'Debug
@@ -83,17 +78,17 @@ MonoBehaviour:
 
       Debug'
   - itemType: 6
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
-    description: Is a gas canister
+    sprite: {fileID: 21300000, guid: e80024e769c897f409d200c7ba7f1d35, type: 3}
+    description: Such a lifesaver.
   - itemType: 7
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 8
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug

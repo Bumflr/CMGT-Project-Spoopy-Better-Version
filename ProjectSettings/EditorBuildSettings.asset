@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Title Screen.unity
     guid: 410fbca917f70be41abe223e8a2695f1
   - enabled: 1
+    path: Assets/Scenes/Mines.unity
+    guid: 8c68900ac725fce4fbd6af2f5c438e68
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: b77417eb78d1e7d4dbc1ba2fef307878
   - enabled: 1
