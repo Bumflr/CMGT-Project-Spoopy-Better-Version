@@ -30,7 +30,8 @@ public static class SoundManager
         HorrorAmbience,
         DelayAmbience,
         AmbienceBonus,
-        HeartBeat
+        HeartBeat,
+        Explosion
     }
 
 

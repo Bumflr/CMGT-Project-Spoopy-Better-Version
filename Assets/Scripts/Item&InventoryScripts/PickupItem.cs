@@ -57,8 +57,10 @@ public class PickupItem : MonoBehaviour, IDataPersistence
             {
                 notesManager.StartReadingItem(item);
             }
-            else if (!pickingPlayer.playerInventory.AddItem(item))
+            else 
             {
+                pickingPlayer.playerInventory.AddItem(item);
+
                 pickUpManager.PickUpItem(item);
             }
 

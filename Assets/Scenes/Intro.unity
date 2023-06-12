@@ -420,6 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notesManager: {fileID: 11400000, guid: 871c4b63bfed1be479c25a741981df58, type: 2}
   intro: 1
+  AudioLog: {fileID: 1222769778}
 --- !u!1001 &1222769776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -544,6 +545,11 @@ PrefabInstance:
 --- !u!224 &1222769777 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6028355448385241498, guid: 3ee75165f972a5243969033666b47e6b, type: 3}
+  m_PrefabInstance: {fileID: 1222769776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1222769778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3608095520904809926, guid: 3ee75165f972a5243969033666b47e6b, type: 3}
   m_PrefabInstance: {fileID: 1222769776}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1918626252

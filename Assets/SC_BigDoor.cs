@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class SC_BigDoor : MonoBehaviour
 {
     [Header("Dependencies")]
     public SC_PlayerController playerController;
 
+    public GameObject obJectWithAnimation;
     public GameObject bigDoor;
     public GameObject explosion;
 
@@ -29,15 +32,28 @@ public class SC_BigDoor : MonoBehaviour
 
             playerController.playerInventory.RemoveItem(item);
 
-            bigDoor.SetActive(false);
-            explosion.SetActive(true);
+            playerController.playerMovementScript.playerMovement._cam.GetComponent<CinemachineBrain>().ActiveVirtualCamera.Follow = obJectWithAnimation.transform;
+
+            obJectWithAnimation.GetComponent<Animator>().enabled = true;
+
+            SoundManager.PlaySound(SoundManager.Sound.Explosion);
+
+
+            StartCoroutine(WaitLike5Seconds());
+
         }
         else
         {
             Debug.Log("Lol you stupid bastard");
         }
     }
+    private IEnumerator WaitLike5Seconds()
+    {
+        yield return new WaitForSeconds(5);
 
+        SceneManager.LoadSceneAsync("Outro");
+
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Door"))

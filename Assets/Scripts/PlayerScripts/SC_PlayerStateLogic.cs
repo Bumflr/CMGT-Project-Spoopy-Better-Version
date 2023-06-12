@@ -16,7 +16,7 @@ public enum PlayerStates
 }
 public class SC_PlayerStateLogic : MonoBehaviour
 {
-    private SC_PlayerMovement playerMovement;
+    public SC_PlayerMovement playerMovement;
     private SC_PlayerHealth playerHealth;
 
     [Header("Dependencies")]
