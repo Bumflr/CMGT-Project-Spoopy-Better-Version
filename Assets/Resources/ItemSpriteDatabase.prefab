@@ -62,26 +62,26 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: ef0f3667587ebd64aa1b934deda1aa03, type: 3}
     description: It's a camera.
   - itemType: 3
-    sprite: {fileID: 21300000, guid: ed64f3a17f2ede646be21ed6edc9161a, type: 3}
+    sprite: {fileID: 21300000, guid: 84b42480faa3a2841ae419d218d797a2, type: 3}
     description: "A flashgrenade?\nFor what reason could such military grade \nweaponry
       be down here?"
   - itemType: 4
-    sprite: {fileID: 21300000, guid: 874d8401331ede14087e8d8d486ddda6, type: 3}
+    sprite: {fileID: 21300000, guid: 36cb2650a55bbb043b6a758bd33e3d4e, type: 3}
     description: 'AA Batteries
 
       These might come in handy.'
   - itemType: 5
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 36de6325140283747b5b9bf31f1989c5, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 6
-    sprite: {fileID: 21300000, guid: e80024e769c897f409d200c7ba7f1d35, type: 3}
+    sprite: {fileID: 21300000, guid: 84d331553f1af264ca2255caac8176ba, type: 3}
     description: Such a lifesaver.
   - itemType: 7
-    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
+    sprite: {fileID: 21300000, guid: e80024e769c897f409d200c7ba7f1d35, type: 3}
     description: 'Debug
 
       Debug
@@ -95,56 +95,56 @@ MonoBehaviour:
 
       Debug'
   - itemType: 9
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 10
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 11
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 12
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 13
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 14
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 15
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: 'Debug
 
       Debug
 
       Debug'
   - itemType: 20
-    sprite: {fileID: 21300000, guid: 0ac55f9f886d827408c102bdf33c5ff7, type: 3}
+    sprite: {fileID: 21300000, guid: c1f820d98bd30b94c8379f92cb9dd88e, type: 3}
     description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
       door.\nthe bioor."
   - itemType: 21
@@ -152,6 +152,18 @@ MonoBehaviour:
     description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
       door.\nthe bioor."
   - itemType: 22
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
+    description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
+      door.\nthe bioor."
+  - itemType: 16
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
+    description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
+      door.\nthe bioor."
+  - itemType: 17
+    sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
+    description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
+      door.\nthe bioor."
+  - itemType: 18
     sprite: {fileID: 21300000, guid: 604f4a52fb921ee43838899a9518f845, type: 3}
     description: "1 Dynamite Staff...\nI could use 3 of these to \nblow up the big
       door.\nthe bioor."
