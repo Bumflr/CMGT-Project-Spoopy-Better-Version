@@ -20,6 +20,9 @@ public class SC_HallwayManager : MonoBehaviour
             if (door.CompareTag("CorrectDoor"))
             {
                 door.tag = "Untagged";
+                
+                
+                
                 break;
             }
         }
