@@ -29,6 +29,9 @@ public enum ItemType
     Letter5,
 
     DynamiteStaff,
+
+    Intro,
+    Outro,
 }
 
 [Serializable]
@@ -81,6 +84,8 @@ public class Item
             case ItemType.Letter3:
             case ItemType.Letter4:
             case ItemType.Letter5:
+            case ItemType.Intro:
+            case ItemType.Outro:
                 return true;
             default:
                 return false;
