@@ -45,8 +45,6 @@ public class SC_FlareBullet : MonoBehaviour {
             flarelight.range =  Mathf.Lerp(flarelight.range,0f,Time.deltaTime * smooth);			
             flaresound.volume = Mathf.Lerp(flaresound.volume,0f,Time.deltaTime * smooth);
             smokepParSystem.maxParticleSize = Mathf.Lerp(smokepParSystem.maxParticleSize,0f,Time.deltaTime * 5);
-
-
         }
 
 			
@@ -57,6 +55,5 @@ public class SC_FlareBullet : MonoBehaviour {
         myCoroutine = true;
         yield return new WaitForSeconds(flareTimer);
         myCoroutine = false;
-
     }
 }

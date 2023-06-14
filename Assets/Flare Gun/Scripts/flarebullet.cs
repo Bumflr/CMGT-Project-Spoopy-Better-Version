@@ -45,8 +45,6 @@ public class flarebullet : MonoBehaviour {
 			flarelight.range =  Mathf.Lerp(flarelight.range,0f,Time.deltaTime * smooth);			
 			flaresound.volume = Mathf.Lerp(flaresound.volume,0f,Time.deltaTime * smooth);
 			smokepParSystem.maxParticleSize = Mathf.Lerp(smokepParSystem.maxParticleSize,0f,Time.deltaTime * 5);
-
-
 		}
 
 			
